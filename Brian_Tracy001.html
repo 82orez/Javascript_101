@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Tracy Lecture</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        span {
+            font-size: large;
+        }
+        .English {
+            color: white;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brian Tracy 강의입니다.</h1><hr>
+
+    <div id="0001">
+        <span class="Korean">나는 행복한 상태입니다. 여기에 있게 되어서</span>
+        <button type="button" onclick="hide()">영어 문장 보기</button>
+
+        <div class="English">I am very happy to be here.</div>
+    </div>
+    <div>
+        <span class="Korean">만약 내가 보여 줄 수 있다면 어떻게, 한 번 시도해 보시겠습니까?</span>
+        <button type="button" onclick="hide()">영어 문장 보기</button>
+
+        <div class="English">If I can show you how, will you give it a try?</div>
+    </div>
+
+    <script>
+        let a = document.querySelector('.English');
+        console.log(a)
+
+        function hide() {
+            a.style.color = 'red';
+        }
+    </script>
+</body>
+</html>
