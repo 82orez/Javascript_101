@@ -15,14 +15,17 @@
 <body>
 	<script>
         let n = prompt('숫자를 입력하시오.');
-        let nFact = 1;
-        let i = 1;
-
-        while (i <= parseInt(n)){
-            nFact *= i;
-            i++;
+        let sum = 0;
+        for (let i=1; i <= parseInt(n); i++){
+            if (i % 2 === 0) {
+                sum += i;
+            }
+            else {
+                continue;
+                // 대신 break; 이면 반복문에서 즉시 빠져 나와 빈 화면 출력됨.
+            }
+            document.write(`${i} --------- ${sum}<br>`);
         }
-        document.write(`${n}! = ${ nFact}`);
     </script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+        let d = new Date();
+        let day = d.getDay();
+
+        console.log(day);
+
+        let dayName = ""
+
+        switch (day) {
+            case 0: dayName = "Sunday"; break;
+            case 1: dayName = "Monday"; break;
+            case 2: dayName = "Tuesday"; break;
+            case 3: dayName = "Wednesday"; break;
+            case 4: dayName = "Thursday"; break;
+            case 5: dayName = "Friday"; break;
+            case 6: dayName = "Saturday"; break;
+            default:
+        }
+
+        document.write(`Today is ${dayName}!`)
+    </script>
+</body>
+</html>
