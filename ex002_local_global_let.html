@@ -31,9 +31,10 @@
         return result;
     }
 
-    document.write(x);
-    document.write(z);   // 오류 발생
+    document.write(x);   // x 는 전역 변수이므로 5+1 이 출렴됨
+    // let x = 100;      // let 은 var 와 달리 변수 재선언 불가
 
+    document.write(z);   // z 는 지역 변수이므로 함수 밖에서 오류 발생
 </script>
 </body>
 </html>

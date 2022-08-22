@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>함수</title>
-    <link rel="stylesheet" href="css/add.css">
+    <title>자바스크립트 이벤트</title>
+    <link rel="stylesheet" href="css/event.css">
 </head>
 <body>
-    <button onclick="addNumber(1,2)">덧셈 계산하기</button>
-    <img src="images/sale.png">
 
-    <script src="js/add.js"></script>
+    <script>
+       let book = {
+           title: "JS",
+           author: "고선생",
+           price: 15000,
+           info: function () {
+               alert(`${this.title}의 저자는 ${this.author}입니다.`);
+           }
+       }
+       book.field = 'IT';
+       console.log(book.title);
+    </script>
 </body>
 </html>
