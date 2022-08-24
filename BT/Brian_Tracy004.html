@@ -25,32 +25,32 @@
 </head>
 <body>
     <h1>Brian Tracy 강의입니다.</h1>
-    <div style="text-align: center"><button type="button">모든 영어 문장 감추기</button></div>
+    <div style="text-align: center"><button type="button" onclick="hideAll()">모든 영어 문장 감추기</button></div>
     <hr>
 
     <div class="Korean"><h4>나는 행복한 상태입니다. 여기에 있게 되어서</h4></div>
-    <button type="button" id="emerge0001" onclick="emerge('0001')">영어 문장 보기</button>
+    <button type="button" class="eb" id="emerge0001" onclick="emerge('0001')">영어 문장 보기</button>
     
     <div class="English" id="e0001"><h3>I am very happy to be here.</h3>
-    <button type="button" id="hide0001" onclick="hide('0001')">영어 문장 감추기</button>
+    <button type="button" class="hb" id="hide0001" onclick="hide('0001')">영어 문장 감추기</button>
     </div>
     <hr>
 
     
     <div class="Korean"><h4>얼마나 많은 사람 여기에 있는 두 배로 늘리고 싶습니까 수입을?</h4></div>
-    <button type="button" id="emerge0002" onclick="emerge('0002')">영어 문장 보기</button>
+    <button type="button" class="eb" id="emerge0002" onclick="emerge('0002')">영어 문장 보기</button>
     
     <div class="English" id="e0002"><h3>How many people here would like to double their income?</h3>
-    <button type="button" id="hide0002" onclick="hide('0002')">영어 문장 감추기</button>
+    <button type="button" class="hb" id="hide0002" onclick="hide('0002')">영어 문장 감추기</button>
     </div>
     <hr>
 
 
     <div class="Korean"><h4>내가 보여 줄 수 있으면 어떻게, 한 번 시도해 보시겠어요?</h4></div>
-    <button type="button" id="emerge0003" onclick="emerge('0003')">영어 문장 보기</button>
+    <button type="button" class="eb" id="emerge0003" onclick="emerge('0003')">영어 문장 보기</button>
 
     <div class="English" id="e0003"><h3>If I can show you how, will you give it a try?</h3>
-        <button type="button" id="hide0003" onclick="hide('0003')">영어 문장 감추기</button>
+        <button type="button" class="hb" id="hide0003" onclick="hide('0003')">영어 문장 감추기</button>
     </div>
     <hr>
 
@@ -65,9 +65,13 @@
             document.querySelector(`#emerge${idNum}`).style.display = 'block';
         }
 
-        // function hideAll() {
-        //     document.querySelector('.English').style.display = 'none';
-        // }
+        function hideAll() {
+            let englishAll = document.querySelectorAll('.English>h3');
+            for (let i = 0; i < englishAll.length; i++) {
+                englishAll[i].style.display = 'none';
+            }
+            document.querySelector('.eb').style.display = 'block';
+        }
     </script>
 </body>
 </html>
