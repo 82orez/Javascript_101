@@ -11,14 +11,10 @@ console.log(passedDay);
 
 document.querySelector('#accent').innerHTML = `${passedDay} 일째`;
 
-// let future = toFirst + (100 * (24*60*60*1000));
-// let someDay = new Date(future);
-// console.log(someDay);
-// let year = someDay.getFullYear();
-// let month = someDay.getMonth();
-// let date = someDay.getDate();
-//
-// document.querySelector('#date100').innerHTML = `${year}년 ${month}월 ${date}일`;
+calDay(100);
+calDay(200);
+calDay(365);
+calDay(500);
 
 function calDay(num) {
     let future = toFirst + (num * (24*60*60*1000));
@@ -30,8 +26,3 @@ function calDay(num) {
 
     document.querySelector(`#date`+ num).innerHTML = `${year}년 ${month}월 ${date}일`;
 }
-
-calDay(100);
-calDay(200);
-calDay(365);
-calDay(500);

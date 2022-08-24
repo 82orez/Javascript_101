@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Tracy Lecture</title>
+    <script defer src="js/js.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        span {
+            font-size: large;
+        }
+        .English {
+            color: red;
+            font-size: large;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brian Tracy 강의입니다.</h1><hr>
+
+    <span class="Korean">나는 행복한 상태입니다. 여기에 있게 되어서</span>
+    <button type="button" id="emerge0001">영어 문장 보기</button>
+    
+    <div class="English"><h3>I am very happy to be here.</h3>
+    <button type="button" id="hide0001">영어 문장 감추기</button>
+    </div>
+    
+
+    <script>
+        let emergeButton = document.querySelector('#emerge0001');
+        let hideButton = document.querySelector('#hide0001');
+
+        let English = document.querySelector('.English');
+
+        
+        emergeButton.onclick = function () {
+            English.style.display = 'block';
+        }
+        hideButton.onclick = function () {
+            English.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
