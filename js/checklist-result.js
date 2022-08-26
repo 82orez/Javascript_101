@@ -14,6 +14,7 @@ function addList() {
     }
     showList();
 }
+
 function showList() {
     let list = "<ul>";
     for (let i = 0; i < itemList.length; i++) {
@@ -22,4 +23,15 @@ function showList() {
     list += "</ul>";
     console.log(list);
     document.querySelector('#itemList').innerHTML = list;
+
+    let remove = document.querySelectorAll('.close');
+    for (let i = 0; i < remove.length; i++) {
+        remove[i].addEventListener('click', removeList);
+    }
+}
+
+function removeList() {
+    let id = this.getAttribute("id");
+    itemList.splice(id,1);
+    showList();
 }
