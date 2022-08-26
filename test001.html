@@ -1,17 +1,25 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Array</title>
+    <title>여행 준비물 점검 목록</title>
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/list.css">
 </head>
 <body>
+    <div id="wrapper">
+        <h2>여행 준비물 점검 목록</h2>
+        <form>
+            <label for="item"></label><input type="text" id="item" autofocus="autofocus">
+            <button type="button" id="add" class="addBtn">추가</button>
+        </form>
 
-    <script>
-        let myArray = new Array();
+        <!-- 준비물 표시 영역 시작.-->
+        <div id="itemList"></div>
+    </div>
 
-    </script>
+    <script src="js/checklist-result.js"></script>
+<!--    <script src="js/test.js"></script>-->
 </body>
 </html>

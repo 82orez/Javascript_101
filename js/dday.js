@@ -1,5 +1,13 @@
+// 현재 날짜를 구하고 시간을 0시 0분 0초로 세팅한다.
 let now = new Date();
+now.setHours(0);
+now.setMinutes(0);
+now.setSeconds(0);
+console.log(now);
+
+// 처음 만난 날짜를 세팅한다.
 let firstDay = new Date("2022-8-22");
+console.log(firstDay);
 
 let toNow = now.getTime();
 let toFirst = firstDay.getTime();
