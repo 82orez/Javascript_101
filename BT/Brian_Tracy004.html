@@ -46,7 +46,7 @@
     <hr>
 
 
-    <div class="Korean"><h4>내가 보여 줄 수 있으면 어떻게, 한 번 시도해 보시겠어요?</h4></div>
+    <div class="Korean"><h4>만약 내가 보여 줄 수 있으면 어떻게, 한 번 시도해 보시겠어요?</h4></div>
     <button type="button" class="eb" id="emerge0003" onclick="emerge('0003')">영어 문장 보기</button>
 
     <div class="English" id="e0003"><h3>If I can show you how, will you give it a try?</h3>
@@ -66,11 +66,14 @@
         }
 
         function hideAll() {
-            let englishAll = document.querySelectorAll('.English>h3');
+            let englishAll = document.querySelectorAll('.English');
             for (let i = 0; i < englishAll.length; i++) {
                 englishAll[i].style.display = 'none';
             }
-            document.querySelector('.eb').style.display = 'block';
+            let ebBtn = document.querySelectorAll('.eb');
+            for (let i = 0; i < ebBtn.length; i++) {
+                ebBtn[i].style.display = 'block';
+            }
         }
     </script>
 </body>
