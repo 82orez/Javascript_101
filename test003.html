@@ -6,8 +6,17 @@
     <title>팝업 창 표시하기</title>
 </head>
 <body>
-<p>이 문서가 열리면 자동으로 팝업 창이 표시됩니다.</p>
+<script>
+    let kim = {
+    firstName: "John",
+    lastName: "Kim",
+    age: 35,
+    address: "Seoul"
+    }
 
-<script src="js/popup.js"></script>
+    for (const kimKey in kim) {
+        console.log(`${kimKey} is ${kim[kimKey]}`);
+    }
+</script>
 </body>
 </html>

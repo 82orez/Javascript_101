@@ -1,32 +1,47 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
+<button type="button" onclick="doSearch(this);">조회</button>
+<select name="" id="" onchange="doChange(this);">
+    <option value="1">A</option>
+    <option value="2">B</option>
+    <option value="3">C</option>
+    <option value="4">D</option>
+</select>
 <script>
+    //this 키워드 의미하는 것.  첫번째. this = Window 객체
+    console.log(this);
+
+    function myFunction() {
+        console.log(this);
+    }
+
+    myFunction();
+
+    //HTML DOM요소에서 이벤트가 수행이 될때 호출하는 함수에 this를 파라미터 값으로
+    //전달하면, 이때 this는 이벤트가 일어나는 HTML DOM 요소 그 자체를 의미
+
+    function doSearch(obj) {
+        console.log(obj);
+    }
+
+    function doChange(obj) {
+        console.log(obj);
+        console.log(obj.value);
+    }
+
+    //오브젝트 내의 함수에서 this는 오브젝트 자체
     let person = {
-        fname: "John",
-        lname: "Doe",
-        age: 25,
+        firstName: "John",
+        lastName: "Doe",
         getFullName: function () {
-            return `${this.fname} ${this.lname} ${this.age}`
-        }
-    }
-    for (const key in person) {
-        document.write(key);
-    }
-    for (const key in person) {
-        document.write(person[key]);
-    }
-
-    document.write(person.getFullName());
-
-
+            return this.firstName + " " + this.lastName;
+        },
+    };
 </script>
 </body>
 </html>
