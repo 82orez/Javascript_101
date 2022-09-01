@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Document</title>
+        <title>Object Destructuring</title>
     </head>
     <body>
         <script>
@@ -23,6 +23,7 @@
             function displayFullName({ firstName, lastName, age }) {
                 //전달 받은 Object 데이터에서 필요한 데이터의 키만 정의해서 사용
                 console.log(`${firstName} ${lastName} ${age}`); //John Doe
+                document.write(`${firstName} ${lastName} ${age}`);
             }
 
             displayFullName(getPerson()); //함수 호출 시 Object를 파라미터 값으로 전달

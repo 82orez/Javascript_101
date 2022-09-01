@@ -17,7 +17,9 @@
                 this.age = age;
             }
             speak() {
-                document.write(`${this.name}님 안녕하세요.`)
+                // document.write(`${this.name}님 안녕하세요.`)
+                document.querySelector('#display').innerHTML = `${this.name}님 안녕하세요.
+                당신의 나이는 ${this.age}세 입니다.`;
             }
         }
 
@@ -25,8 +27,6 @@
         console.log(lee.name);
         console.log(lee.age);
         lee.speak();
-
-
     </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let person = {
+        fname: "John",
+        lname: "Doe",
+        age: 25,
+    }
+    // for-in 은 주로 key 값을 가지는 객체에 주로 쓰임.
+    // key 값이 index 인 array, strings 에는 for-of.
+    for (const key in person) {
+        document.write(`${key}는 ${person[key]}입니다.`);
+    }
+    let hi = 'hello'
+    for (const hiElement of hi) {
+        console.log(hiElement);
+    }
+</script>
+</body>
+</html>

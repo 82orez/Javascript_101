@@ -1,47 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<script>
-    <!-- 무작위의 변수갯수를 받아 올 때: '...+변수명', 변수명은 관습적으로 'args' 를 사용   -->
-    function sum(...args) {
-        let total = 0;
-        for (let x of args) {
-            total += x;
-        }
-        console.log(total);
-        return total;
-    }
-    sum(3, 2, 5, 7, 4, 23);
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>예외 처리</title>
+    </head>
+    <body>
+        <p>이 문서가 열리면 자동으로 팝업 창이 표시됩니다.</p>
 
-    function add(...abc) {
-        let total = 0;
-        for (let x of abc) {
-            total += x;
-        }
-        console.log(total);
-        return total;
-    }
-    add(3, 2, 5, 7, 4, 23);
-
-    function add1(...args) {
-        let total = 0;
-        for (const argsKey in args) {
-            total += args[argsKey];
-            // console.log(argsKey);
-            // console.log(total);
-        }
-        console.log(total);
-        return total;
-    }
-    add1(3, 2, 5, 7, 4, 23);
-
-</script>
-</body>
+        <script src="js/try_catch_finally.js"></script>
+    </body>
 </html>
