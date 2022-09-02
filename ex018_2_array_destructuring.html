@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang='ko'>
+<html lang="ko">
 <head>
-    <meta charset='UTF-8'>
+    <meta charset="UTF-8">
     <title>Array Destructuring</title>
 </head>
 <body>
@@ -26,18 +26,13 @@
     console.log(z);
 
     function getProfile() {
-        return [
-            "John",
-            "Doe",
-            ["Red", "Green", "Blue"]
-        ];
+        return ["John", "Doe", ["Red", "Green", "Blue"]];
     }
 
-    let [firstName, lastName,[color1,color2, color3]] = getProfile();
+    let [firstName, lastName, [color1, color2, color3]] = getProfile();
     console.log(color1);
     console.log(color2);
     console.log(color3);
-
 </script>
 </body>
 </html>
