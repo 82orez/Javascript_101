@@ -1,9 +1,2 @@
 .idea
-db.sqlite3
-*.pyc
-__pycache__
 .DS_Store
-/node_modules
-.prettierrc.js
-package-lock.json
-package.json
