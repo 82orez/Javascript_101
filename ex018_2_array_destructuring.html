@@ -30,9 +30,15 @@
     }
 
     let [firstName, lastName, [color1, color2, color3]] = getProfile();
+    console.log(firstName);
     console.log(color1);
     console.log(color2);
     console.log(color3);
+
+    let [f_Name, ...rest] = getProfile();
+    console.log(f_Name);
+    console.log(rest);
+
 </script>
 </body>
 </html>
