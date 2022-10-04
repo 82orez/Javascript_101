@@ -1,4 +1,4 @@
-// state: pending , resolved, rejected
+// state: pending , resolve(fulfilled), reject
 
 // 1. Producer
 const promise = new Promise((resolve, reject) => {
