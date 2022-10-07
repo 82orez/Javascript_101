@@ -19,7 +19,8 @@ words.push('push');
 console.log(words);
 
 // pop: 맨 뒤 삭제
-words.pop();
+let popped = words.pop();
+console.log('popped: ',popped);
 console.log(words);
 
 // unshift: 맨 앞에 추가
@@ -32,8 +33,8 @@ words.shift();
 console.log(words);
 
 // splice:해당 index 부터 몇 개까지 삭제하고 새로운 데이터 추가
-words.splice(1,2,'splice');
-console.log(words);
+words.splice(1,0,'splice');
+console.log('splice: ',words);
 
 // concat: 배열 합치기
 let words2 = ['hello', 'world'];
@@ -52,4 +53,36 @@ console.log(words.toString());
 console.log(words.toLocaleString());
 console.log(words.join('+'));
 
-
+// 정렬
+console.log('sorted: ',words.sort());
+// 숫자 정렬
+// (a - b)가 음수값(-)이면 위치 변화 없고 양수값(+)이면 위치를 바꾼다.
+let numbers = [45, 35, 100, 3, 7, 88, 1];
+console.log(numbers.sort((a, b) => {return a - b}));
+// point 값에 따라 내림 차순 정렬
+let persons = [
+    {
+        name: "유재석",
+        point: 78,
+        city: "서울",
+    },
+    {
+        name: "김종국",
+        point: 92,
+        city: "서울",
+    },
+    {
+        name: "양세찬",
+        point: 76,
+        city: "제주",
+    },
+    {
+        name: "하하",
+        point: 81,
+        city: "서울",
+    },
+];
+persons.sort((a, b) => {
+    return a.point > b.point ? -1 : a.point < b.point ? 1 : 0;
+});
+console.log(persons);
