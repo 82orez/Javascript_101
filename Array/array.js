@@ -86,3 +86,8 @@ persons.sort((a, b) => {
     return a.point > b.point ? -1 : a.point < b.point ? 1 : 0;
 });
 console.log(persons);
+
+let newPersons = persons.map((value, index, array) => {
+   return {fullName: value.name};
+});
+console.log('map', newPersons);

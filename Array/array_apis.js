@@ -78,7 +78,7 @@ const students = [
     const result = students.map((value, index, array) => {
         return `${value.name}'s score is ${value.score * 2}!`;
     });
-    console.log(result);
+    console.log('map',result);
 }
 
 // Q8. check if there is a student with the condition
@@ -96,7 +96,7 @@ const students = [
 
 
 
-console.clear();
+// console.clear();
 
 
 
