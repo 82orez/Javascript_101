@@ -1,9 +1,10 @@
-// Inner object for asynchronous operation
-// state: pending -> fulfilled or rejected
-// Producer vs Consumer
+function doSomething(add) {
+   console.log(add);
+   console.log(add(3,4));
+}
 
-// 1. Producer
-const promise = new Promise((resolve, reject)=>{
-  // some heavy work such as network, reading files
-  console.log('Doing something...')
-})
+function add(a, b) {
+  return a + b;
+}
+
+doSomething(add);
