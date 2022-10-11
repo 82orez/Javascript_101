@@ -1,29 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        let age = 29;
-        let name = 'TG';
-        
-        function myFunction() {
-            age = 45;
-            // let age = 30;        
-            console.log(age);
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            if (confirm("Execute?")) {
+                let i = 0;
+                let sec = parseInt(prompt('How long sec?: '));
+                let times = parseInt(prompt('How many times?: '));
 
-            // function myFunction2() {
-                
-            // }
-        }
-
-        myFunction();
-        console.log(age);
-    </script>
-</body>
+                let fnc = setInterval(() => {
+                    console.log(`Repeat in ${sec} sec! ${i}`);
+                    if (i === times) {
+                        clearInterval(fnc);
+                    }
+                    i++;
+                }, sec * 1000);
+            } else {
+                document.write("Canceled!");
+            }
+        </script>
+    </body>
 </html>
