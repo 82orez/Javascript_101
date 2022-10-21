@@ -1,18 +1,21 @@
-// for (let i = 2; i < 10 ; i++) {
-//     for (let j = 1; j < 10; j++) {
-//         console.log(`${i} X ${j} = ${i * j}`);
-//     }
+// function convertToString(anything) {
+//     // TODO: 여기에 코드를 작성합니다.
+//     return anything.toString();
 // }
-
-// console.log(typeof 1);
-// console.log(typeof '1');
-// console.log(typeof (1 < 2));
-// console.log((1 > 2));
-
-// function triangleArea(base, height) {
-//     return base * height / 2;
+// let result = convertToString(12345);
+// console.log(result);
+//
+//
+// function convertToString1(anything) {
+//     // TODO: 여기에 코드를 작성합니다.
+//     return String(anything);
 // }
+// let result1 = convertToString1(null);
+// console.log(result1);
 
-let triangleArea = (base, height) => base * height / 2;
+function square(base){
+    let side = base;
+    return base * side;
+}
 
-console.log(triangleArea(5,4));
+console.log(square(3));
