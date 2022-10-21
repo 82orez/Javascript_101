@@ -12,10 +12,12 @@
 // }
 // let result1 = convertToString1(null);
 // console.log(result1);
-
-function square(base){
-    let side = base;
-    return base * side;
-}
-
-console.log(square(3));
+//
+// function square(base){
+//     let side = base;
+//     return base * side;
+// }
+//
+// console.log(square(3));
+console.log(0 == false);
+console.log(0 === false);
