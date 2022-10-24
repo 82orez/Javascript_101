@@ -1,12 +1,14 @@
-function repeatString(str, num) {
-    let srtSum = '';
+// function replaceAll(str, from, to) {
+//     for (let strElement of str) {
+//         if (from === strElement) {
+//             strElement = from;
+//         }
+//     }
+//     return str;
+// }
+//
+// console.log(replaceAll('loop', 'o', 'e'));
 
-    for (let i = 0; i < num; i++) {
-        srtSum += str;
-    }
-
-    return srtSum;
-}
-
-console.log(repeatString('code', 3));
-console.log(repeatString('code', 0));
+let char = 'loop';
+console.log(char[0]='k');
+console.log(char);
