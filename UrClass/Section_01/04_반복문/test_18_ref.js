@@ -25,4 +25,4 @@ function listPrimes(num) {
 // console.log(listPrimes(3));
 // console.log(listPrimes(4));
 // console.log(listPrimes(5));
-console.log(listPrimes(5));
+console.log(listPrimes(46));
