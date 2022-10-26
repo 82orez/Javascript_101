@@ -16,7 +16,7 @@ function fibonacci(num) {
         if (i <= 1) {
             result[i] = i;
         } else {
-            result[i] = result[i - 2] + result[i - 1];
+            result[i] = result[i-2] + result[i-1];
         }
     }
     return result;
