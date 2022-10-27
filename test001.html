@@ -8,24 +8,71 @@
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
+        <style>
+            main {
+                border: 1px dotted red;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            div {
+                border: 1px solid green;
+            }
+
+            * {
+                margin: 10px;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            #box1 {
+                flex-grow: 1;
+            }
+
+            #box2 {
+                flex-grow: 1;
+            }
+
+            #box3 {
+                flex-grow: 1;
+            }
+
+            #box4 {
+                flex-grow: 1;
+                flex-basis: 150px;
+            }
+
+            #box5 {
+                flex-grow: 1;
+                flex-basis: 150px;
+            }
+
+            #box6 {
+                flex-grow: 1;
+                flex-basis: 150px;
+            }
+        </style>
     </head>
     <body>
-        <script>
-            if (confirm("Execute?")) {
-                let i = 0;
-                let sec = parseInt(prompt('How long sec?: '));
-                let times = parseInt(prompt('How many times?: '));
+    <main>
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+    </main>
 
-                let fnc = setInterval(() => {
-                    console.log(`Repeat in ${sec} sec! ${i}`);
-                    if (i === times) {
-                        clearInterval(fnc);
-                    }
-                    i++;
-                }, sec * 1000);
-            } else {
-                document.write("Canceled!");
-            }
-        </script>
+    <main>
+        <div id="box1" class="box">box1</div>
+        <div id="box2" class="box">box2</div>
+        <div id="box3" class="box">box3</div>
+    </main>
+
+    <main>
+        <div id="box4" class="box">box4</div>
+        <div id="box5" class="box">box5</div>
+        <div id="box6" class="box">box6</div>
+    </main>
     </body>
 </html>
