@@ -1,0 +1,83 @@
+/*브라우저 초기 세팅을 위한 설정*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: "monospace", cursive;
+    color: #000;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    height: 100vh;
+}
+.calculator {
+    background-color: #fd96ab;
+    width: 350px;
+    height: 520px;
+    border-radius: 25px;
+    padding: 2px 10px 10px 10px;
+    border: solid 6px #ef7993;
+    border-bottom: solid 6px #d27082;
+    display: flex;
+    flex-direction: column;
+}
+.calculator__display--for-advanced {
+    border: 1px solid;
+    background-color: white;
+    flex: 1;
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    text-align: right;
+    font-size: 30px;
+}
+.calculator__buttons {
+    border: 1px solid;
+    background-color: white;
+    flex: 7;
+    border-radius: 10px;
+    margin: 10px 10px 30px 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.clear__and__enter {
+    flex: 1;
+    display: flex;
+    border: 1px solid;
+    margin: 5px;
+}
+.button__row {
+    flex: 1;
+    border: 1px solid;
+    margin: 5px;
+    display: flex;
+}
+
+/*AC 버튼과 Enter 버튼을 동시에 작업.*/
+.clear__and__enter button {
+    margin: 5px;
+    flex: 0 0 60px;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: greenyellow;
+}
+.number {
+    flex: 1;
+    margin: 5px;
+    border-radius: 5px;
+}
+.operator {
+    flex: 1;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+.calculator__buttons * {
+    font-size: 17px;
+}
