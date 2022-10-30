@@ -13,7 +13,7 @@ body {
     align-items: center;
 }
 
-#calculator {
+.calculator {
     display: flex;
     flex-direction: column;
     width: 360px;
@@ -29,6 +29,7 @@ body {
     flex: 1;
     margin: 10px;
     padding: 10px;
+    border: 2px solid;
     border-radius: 10px;
     text-align: right;
     font-size: 30px;
@@ -40,30 +41,45 @@ body {
 .calculator__buttons {
     background-color: white;
     flex: 7;
-    margin: 10px 10px 30px 10px;
+    margin: 10px 10px 15px 10px;
     padding: 10px;
+    border: 2px solid;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
 .clear__and__enter {
-    flex: 1;
+    flex: 1 0 0;
     display: flex;
+    /*border: 1px solid;*/
 }
 .clear__and__enter * {
     flex: 1;
-    margin: 13px 10px;
+    margin: 10px 10px;
     border-radius: 10px;
     background-color: greenyellow;
 }
-.clear__and__enter .no {
+.clear__and__enter .sun {
+    flex: 2;
     color: white;
-    background-color: white;
-}
-
-.button__row{
-    flex: 1;
+    background-color: #bbb0b4;
+    border-radius: 0;
+    border: 1px solid black;
     display: flex;
+}
+.clear__and__enter .sun span {
+    flex: 1;
+    border: 1px dotted black;
+    margin: 2px;
+    padding: 0;
+    border-radius: 0;
+    background-color: #bbb0b4;
+    color: #bbb0b4;
+}
+.button__row{
+    flex: 1 0 0;
+    display: flex;
+    /*border: 1px solid;*/
 }
 .button__row * {
     flex: 1;
@@ -79,4 +95,11 @@ body {
 .operator {
     color: white;
     background-color: black;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 30%;
 }

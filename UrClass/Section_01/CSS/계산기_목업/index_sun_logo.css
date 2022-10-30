@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    border: 6px solid #ef7993;
+    border-bottom: 10px solid #d27082;
+    border-radius: 25px;
+    background-color: #fd96ab;
+    width: 360px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /*background-image: url("img/codestates_motif.png");*/
+}
+
+.calculator__display--for-advanced {
+    border: 2px solid;
+    border-radius: 10px;
+    flex: 1;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+.calculator__display--bare {
+    display: none;
+}
+.calculator__buttons {
+    border: 2px solid;
+    border-radius: 10px;
+    flex: 7;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.clear__and__enter {
+    flex: 1;
+    display: flex;
+    /*border: 1px solid;*/
+}
+.clear__and__enter * {
+    flex: 1;
+    background-color: greenyellow;
+    border-radius: 10px;
+    margin: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px;
+}
+.sun {
+    flex: 2;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #bbb0b4;
+    box-shadow: none;
+}
+.panel {
+    border: 1px dotted;
+    background-color: #bbb0b4;
+    border-radius: 0;
+    margin: 2px;
+    box-shadow: none;
+}
+.button__row {
+    flex: 1;
+    display: flex;
+    /*border: 1px solid;*/
+}
+.button__row * {
+    flex: 1;
+    border-radius: 10px;
+    margin: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px;
+}
+.operator {
+    color: white;
+    background-color: black;
+    box-shadow: 3px 3px 3px gray;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 30%;
+}
