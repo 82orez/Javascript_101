@@ -5,14 +5,14 @@
     box-sizing: border-box;
 }
 
-body {
+.container {
     border: 2px solid red;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container {
+.calculator {
     border: 6px solid #ef7993;
     border-bottom: 10px solid #d27082;
     border-radius: 25px;
