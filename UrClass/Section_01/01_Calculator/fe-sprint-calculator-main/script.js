@@ -1,10 +1,17 @@
-const calculator = document.querySelector('.calculator'); // calculator 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
-const buttons = calculator.querySelector('.calculator__buttons'); // calculator__keys 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+// calculator 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+const calculator = document.querySelector('.calculator');
 
-const firstOperend = document.querySelector('.calculator__operend--left'); // calculator__operend--left 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
-const operator = document.querySelector('.calculator__operator'); // calculator__operator 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
-const secondOperend = document.querySelector('.calculator__operend--right'); // calculator__operend--right 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
-const calculatedResult = document.querySelector('.calculator__result'); // calculator__result 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+// calculator__buttons 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+const buttons = calculator.querySelector('.calculator__buttons');
+
+// calculator__operend--left 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+const firstOperend = document.querySelector('.calculator__operend--left');
+// calculator__operator 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+const operator = document.querySelector('.calculator__operator');
+// calculator__operend--right 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+const secondOperend = document.querySelector('.calculator__operend--right');
+// calculator__result 엘리먼트와, 그 자식 엘리먼트의 정보를 모두 담고 있습니다.
+const calculatedResult = document.querySelector('.calculator__result');
 
 function calculate(n1, operator, n2) {
   let result = 0;

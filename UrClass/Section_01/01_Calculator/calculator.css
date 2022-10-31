@@ -4,8 +4,6 @@
     border: 0;
     box-sizing: border-box;
 }
-body {
-}
 
 .container {
     border: 2px solid red;
@@ -15,9 +13,8 @@ body {
     align-items: center;
 }
 .calculator {
-    background-image: url("img/codestates_motif.png");
-    border: 6px solid #a29c9f;
-    border-bottom: 10px solid #525050;
+    border: 6px solid #ef7993;
+    border-bottom: 10px solid #d27082;
     border-radius: 25px;
     background-color: #fd96ab;
     width: 360px;
@@ -28,7 +25,7 @@ body {
 }
 
 .calculator__display--for-advanced {
-    /*display: none;*/
+    display: none;
     border: 2px solid;
     border-radius: 10px;
     flex: 1;
@@ -40,7 +37,7 @@ body {
     text-align: right;
 }
 .calculator__display--bare {
-    display: none;
+    /*display: none;*/
     border: 2px solid;
     border-radius: 10px;
     flex: 1;
