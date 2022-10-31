@@ -2,13 +2,17 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8" />
-        <title>계산기 목업_제출용</title>
-        <link rel="stylesheet" href="index_sun_logo.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript Calculator</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Righteous"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./yourStyle.css" />
     </head>
     <body>
         <div class="container">
             <div class="calculator">
-                <div class="calculator__display--for-advanced">0</div>
                 <div class="calculator__display--bare">
                     <span class="calculator__operend--left">0</span>
                     <span class="calculator__operator">+</span>
@@ -16,16 +20,11 @@
                     <span class="calculator__equal">=</span>
                     <span class="calculator__result">0</span>
                 </div>
+                <div class="calculator__display--for-advanced">0</div>
                 <div class="calculator__buttons">
                     <div class="clear__and__enter">
                         <button class="clear">AC</button>
-                        <button class="calculate">=</button>
-                        <span class="sun">
-                            <span class="panel"></span>
-                            <span class="panel"></span>
-                            <span class="panel"></span>
-                            <span class="panel"></span>
-                        </span>
+                        <button class="calculate">Enter</button>
                     </div>
                     <div class="button__row">
                         <button class="number">7</button>
@@ -47,16 +46,16 @@
                     </div>
                     <div class="button__row">
                         <button class="number">0</button>
-                        <button class="number">00</button>
-                        <button class="number">.</button>
+                        <button class="number double">00</button>
+                        <button class="decimal">.</button>
                         <button class="operator">/</button>
                     </div>
                 </div>
                 <div class="logo">
-                    <img src="img/codestates_logo.png" alt="codestates logo" />
+                    <img src="data/codestates-logo.png" alt="codestates logo" />
                 </div>
             </div>
         </div>
-        <script src="../fe-sprint-calculator-main/script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>

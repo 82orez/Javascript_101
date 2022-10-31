@@ -4,6 +4,8 @@
     border: 0;
     box-sizing: border-box;
 }
+body {
+}
 
 .container {
     border: 2px solid red;
@@ -13,8 +15,9 @@
     align-items: center;
 }
 .calculator {
-    border: 6px solid #ef7993;
-    border-bottom: 10px solid #d27082;
+    background-image: url("img/codestates_motif.png");
+    border: 6px solid #a29c9f;
+    border-bottom: 10px solid #525050;
     border-radius: 25px;
     background-color: #fd96ab;
     width: 360px;
@@ -25,7 +28,7 @@
 }
 
 .calculator__display--for-advanced {
-    display: none;
+    /*display: none;*/
     border: 2px solid;
     border-radius: 10px;
     flex: 1;
@@ -37,7 +40,7 @@
     text-align: right;
 }
 .calculator__display--bare {
-    /*display: none;*/
+    display: none;
     border: 2px solid;
     border-radius: 10px;
     flex: 1;
@@ -77,8 +80,9 @@
 }
 .clear__and__enter * {
     flex: 1;
-    background-color: greenyellow;
+    background-color: #bbb549;
     border-radius: 10px;
+    color: #eb4a6d;
     margin: 8px;
     font-size: 20px;
     font-weight: bold;
@@ -93,9 +97,9 @@
     box-shadow: none;
 }
 .panel {
-    border: 1px dotted;
+    border: 1px dotted black;
     background-color: #bbb0b4;
-    border-radius: 0;
+    border-radius: 3px;
     margin: 1px;
     box-shadow: none;
 }
@@ -113,9 +117,9 @@
     box-shadow: 3px 3px 3px;
 }
 .operator {
-    color: white;
-    background-color: black;
-    box-shadow: 3px 3px 3px gray;
+    color: #167dae;
+    background-color: #bbb549;
+    box-shadow: 3px 3px 3px;
 }
 .logo {
     display: flex;
