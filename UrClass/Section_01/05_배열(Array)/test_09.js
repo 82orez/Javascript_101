@@ -1,4 +1,5 @@
 // 문자열을 입력받아 문자열에서 가장 긴 단어를 리턴해야 합니다.
+// 단어 사이는 공백 한 칸이고, 문자열을 반화해야 함.
 
 // let output = getLongestWord('I love codestates');
 // console.log(output); // --> "codestates"

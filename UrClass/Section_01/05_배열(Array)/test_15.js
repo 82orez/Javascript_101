@@ -10,8 +10,7 @@ function getElementsUpTo(arr, n) {
     if (n > arr.length) {
         return [];
     }
-    let result = arr.slice(0, n);
-    return result;
+    return arr.slice(0, n);
 }
 
 console.log(getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3));

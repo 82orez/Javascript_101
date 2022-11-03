@@ -2,7 +2,7 @@
 
 // let output = getLargestElement([1, 4, 3]);
 // console.log(output); // --> 4
-//
+
 // output = getLargestElement([-4, -2, -9]);
 // console.log(output); // --> -2
 

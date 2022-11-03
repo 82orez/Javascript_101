@@ -3,9 +3,9 @@
 // let output = getAllElementsButNth(['a', 'b', 'c'], 1);
 // console.log(output); // --> ['a', 'c']
 
-// splice() 를 써도 됨.
+// ** splice() 를 써도 됨.
 // function getAllElementsButNth(arr, n) {
-//     arr.splice(n,1)
+//     arr.splice(n,1)  // => splice(삽입을 원하는 index, 지우려는 index 갯수, 추가하고자 하는 내용들)
 //     return arr;
 // }
 

@@ -1,4 +1,6 @@
 // 문자열을 입력받아 문자열을 구성하는 각 문자를 요소로 갖는 배열을 리턴.
+// str.split 사용은 금지됩니다. => return str.split('');
+
 // let output = getAllLetters('Radagast');
 // console.log(output); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 

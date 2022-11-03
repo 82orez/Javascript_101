@@ -3,6 +3,8 @@
 // let output = getEvenNumbers([1, 2, 3, 4]);
 // console.log(output); // --> [2, 4]
 
+// 빈 배열을 하나 만들고 조건에 맞는 요소만 push.
+
 function getEvenNumbers(arr) {
     let result = [];
 
