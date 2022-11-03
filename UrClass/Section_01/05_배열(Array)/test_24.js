@@ -26,7 +26,7 @@ function createPhoneNumber(arr) {
     } else {
         head = `(${arr.slice(0, 3).join('')})`;
         body = arr.slice(3, 7).join('');
-        tail = arr.slice(7, 11).join('')
+        tail = arr.slice(7, 11).join('');
         return `${head}${body}-${tail}`;
     }
 }
