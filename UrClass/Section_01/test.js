@@ -1,78 +1,116 @@
-console.log(1+'1');
-console.log(typeof (1 +'1'));
+//--------Destructuring Q1.
 
-console.log(1 + true);
-console.log(typeof (1 + true));
+const array = ['code', 'states', 'im', 'course']
 
-console.log('1' + true);
-console.log(typeof ('1' + true));
+const [first, second] = array
 
-let foo = 1;
+console.log(first);
+console.log(second);
 
-{
-    // foo ++;
-    let foo = 2;
-    console.log(foo);
+// expect(first).to.eql('code')
+// expect(second).to.eql('states')
+
+const result = []
+function foo([first, second]) {
+    result.push(second)
+    result.push(first)
 }
 
-let funcExpressed = 'to be a function';
+foo(array)
 
-console.log(typeof funcExpressed);
-console.log(typeof funcDeclared);
-
-function funcDeclared() {
-    return 'this is a function declaration';
-}
-
-funcExpressed = function () {
-    return 'this is a function expression';
-};
-
-console.log(typeof funcExpressed);
+console.log(result)
+// expect(result).to.eql(['states', 'code'])
 
 
-// ----------------------------
-function defaultParameter(num = 5) {
-    return num;
-}
+//--------Destructuring Q2.
+const array1 = ['code', 'states', 'im', 'course']
+const [start, ...rest] = array1
 
-console.log(defaultParameter());
-console.log(defaultParameter(10));
+console.log(start);
+console.log(rest);
+// expect(start).to.eql('code')
+// expect(rest).to.eql(['states', 'im', 'course'])
 
 
-// ------------------------------
-let age = 27;
-let name = 'jin';
-let height = 179;
+// //--------Destructuring Q3.
+// const name = '김코딩'
+// const age = 28
+//
+// const person = {
+//     name,
+//     age,
+//     level: 'Junior',
+// }
+//
+// console.log(person)
+// // expect(person).to.eql(FILL_ME_IN)
 
-function outerFn() {
-    let age = 24;
-    name = 'jimin';
-    let height = 178;
 
-    function innerFn() {
-        age = 26;
-        let name = 'suga';
-        return height;
-    }
+//--------Destructuring Q4.
+const student = { name: '박해커', major: '물리학과' }
 
-    innerFn();
+const { name } = student
 
-    console.log(age);
-    console.log(name);
-    // expect(age).to.equal(26);
-    // expect(name).to.equal('suga');
-
-    return innerFn;
-}
-
-const innerFn = outerFn();
-
-console.log(age);
 console.log(name);
-console.log(innerFn());
+// expect(name).to.eql('박해커')
 
 
-// expect(age).to.equal(27);
-// expect(name).to.equal('jimin');
-// expect(innerFn()).to.equal(178);
+//--------Destructuring Q5 #1.
+const student1 = { name1: '최초보', major: '물리학과' }
+const { name1, ...args } = student1
+
+console.log(name1);
+console.log(args);
+
+// expect(name1).to.eql('최초보')
+// expect(args).to.eql(FILL_ME_IN)
+
+
+//--------Destructuring Q5 #2.
+const student2 = { name: '최초보', major: '물리학과', lesson: '양자역학', grade: 'B+' }
+
+function getSummary({ name, lesson: course, grade }) {
+    return `${name}님은 ${grade}의 성적으로 ${course}을 수강했습니다`
+}
+
+console.log(getSummary(student2));
+
+
+//--------Destructuring Q5 #3.
+
+const user = {
+    name: '김코딩',
+    company: {
+        name: 'Code States',
+        department: 'Development',
+        role: {
+            name: 'Software Engineer'
+        }
+    },
+    age: 35
+}
+
+const changedUser = {
+    ...user,
+    name: '박해커',
+    age: 20
+}
+
+const overwriteChanges = {
+    name: '박해커',
+    age: 20,
+    ...user
+}
+
+const changedDepartment = {
+    ...user,
+    company: {
+        ...user.company,
+        department: 'Marketing'
+    }
+}
+
+console.log(user);
+console.log(changedUser);
+console.log(overwriteChanges);
+console.log(changedDepartment);
