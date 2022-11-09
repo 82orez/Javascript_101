@@ -8,7 +8,7 @@ describe('Spread syntax 에 대해 학습합니다.', function () {
 
   it('빈 배열에 전개 문법을 사용할 경우, 아무것도 전달되지 않습니다.', function () {
     const spread = [];
-    // TODO: 전개 문법을 사용해 테스트 코드를 완성합니다. spread를 지우지 않고 해결할 수 있습니다.
+    // TODO: 전개 문법을 사용해 테스트 코드를 완성합니다. spread 를 지우지 않고 해결할 수 있습니다.
     const arr = [0, ...spread, 1];
     expect(arr).to.deep.equal([0, 1]);
   });
@@ -39,6 +39,7 @@ describe('Spread syntax 에 대해 학습합니다.', function () {
     // 변수 'merged' 에 할당된 것은 'obj1'과 'obj2'의 value 일까요, reference 일까요?
     // value?
     // 만약 값(value, 데이터)이 복사된 것이라면, shallow copy 일까요, deep copy 일까요?
+    // 얕은 복사
 
     expect(merged).to.deep.equal({
       cohort: 7,
