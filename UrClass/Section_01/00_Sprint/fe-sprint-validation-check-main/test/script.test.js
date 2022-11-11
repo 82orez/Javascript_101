@@ -1,9 +1,9 @@
 const { readFileSync } = require('fs')
 const { JSDOM } = require('jsdom')
 const { expect } = require('chai')
-const { window } = new JSDOM(readFileSync(__dirname + '/../src/index.html').toString())
-const script = readFileSync(__dirname + '/../src/script.js').toString()
-const validator = readFileSync(__dirname + '/../src/validator.js').toString()
+const { window } = new JSDOM(readFileSync(__dirname + '/../Validation/index.html').toString())
+const script = readFileSync(__dirname + '/../Validation/script.js').toString()
+const validator = readFileSync(__dirname + '/../Validation/validator.js').toString()
 const { document, KeyboardEvent, Element } = window;
 global.Element = Element
 require('geteventlisteners');
