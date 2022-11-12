@@ -19,16 +19,35 @@ const convertToDiscussion = (obj) => {
   imageInformation.className = 'discussion__avatar--image';
   imageInformation.setAttribute('src', `${obj.avatarUrl}`);
   imageInformation.setAttribute('alt', `avatar of ${obj.author}`);
+
   avatarWrapper.append(imageInformation);
 
-  const  subject = document.createElement('h2');
-  subject.className = 'discussion__title';
-  const aLink = document.createElement('a');
-  if (obj.answer === null) {
-    subject.textContent = obj.title;
+  // discussionContent
+  const  title = document.createElement('h2');
+  title.className = 'discussion__title';
+
+  if (obj.answer !== null) {
+    const aLink = document.createElement('a');
+    aLink.setAttribute('href',`${obj.answer.url}`);
+    aLink.textContent = obj.title;
+    title.append(aLink);
   } else {
-    aLink.setAttribute('href', `${obj.answer.url}`);
+    title.textContent = obj.title;
   }
+
+  const disInfo = document.createElement('div');
+  disInfo.className = 'discussion__information';
+  disInfo.textContent = `${obj.author} / ${obj.createdAt}`;
+
+  discussionContent.append(title, disInfo);
+
+  // discussionAnswered
+  const checkAnswered = document.createElement('p');
+  if (obj.answer !== null) {
+    checkAnswered.textContent = '☑';
+    discussionAnswered.append(checkAnswered);
+  }
+
 
   li.append(avatarWrapper, discussionContent, discussionAnswered);
   return li;
