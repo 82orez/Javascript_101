@@ -7,7 +7,7 @@
     /*color: #000;*/
 }
 
-.form__input--wrapper {
+#login_wrapper {
     border: 20px solid lightblue;
     padding: 5px 20px;
     position: absolute;
@@ -22,7 +22,14 @@
         justify-content: center;
         align-items: center;
 }
-.form__input--wrapper > div {
+h1 {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.form {
+    width: 300px;
+}
+.form > div {
     display: flex;
     justify-content: center;
     padding-bottom: 7px;
@@ -37,11 +44,10 @@ button {
     float: right;
     padding: 3px;
 }
-
 input {
-    border: 1px solid;
     padding: 5px;
 }
-textarea {
+
+#id, #pwd {
     border: 1px solid;
 }
