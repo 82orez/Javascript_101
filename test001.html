@@ -7,72 +7,25 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
-        <style>
-            main {
-                border: 1px dotted red;
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            div {
-                border: 1px solid green;
-            }
-
-            * {
-                margin: 10px;
-                padding: 10px;
-                box-sizing: border-box;
-            }
-
-            #box1 {
-                flex-grow: 1;
-            }
-
-            #box2 {
-                flex-grow: 1;
-            }
-
-            #box3 {
-                flex-grow: 1;
-            }
-
-            #box4 {
-                flex-grow: 1;
-                flex-basis: 150px;
-            }
-
-            #box5 {
-                flex-grow: 1;
-                flex-basis: 150px;
-            }
-
-            #box6 {
-                flex-grow: 1;
-                flex-basis: 150px;
-            }
-        </style>
+        <link rel='stylesheet' href='test.css'>
+        <title>test</title>
     </head>
     <body>
-    <main>
-        <div>box1</div>
-        <div>box2</div>
-        <div>box3</div>
-        <div>box4</div>
-        <div>box5</div>
-        <div>box6</div>
-    </main>
-
-    <main>
-        <div id="box1" class="box">box1</div>
-        <div id="box2" class="box">box2</div>
-        <div id="box3" class="box">box3</div>
-    </main>
-
-    <main>
-        <div id="box4" class="box">box4</div>
-        <div id="box5" class="box">box5</div>
-        <div id="box6" class="box">box6</div>
-    </main>
+        <div class="form__input--wrapper">
+            <div class="form__input--name">
+                <label for="name">Enter your name: </label>
+                <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form__input--title">
+                <label for="name">Enter your title: </label>
+                <input type="text" name="name" id="title" required />
+            </div>
+            <div class="form__textBox">
+                <label for="story">Your question: </label>
+                <div>
+                    <textarea id="story" name="story" placeholder="질문을 작성하세요" required></textarea>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
