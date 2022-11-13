@@ -28,11 +28,13 @@ li.discussion__container {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    margin: 10px;
+    margin: 15px 0px;
+    border-radius: 20px;
 }
 .discussion__avatar--image {
     width: 48px;
     border-radius: 100%;
+    margin: 0px 10px;
 }
 .discussion__title {
     margin: 10px;
@@ -40,6 +42,7 @@ li.discussion__container {
 .discussion__information {
     margin: 10px;
     text-align: right;
+    color: #829460;
 }
 
 
@@ -60,6 +63,7 @@ h3, a {
     border: 1px solid;
     flex: 3;
     background-color: #ffc2d1;
+    /*height: 200px;*/
 }
 .form__submit {
     flex: 1;
