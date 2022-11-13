@@ -19,6 +19,9 @@ main {
     background-color: #e6eaec;
     width: 800px;
 }
+#myAgora {
+    margin: 30px 0px;
+}
 .discussion__wrapper {
     /*border: 1px solid;*/
     width: 540px;
