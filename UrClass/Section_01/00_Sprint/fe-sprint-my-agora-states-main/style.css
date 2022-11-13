@@ -16,6 +16,7 @@ main {
     display: flex;
         flex-direction: column;
         align-items: center;
+
     background-color: #e6eaec;
     width: 800px;
 }
@@ -28,8 +29,9 @@ main {
 }
 li.discussion__container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+        justify-content: space-between;
+        align-items: center;
+
     background-color: white;
     margin: 15px 0px;
     border-radius: 20px;
@@ -60,8 +62,8 @@ h3, a {
 /* 입력 Section */
 .form {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+        justify-content: space-between;
+        align-items: center;
     width: 540px;
 }
 .form__input--wrapper {
@@ -70,24 +72,38 @@ h3, a {
     border: 1px solid;
     border-radius: 20px;
     background-color: #ffc2d1;
-    /*height: 200px;*/
+    height: 120px;
+    margin-right: 10px;
+
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 }
 .form__submit {
     flex: 1;
 
     border: 1px solid;
+    border-radius: 20px;
     text-align: center;
     background-color: #ffc2d1;
+    height: 120px;
+
+    display: flex;
+        justify-content: center;
 }
 
 .form__input--name {
-    margin: 10px;
+    flex: 1;
+    /*margin: 10px;*/
 }
 .form__input--title {
-    margin: 10px;
+    flex: 1;
+    /*margin: 10px;*/
 }
 .form__textBox {
-    margin: 10px;
+    flex: 2;
+    /*margin: 10px;*/
 }
 
 
@@ -99,5 +115,9 @@ h3, a {
 }
 #story {
     border: 1px solid;
+}
+
+.form__submit > input {
+    background-color: #ffc2d1;
 }
 
