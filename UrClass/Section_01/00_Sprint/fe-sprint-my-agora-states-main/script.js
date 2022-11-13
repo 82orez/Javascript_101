@@ -23,7 +23,7 @@ const convertToDiscussion = (obj) => {
   avatarWrapper.append(imageInformation);
 
   // discussionContent
-  const  title = document.createElement('h2');
+  const  title = document.createElement('h3');
   title.className = 'discussion__title';
 
   if (obj.answer !== null) {
