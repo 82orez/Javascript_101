@@ -65,18 +65,21 @@ h3, a {
     width: 540px;
 }
 .form__input--wrapper {
+    flex: 3;
+
     border: 1px solid;
     border-radius: 20px;
-    flex: 3;
     background-color: #ffc2d1;
     /*height: 200px;*/
 }
 .form__submit {
     flex: 1;
+
     border: 1px solid;
     text-align: center;
     background-color: #ffc2d1;
 }
+
 .form__input--name {
     margin: 10px;
 }
@@ -86,6 +89,7 @@ h3, a {
 .form__textBox {
     margin: 10px;
 }
+
 
 #name {
     border: 1px solid;
