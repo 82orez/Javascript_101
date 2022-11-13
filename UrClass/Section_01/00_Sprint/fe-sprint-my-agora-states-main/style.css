@@ -73,6 +73,9 @@ h3, a {
 }
 .form__submit {
     flex: 1;
+    border: 1px solid;
+    text-align: center;
+    background-color: #ffc2d1;
 }
 .form__input--name {
     margin: 10px;
@@ -93,8 +96,4 @@ h3, a {
 #story {
     border: 1px solid;
 }
-.form__submit {
-    border: 1px solid;
-    text-align: center;
-    background-color: #ffc2d1;
-}
+
