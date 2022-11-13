@@ -67,12 +67,22 @@ h3, a {
 }
 .form__input--wrapper {
     border: 1px solid;
+    border-radius: 20px;
     flex: 3;
     background-color: #ffc2d1;
     /*height: 200px;*/
 }
 .form__submit {
     flex: 1;
+}
+.form__input--name {
+    margin: 10px;
+}
+.form__input--title {
+    margin: 10px;
+}
+.form__textBox {
+    margin: 10px;
 }
 
 #name {
