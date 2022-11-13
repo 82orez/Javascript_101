@@ -42,11 +42,13 @@ const convertToDiscussion = (obj) => {
   discussionContent.append(title, disInfo);
 
   // discussionAnswered
-  const checkAnswered = document.createElement('p');
+  const checkAnswered = document.createElement('h3');
   if (obj.answer !== null) {
     checkAnswered.textContent = '☑';
-    discussionAnswered.append(checkAnswered);
+  } else {
+    checkAnswered.textContent = '□';
   }
+  discussionAnswered.append(checkAnswered);
 
 
   li.append(avatarWrapper, discussionContent, discussionAnswered);
