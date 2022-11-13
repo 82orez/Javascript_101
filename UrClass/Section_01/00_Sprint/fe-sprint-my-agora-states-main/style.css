@@ -47,6 +47,9 @@ li.discussion__container {
     text-align: right;
     color: #829460;
 }
+.discussion__answered {
+    margin: 30px;
+}
 
 
 /* a 링크 밑줄 및 color 없애기 */
