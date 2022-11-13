@@ -6,16 +6,21 @@
     /*font-family: 'Righteous', cursive;*/
     /*color: #000;*/
 }
-
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #login_wrapper {
     border: 20px solid lightblue;
     padding: 5px 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
     width: 450px; height: 250px;
-    margin-left: -220px;
-    margin-top: -170px;
+    /*margin-left: -220px;*/
+    /*margin-top: -170px;*/
 
     display: flex;
         flex-direction: column;
