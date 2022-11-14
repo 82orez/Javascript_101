@@ -72,13 +72,13 @@ form.form {
     flex: 3;
     background-color: #F6F6C9;
     padding: 10px 20px 10px 20px;
-    height: 110px;
+    height: 155px;
     border-radius: 10px;
 }
 .form__submit {
     flex: 1;
     background-color: #F6F6C9;
-    height: 110px;
+    height: 155px;
     border-radius: 10px;
     margin-left: 20px;
 
@@ -90,6 +90,8 @@ form.form {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* 줄 바꿈을 가능하게 */
+    flex-wrap: wrap;
 
     padding-bottom: 7px;
 }
@@ -102,6 +104,16 @@ label {
 
 #name, #title, #story {
     border: 1px solid;
+    border-radius: 5px;
+}
+#name, #title {
+    width: 220px; height: 25px;
+    padding-left: 10px;
+}
+
+#story {
+    width: 400px; height: 50px;
+    padding: 10px;
 }
 
 .form__submit > input {
