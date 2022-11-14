@@ -73,3 +73,10 @@ const submit = document.querySelector('.form__submit');
 const inputName = document.querySelector('#name').value;
 const inputTitle = document.querySelector('#title').value;
 const inputStory = document.querySelector('#story').value;
+
+submit.addEventListener('click', e => {
+  agoraStatesDiscussions.unshift({
+    author: inputName,
+    title: inputTitle,
+  })
+})
