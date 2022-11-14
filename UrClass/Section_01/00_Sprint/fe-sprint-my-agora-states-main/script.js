@@ -1,6 +1,14 @@
 // index.html 을 열어서 agoraStatesDiscussions 배열 요소를 확인하세요.
 console.log(agoraStatesDiscussions);
 
+// LocalStorage 에 ‘agoraData’ key 로 저장된 배열이 없으면 dummy data 를 저장한다.
+if (!localStorage.getItem('localAgoraData')) {
+  localStorage.setItem('localAgoraData', JSON.stringify(agoraStatesDiscussions));
+}
+
+const localAgoraData = JSON.parse(localStorage.getItem('localAgoraData'));
+console.log(localAgoraData);
+
 // convertToDiscussion 은 아고라 스테이츠 데이터를 DOM 으로 바꿔줍니다.
 const convertToDiscussion = (obj) => {
   const li = document.createElement("li"); // li 요소 생성
@@ -57,8 +65,8 @@ const convertToDiscussion = (obj) => {
 
 // agoraStatesDiscussions 배열의 모든 데이터를 화면에 렌더링하는 함수입니다.
 const render = (element) => {
-  for (let i = 0; i < agoraStatesDiscussions.length; i += 1) {
-    element.append(convertToDiscussion(agoraStatesDiscussions[i]));
+  for (let i = 0; i < localAgoraData.length; i += 1) {
+    element.append(convertToDiscussion(localAgoraData[i]));
   }
   return;
 };
@@ -75,7 +83,7 @@ const inputTitle = document.querySelector('#title').value;
 const inputStory = document.querySelector('#story').value;
 
 submit.addEventListener('click', e => {
-  agoraStatesDiscussions.unshift({
+  localAgoraData.unshift({
     author: inputName,
     title: inputTitle,
   })
