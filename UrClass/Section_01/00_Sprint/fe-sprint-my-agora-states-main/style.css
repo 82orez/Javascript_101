@@ -15,6 +15,7 @@ main {
     border: 1px solid red;
     display: flex;
         flex-direction: column;
+        /*justify-content: center;*/
         align-items: center;
 
     background-color: #e6eaec;
@@ -60,60 +61,46 @@ h3, a {
 }
 
 /* 입력 Section */
-.form {
-    display: flex;
-        justify-content: space-between;
-        align-items: center;
+form.form {
     width: 540px;
+
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }
 .form__input--wrapper {
     flex: 3;
-
-    border: 1px solid;
-    border-radius: 20px;
     background-color: #F6F6C9;
-    height: 120px;
-    margin-right: 10px;
-
-    display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    padding: 10px 20px 10px 20px;
+    height: 110px;
+    border-radius: 10px;
 }
 .form__submit {
     flex: 1;
-
-    border: 1px solid;
-    border-radius: 20px;
-    text-align: center;
     background-color: #F6F6C9;
-    height: 120px;
+    height: 110px;
+    border-radius: 10px;
+    margin-left: 20px;
 
     display: flex;
-        justify-content: center;
+    justify-content: center;
+    align-items: center;
 }
+.form__input--wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.form__input--name {
-    /*flex: 1;*/
-    /*margin: 10px;*/
+    padding-bottom: 7px;
 }
-.form__input--title {
-    /*flex: 1;*/
-    /*margin: 10px;*/
-}
-.form__textBox {
-    /*flex: 2;*/
-    /*margin: 10px;*/
+label {
+    flex: 1;
 }
 
 
-#name {
-    border: 1px solid;
-}
-#title {
-    border: 1px solid;
-}
-#story {
+
+
+#name, #title, #story {
     border: 1px solid;
 }
 
