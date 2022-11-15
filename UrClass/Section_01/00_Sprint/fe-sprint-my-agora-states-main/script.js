@@ -91,9 +91,10 @@ const submit = document.querySelector('.form__submit');
 const inputStory = document.querySelector('#story').value;
 
 submit.addEventListener('click', e => {
-const inputName = document.querySelector('#name').value;
-const inputTitle = document.querySelector('#title').value;
-let now = new Date();
+  const inputName = document.querySelector('#name').value;
+  const inputTitle = document.querySelector('#title').value;
+  let now = new Date();
+
   localAgoraData.unshift( {
     id: "D_kwDOHOApLM4APjJi",
     createdAt: now,
