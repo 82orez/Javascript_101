@@ -62,14 +62,12 @@ const convertToDiscussion = (obj) => {
 
   // discussionAnswered
   const checkAnswered = document.createElement('h3');
-  if (obj.answer !== null) {
-    checkAnswered.textContent = '☑';
-  } else {
-    checkAnswered.textContent = '□';
-  }
+  obj.answer !== null ? checkAnswered.textContent = '☑' : checkAnswered.textContent = '□';
+
   discussionAnswered.append(checkAnswered);
 
 
+  // 전체
   li.append(avatarWrapper, discussionContent, discussionAnswered);
   return li;
 };
