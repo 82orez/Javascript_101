@@ -1,12 +1,5 @@
-console.log('hello');
+let now = new Date().toLocaleDateString();
+console.log(now);
 
-const logIn = document.querySelector('#btn_login');
-const userName = document.querySelector('input#id');
-
-// logIn.addEventListener('click', e => {
-//     console.log(userName);
-// })
-
-userName.addEventListener('keyup', e => {
-    console.log(userName.value);
-})
+let now1 = new Date();
+console.log(now1);

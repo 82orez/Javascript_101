@@ -92,9 +92,10 @@ const inputStory = document.querySelector('#story').value;
 submit.addEventListener('click', e => {
 const inputName = document.querySelector('#name').value;
 const inputTitle = document.querySelector('#title').value;
+let now = new Date().toLocaleString();
   localAgoraData.unshift( {
     id: "D_kwDOHOApLM4APjJi",
-    createdAt: "2022-05-16T01:02:17Z",
+    createdAt: now,
     title: inputTitle,
     url: "https://github.com/codestates-seb/agora-states-fe/discussions/45",
     author: inputName,
