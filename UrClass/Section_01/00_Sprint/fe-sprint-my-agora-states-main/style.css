@@ -116,8 +116,13 @@ label {
 }
 
 .form__submit > input {
-    background-color: #F6F6C9;
+    background-color: #F8C4B4;
     height: 155px; width: 80px;
     border-radius: 10px;
+    font-size: 18px;
 }
-
+.form__submit > input:hover {
+    background-color: #FF8787;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
