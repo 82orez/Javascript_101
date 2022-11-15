@@ -1,9 +1,10 @@
 // index.html 을 열어서 agoraStatesDiscussions 배열 요소를 확인하세요.
 console.log(agoraStatesDiscussions);
 
+// 시간 표현 변경
+
+
 // LocalStorage 에 ‘agoraData’ key 로 저장된 배열이 없으면 dummy data 를 저장한다.
-
-
 const saveDataLocalStorage = (obj) => {
   localStorage.setItem('agoraData', JSON.stringify(obj));
   return;
@@ -55,7 +56,7 @@ const convertToDiscussion = (obj) => {
 
   const disInfo = document.createElement('div');
   disInfo.className = 'discussion__information';
-  disInfo.textContent = `${obj.author} / ${obj.createdAt}`;
+  disInfo.textContent = `${obj.author} / ${new Date(obj.createdAt).toLocaleString()}`;
 
   discussionContent.append(title, disInfo);
 
