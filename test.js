@@ -1,8 +1,34 @@
-let now = new Date().toLocaleDateString();
-console.log(now);
 
-let now1 = new Date('2022-05-15T23:57:43Z');
-console.log(now1);
+// if (true) {
+//     var secret = '12345';
+// }
+// console.log(secret);
 
-let now2 = new Date('2022-05-15T23:57:43Z').toLocaleString();
-console.log(now2)
+// console.log(secret);    // ReferenceError 가 아님. hoisting 때문.
+//
+// if (true) {
+//     var secret = '12345';
+// }
+
+//
+// function a() {
+//     var secret = 123;
+// }
+// a();
+// console.log(secret);
+
+// function loop() {
+//     for(let i = 0; i < 5; i++) {
+//         console.log(i);
+//     }
+//     console.log('final',i);
+// }
+// loop();
+
+let greeting = 'hello';
+function greetSomeone() {
+    let firstName = 'Josh'
+    return greeting + ' ' + firstName;
+}
+console.log(greetSomeone());
+console.log(firstName);
