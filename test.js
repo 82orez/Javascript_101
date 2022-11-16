@@ -25,10 +25,16 @@
 // }
 // loop();
 
-let greeting = 'hello';
-function greetSomeone() {
-    let firstName = 'Josh'
-    return greeting + ' ' + firstName;
-}
-console.log(greetSomeone());
-console.log(firstName);
+console.log(a);
+var a;
+
+console.log(b);
+let b;
+
+// let greeting = 'hello';
+// function greetSomeone() {
+//     let firstName = 'Josh'
+//     return greeting + ' ' + firstName;
+// }
+// console.log(greetSomeone());
+// console.log(firstName);
