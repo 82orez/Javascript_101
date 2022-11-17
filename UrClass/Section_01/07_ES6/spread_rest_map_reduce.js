@@ -10,7 +10,9 @@ console.log('Spread', spreadSum(...numbers)); // Array -> String
 
 console.log(Math.max(...numbers));
 
-// 2. rest 문법
+
+
+// 2. rest 문법 (남아 있는 인자들을 배열로 만든다는 느낌)
 // ** 파라미터를 배열의 형태로 받아서 사용할 수 있습니다. 파라미터 개수가 가변적일 때 유용합니다.
 
 function restMap(...theArgs) {
@@ -35,6 +37,8 @@ function sum(...theArgs) {
 console.log('Rest', sum(1, 2, 3));
 console.log('Rest', sum(1, 2, 3, 4));
 
+
+// 초기값을 빈 배열을 준 경우도 가능
 function isOdd(...theArgs) {
     return theArgs.reduce((previousValue, currentValue, currentIndex, array) => {
         previousValue.push(currentValue % 2 ? 'Odd' : 'Even');

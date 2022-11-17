@@ -101,6 +101,7 @@ const students = [
 
 
 // Q9. compute students' average score
+// reduce 는 여러 배열을 가공하여 하나의 값, 문자열, 배열 등으로 나타내 준다.
 {
     const result = students.reduce((previousValue, currentValue, currentIndex, array) => {
         console.log('---------------')
