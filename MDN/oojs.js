@@ -57,31 +57,17 @@ function Person(first, last, age, gender, interests) {
 
 let person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
 
-console.log(person1.valueOf())
+var person2 = Object.create(person1);
 
+console.log(Person.prototype);
+console.log(person1.constructor.name);
+console.log(person2.constructor);
 
+console.log(person1.greeting());
 
+// 생성자(Constructor) 수정.
+Person.prototype.farewell = function() {
+    alert(this.name.first + ' has left the building. Bye for now!');
+};
 
-
-
-// class Human {
-//     constructor(name, age) {
-//         this.name = name;
-//         this.age = age;
-//     }
-//
-//     sleep() {
-//         console.log(`${this.name}은 잠에 들었습니다`);
-//     }
-// }
-//
-// let kimCoding = new Human('김코딩', 30);
-//
-// // Human.prototype.constructor === Human; // 결과는?
-// console.log(Human.prototype.constructor === Human);
-//
-// // Human.prototype === kimCoding.__proto__; //결과는?
-// console.log(Human.prototype === kimCoding.__proto__);
-//
-// // Human.prototype.sleep === kimCoding.sleep; //결과는?
-// console.log(Human.prototype.sleep === kimCoding.sleep);
+console.log(person1.farewell());

@@ -3,7 +3,7 @@ let kim = {
     first: 10,
     second: 20,
     sum: function() {
-        return this.first + this.second ;
+        return `${this.name}'s total score is ${this.first + this.second}!`;
     }
 }
 
