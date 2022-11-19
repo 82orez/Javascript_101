@@ -11,7 +11,7 @@ function Person(name, first, second, third) {
     // }
 }
 
-// 객체 생성시 함수를 객체 밖에서 prototye 을 이용해서 선언하면,
+// 객체 생성시 함수를 객체 밖에서 prototype 을 이용해서 선언하면,
 // 메모리 절약 효과가 있음.
 Person.prototype.sum = function() {
     return this.first + this.second + this.third;

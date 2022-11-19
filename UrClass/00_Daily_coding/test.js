@@ -1,23 +1,31 @@
-function computeWhenDouble(interestRate) {
-    // TODO: 여기에 코드를 작성합니다.
-    let currentMoney = 100;
-    let rate = 1 + interestRate/100;
-    let n = 0;
+// 수를 입력받아 2의 거듭제곱인지 여부를 리턴해야 합니다.
 
-    while (currentMoney < 200) {
-        currentMoney *= rate;
-        n += 1;
+// 반복문(while)문을 사용해야 합니다.
+// 2의 0승은 1입니다.
+// Number.isInteger, Math.log2, Math.log 사용은 금지됩니다.
+
+function powerOfTwo(num) {
+    // TODO: 여기에 코드를 작성합니다.
+    if (num === 1) {
+        return true;
+    } else if (num % 2 === 1) {
+        return false;
+    } else {
+        let i = 2;
+        while (i <= num) {
+            if (num / (2 ** i) === 0) {
+                return true;
+            } else {
+                i++;
+            }
+        }
+        return false;
     }
-    console.log(currentMoney);
-    return n;
 }
 
+let output1 = powerOfTwo();
+console.log(output1); // true
+let output2 = powerOfTwo(22);
+console.log(output2); // false
 
-let output = computeWhenDouble(7);
-console.log(output); // --> 11
-
-output = computeWhenDouble(10);
-console.log(output); // --> 8
-
-output = computeWhenDouble(100);
-console.log(output); // --> 1
+console.log(powerOfTwo( 36028797018963970));
