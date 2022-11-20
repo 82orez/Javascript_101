@@ -2,15 +2,23 @@ let kim = {
     name: 'kim',
     first: 10,
     second: 20,
+<<<<<<< HEAD:JS_Object_Oriented/object_factory.js
     sum: function () {
         return `${this.name}'s total score is ${this.first + this.second}!`;
     },
 };
+=======
+    sum: function() {
+        return `${this.name}'s total score is ${this.first + this.second}!`;
+    }
+}
+>>>>>>> e73aebdbd290837a6ee75c3f8a1de0bc415620d4:JS_Object/object_factory.js
 
 let lee = {
     name: 'lee',
     first: 10,
     second: 30,
+<<<<<<< HEAD:JS_Object_Oriented/object_factory.js
     sum: function () {
         return `${this.name}'s total score is ${this.first + this.second}!`;
     },
@@ -35,10 +43,14 @@ class Person {
         this.second = second;
     }
     sum() {
+=======
+    sum: function() {
+>>>>>>> e73aebdbd290837a6ee75c3f8a1de0bc415620d4:JS_Object/object_factory.js
         return `${this.name}'s total score is ${this.first + this.second}!`;
     }
 }
 
+<<<<<<< HEAD:JS_Object_Oriented/object_factory.js
 // console.log(Person());
 console.log(new Person());
 
@@ -50,3 +62,8 @@ console.log(steve.sum());
 
 console.log(mary);
 console.log(mary.sum());
+=======
+
+console.log(kim.sum());
+console.log(lee.sum());
+>>>>>>> e73aebdbd290837a6ee75c3f8a1de0bc415620d4:JS_Object/object_factory.js
