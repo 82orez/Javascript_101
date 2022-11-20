@@ -2,6 +2,7 @@
 
 // 반복문(while)문을 사용해야 합니다.
 // 2의 0승은 1입니다.
+// n >= 1
 // Number.isInteger, Math.log2, Math.log 사용은 금지됩니다.
 
 function powerOfTwo(num) {
@@ -11,9 +12,9 @@ function powerOfTwo(num) {
     } else if (num % 2 === 1) {
         return false;
     } else {
-        let i = 2;
+        let i = 1;
         while (i <= num) {
-            if (num / (2 ** i) === 0) {
+            if (num / (2 ** i) === 1) {
                 return true;
             } else {
                 i++;
@@ -23,9 +24,14 @@ function powerOfTwo(num) {
     }
 }
 
-let output1 = powerOfTwo();
-console.log(output1); // true
-let output2 = powerOfTwo(22);
-console.log(output2); // false
 
+console.log(powerOfTwo( 2));
+console.log(powerOfTwo( 4));
+console.log(powerOfTwo( 5));
+console.log(powerOfTwo( 6));
+console.log(powerOfTwo( 8));
+console.log(powerOfTwo( 16));
+console.log(powerOfTwo( 22));
 console.log(powerOfTwo( 36028797018963970));
+
+console.log(8/2**3)
