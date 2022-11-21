@@ -18,6 +18,8 @@ let kim = new Person('Kim',10,20,30);
 console.log(kim.sum());
 console.log(kim.multi());
 
+// class 외부에서도 prototype 을 이용하여 class 내부에 메서드를 추가 및 수정 가능.
+// 그리고 아래와 같이 특정 class 만 변경하는 것도 가능.
 kim.sum = function() {
     return this.first + this.second;
 }
