@@ -21,7 +21,6 @@ class Bee extends Grub {
 }
 
 let bee = new Bee();
-
 console.log(bee);
 console.log(bee.age);
 console.log(bee.color);
@@ -68,6 +67,9 @@ class HoneyMakerBee extends Bee {
 }
 
 let honeyMakerBee = new HoneyMakerBee();
-
 console.log(honeyMakerBee);
 console.log(honeyMakerBee.makeHoney());
+
+console.log(HoneyMakerBee.__proto__);
+console.log(HoneyMakerBee.prototype);
+console.log(honeyMakerBee.__proto__);

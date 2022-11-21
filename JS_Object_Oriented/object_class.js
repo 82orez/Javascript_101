@@ -65,6 +65,9 @@ console.log(mary);
 console.log(mary.sum());
 console.log(mary.p_sub());
 
+console.log(mary.__proto__);
+console.log(Person.prototype);
+
 
 
 
