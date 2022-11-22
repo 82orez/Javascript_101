@@ -1,3 +1,5 @@
+// 함수들을 입력받아 함수들이 입력된 차례대로 결합된 새로운 함수를 리턴해야 합니다.
+
 const f1 = function square(num) {
     return num * num;
 }
