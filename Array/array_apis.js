@@ -1,4 +1,4 @@
-// Q1. make a string out of an array
+// ? Q1. make a string out of an array
 {
     const fruits = ['apple', 'banana', 'orange'];
     console.log(fruits.toString());
@@ -6,13 +6,13 @@
 }
 
 
-// Q2. make an array out of a string
+// ? Q2. make an array out of a string
 {
     const fruits = 'apple, banana, orange';
     console.log(fruits.split(',',2));
 }
 
-// Q3. make this array look like this: [5, 4, 3, 2, 1]
+// ? Q3. make this array look like this: [5, 4, 3, 2, 1]
 {
     const array = [1, 2, 3, 4, 5];
     console.log(array.reverse());
@@ -20,7 +20,7 @@
     console.log(array);
 }
 
-// Q4. make new array without the first two elements
+// ? Q4. make new array without the first two elements
 {
     const array = [1, 2, 3, 4, 5];
     // 원본 array 값 자체가 변형됨.
@@ -31,7 +31,7 @@
 }
 
 
-
+//--------------------------------------------------------------
 
 class Student {
     constructor(name, age, enrolled, score) {
@@ -50,7 +50,7 @@ const students = [
     new Student('E', 18, true, 88),
 ];
 
-// Q5. find a student with the score 90
+// ? Q5. find a student with the score 90
 
 {
     const result = students.find((value, index) => {
@@ -59,7 +59,7 @@ const students = [
     console.log(result);
 }
 
-// Q6. make an array of enrolled students
+// ? Q6. make an array of enrolled students
 {
     const result = students.filter((value, index, array) => {
         return value.enrolled === true;
@@ -72,7 +72,7 @@ const students = [
     console.log('filter',result1);
 }
 
-// Q7. make an array containing only the students' scores
+// ? Q7. make an array containing only the students' scores
 // result should be: [45, 80, 90, 66, 88]
 {
     const result = students.map((value, index, array) => {
@@ -81,7 +81,7 @@ const students = [
     console.log('map',result);
 }
 
-// Q8. check if there is a student with the condition
+// ? Q8. check if there is a student with the condition
 {
     const result = students.some((value, index, array) => {
        return value.score > 98;
@@ -95,13 +95,8 @@ const students = [
 }
 
 
-
-// console.clear();
-
-
-
-// Q9. compute students' average score
-// reduce 는 여러 배열을 가공하여 하나의 값, 문자열, 배열 등으로 나타내 준다.
+// ? Q9. compute students' average score
+// * reduce 는 여러 배열을 가공하여 하나의 값, 문자열, 배열 등으로 나타내 준다.(응축 성향)
 {
     const result = students.reduce((previousValue, currentValue, currentIndex, array) => {
         console.log('---------------')
@@ -112,7 +107,7 @@ const students = [
     console.log(result / students.length);
 }
 
-// Q10. make a string containing all the scores
+// ? Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
     const result = students
@@ -122,7 +117,7 @@ const students = [
     console.log(result);
 }
 
-// Bonus! do Q10 sorted in ascending order
+// ? Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
 {
     const result = students.map((value, index, array) => {
