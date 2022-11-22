@@ -1,17 +1,7 @@
-// callback 함수를 인자(매개변수)로 받아서 그 함수를 그대로 실행함.
-function printImmediately(callback) {
-    callback();
-}
-
-function printWithDelay(callback, timeout) {
-    setTimeout(callback, timeout);
-}
-
-// callback 이 먼저 실행되지만 2초 후에 출력.
-printWithDelay(() => console.log("callback"), 2000);
-printImmediately(() => console.log("hello"));
+// * 콜백 지옥의 문제점: 가독성이 매우 떨어지고 이에 따라 디버킹 및 유지보수에 어려움.
 
 class UserStorage {
+    // login 정보를 받아서 callback 함수 onSuccess(로그인 성공시), onError(로그인 실패시)를 호출.
     loginUser(id, pw, onSuccess, onError) {
         setTimeout(() => {
             if(
@@ -23,6 +13,7 @@ class UserStorage {
             }
         }, 2000);
     }
+    // 로그인에 성공하면 사용자 정보를 받아 오고, 성공하면 onSuccess, 실패하면 onError 콜백함수 호출.
     getRoles(user, onSuccess, onError) {
         setTimeout(() => {
             if (user === 'TG') {
@@ -34,26 +25,25 @@ class UserStorage {
     }
 }
 
-
 const userStorage = new UserStorage();
 const id = prompt('Enter your ID: ');
-const pw = prompt('Enter your PW');
+const pw = prompt('Enter your Password:');
 
 userStorage.loginUser(
     id,
     pw,
-    (user) => {
+    user => {
         userStorage.getRoles(
             user,
-            (userWithRole) => {
+            userWithRole => {
                 alert(`Hello ${userWithRole.name}, you have a ${userWithRole.role} role!`);
             },
-            (error) => {
+            error => {
                 console.log(error)
             }
         )
     },
-    (error)=> {
+    error=> {
         console.log(error);
     }
 );
