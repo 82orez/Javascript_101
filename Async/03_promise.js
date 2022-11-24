@@ -50,8 +50,9 @@ const getHen = () =>
 const getEgg = hen =>
     new Promise((resolve, reject) => {
         setTimeout(() => {
-            // resolve(`${hen} -> egg`);
-            reject(new Error('failed'));
+            // ! 에러 발생 여부 조정 가능.
+            resolve(`${hen} -> egg`);
+            // reject(new Error('failed'));
         }, 1000);
     });
 
@@ -64,10 +65,9 @@ const cook = egg =>
 
 getHen()
     .then(hen => getEgg(hen))
-    .catch(error => {
-        return 'bread';
-    })
+    // .catch(error => {
+    //     return 'bread';
+    // })
     .then(egg => cook(egg))
     .then(meal => console.log(meal))
     .catch(error => console.log(error));
-

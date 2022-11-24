@@ -5,10 +5,16 @@ const user1Path = path.join(__dirname, 'files/user1.json');
 const user2Path = path.join(__dirname, 'files/user2.json');
 
 const readAllUsers = () => {
-  // TODO: Promise.all을 이용해 작성합니다
+  // TODO: Promise.all 을 이용해 작성합니다.
+  return Promise.all([getDataFromFilePromise(user1Path), getDataFromFilePromise(user2Path)])
+      .then(dataArr => {
+        return dataArr.map((value) => {
+          return JSON.parse(value);
+        })
+      })
 }
 
-// readAllUsers()
+readAllUsers();
 
 module.exports = {
   readAllUsers

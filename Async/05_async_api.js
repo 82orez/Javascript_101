@@ -49,9 +49,9 @@ function getBanana() {
 }
 getBanana().then((fruit) => console.log(fruit));
 
-// 이중 Delay 발생
+// ? 이중 Delay 발생
 async function getFruit() {
-    const apple = await getApple();  // delay 후에 다음 코드 실행
+    const apple = await getApple();  // ? delay 후에 다음 코드 실행
     const banana = await getBanana();
     return `${apple} + ${banana}`;
 }
@@ -73,7 +73,7 @@ pickFruit().then((fruit) => {console.log(fruit)});
 
 // ? 2) API: all
 function pickFruitsAll() {
-    return Promise.all([getApple(), getBanana()]).then((fruits)=>{return fruits.join('///')});
+    return Promise.all([getApple(), getBanana()]).then((fruits) => {return fruits.join('///')});
 }
 console.log(pickFruitsAll());
 pickFruitsAll().then((fruit) => {console.log(fruit)});

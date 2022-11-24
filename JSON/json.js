@@ -1,6 +1,6 @@
-// JSON: 주로 서버 통신에서 사용되는 데이터 형식
+// * JSON: 주로 서버 통신에서 사용되는 데이터 형식
 
-// 1. Object to JSON: stringify(obj)
+// * 1. Object to JSON: stringify(obj)
 let json = JSON.stringify(true);
 console.log('Bool:', json);
 
@@ -31,7 +31,8 @@ json = JSON.stringify(rabbit, (key, value) => {
 });
 console.log(json);
 
-// 2. JSON to Object: parse(json)
+
+// * 2. JSON to Object: parse(json)
 const obj = JSON.parse(json, (key, value)=>{
     return key ==='birthday' ? new Date(value) : value;
 });

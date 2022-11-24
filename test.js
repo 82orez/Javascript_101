@@ -1,16 +1,18 @@
-// 터미널에 `node index.js`를 입력하여 비동기 코드가 작동하는 순서를 확인해보세요.
-const printString = (string) => {
-    setTimeout(function () {
-        console.log(string);
-    }, Math.floor(Math.random() * 100) + 1);
-};
+function getNewsAndWeatherAll() {
 
-const printAll = () => {
-    printString('A');
-    printString('B');
-    printString('C');
-};
+    let newObj = {};
+    return Promise.all([fetch('http://localhost:4999/data/latestNews'), fetch('http://localhost:4999/data/weather')])
+        .then(dataArrJson => {
+            return dataArrJson.map((value) => {
+                return value.json();
+            })
+        })
+        .then(dataArrObj => {
+                newObj.news = dataArrObj[0];
+                newObj.weather = dataArrObj[1];
+                return newObj;
 
-printAll();
+        })
+}
 
-console.log(`아래와 같이 비동기 코드는 순서를 보장하지 않습니다!`);
+console.log(getNewsAndWeatherAll());
