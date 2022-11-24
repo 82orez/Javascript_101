@@ -1,38 +1,25 @@
-// * 문자열을 입력받아 문자열을 구성하는 각 단어의 첫 글자가 대문자인 문자열을 리턴해야 합니다.
+const posts = [
+    { id: 1, title: "Hello World", content: "Welcome to learning React" },
+    { id: 2, title: "Installation", content: "You can install React from npm" }
+];
 
-// ? 단어는 공백으로 구분합니다.
-// ? 연속된 공백이 존재할 수 있습니다.
-// ? 빈 문자열을 입력받은 경우, 빈 문자열을 리턴해야 합니다.
+export default function App() {
+    // 한 포스트의 정보를 담은 객체 post 를 매개변수로 받고
+    // obj 를 JSX 표현식으로 바꿔 리턴해주는 함수 postToJSX
+    const postToJSX = (post) => {
+        return (
+            <div key={post.id}>
+                <h3>{post.title}</h3>
+                <p>{post.content}</p>
+            </div>
+        );
+    };
 
-function letterCapitalize(str) {
-    // TODO: 여기에 코드를 작성합니다.
-    let result = '';
-
-    if (str.length === 0) {
-        return result;
-    }
-    if (str[0] !== ' ') {
-        result += str[0].toUpperCase();
-    } else {
-        result += str[0];
-    }
-    for (let i = 1; i < str.length; i++) {
-        if (str[i-1] === ' ') {
-            result += str[i].toUpperCase();
-        } else {
-            result += str[i];
-        }
-    }
-    return result;
+    // TODO: postToJSX 함수를 이용하여 에러를 해결하고 여러 개의 엘리먼트롤 표시해보세요.
+    return (
+        <div className="App">
+            <h1>Hello JSX</h1>
+            {posts.map((post) => postToJSX(post))}
+        </div>
+    );
 }
-
-
-let output1 = letterCapitalize('hello world');
-console.log(output1); // "Hello World"
-
-let output2 = letterCapitalize('javascript  is sexy ');
-console.log(output2); // "Javascript  Is Sexy "
-
-let a = 'javascript  is sexy '
-console.log(a.split(' '));
-console.log(a.split(' ')[1].length);
