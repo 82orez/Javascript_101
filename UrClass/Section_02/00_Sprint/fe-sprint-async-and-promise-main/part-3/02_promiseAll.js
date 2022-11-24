@@ -1,16 +1,16 @@
 function getNewsAndWeatherAll() {
+
     return Promise.all([fetch(newsURL), fetch(weatherURL)])
-        .then(([newsRes, weatherRes]) => {
-            return Promise.all([newsRes.json(), weatherRes.json()])
-    })
-        .then(([news, weather]) => {
+        .then(([newRes, weatherRes]) => {
+            // ! 어떻게 JSON 파일을 변환해서 resolve 함수 인자로 넘겨술 것인가?
+            return Promise.all([newRes.json(), weatherRes.json()]);
+        })
+        .then(([newsObj, weatherObj]) => {
             return {
-                news: news.data,
-                weather: weather
+                news: newsObj.data,
+                weather: weatherObj
             }
         })
-
-
 }
 
 
