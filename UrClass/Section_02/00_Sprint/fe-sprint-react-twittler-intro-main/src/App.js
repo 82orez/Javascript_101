@@ -78,8 +78,7 @@ const App = () => {
   return (
     <div className="App">
       <main>
-        {/*TODO : Sidebar 컴포넌트를 작성합니다.*/}
-          <i className="fa-solid fa-tornado"></i>
+        TODO : Sidebar 컴포넌트를 작성합니다.
         <Features />
       </main>
     </div>

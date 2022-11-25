@@ -247,13 +247,6 @@ main {
   padding: 0.5rem;
 }
 
-.fa-tornado {
-  font-size: 5rem;
-  color: var(--default-text-color);
-  padding: 1.3rem;
-  cursor: pointer;
-}
-
 #logo {
   position: absolute;
   left: 12px;
