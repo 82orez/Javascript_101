@@ -126,7 +126,6 @@ main {
   flex-direction: row;
   padding: 0.5rem 1rem;
 }
-
 .tweetForm__profile,
 .notificationBar__icon {
   padding: 0.2rem;
@@ -252,4 +251,17 @@ main {
   left: 12px;
   top: 4px;
   height: 22px;
+}
+
+.tweetForm__container {
+  margin: 0px 0px 10px 10px;
+}
+.tweets {
+  margin: 10px;
+}
+li.tweet {
+  margin: 12px 0;
+}
+footer {
+  margin: 0 0 0 12px;
 }
