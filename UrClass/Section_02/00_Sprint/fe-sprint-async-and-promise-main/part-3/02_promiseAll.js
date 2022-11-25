@@ -26,7 +26,7 @@ function getNewsAndWeatherAll() {
         })
 
 
-    // ? 방법 3.
+    // ! 방법 3. -> Agora states questioning
     // // return Promise.all([fetch('http://localhost:4999/data/latestNews'), fetch('http://localhost:4999/data/weather')])
     // return Promise.all([fetch(newsURL), fetch(weatherURL)])
     //     .then(dataJsonArr => dataJsonArr.map(value => {
