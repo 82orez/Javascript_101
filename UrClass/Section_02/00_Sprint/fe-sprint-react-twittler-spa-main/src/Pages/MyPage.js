@@ -8,7 +8,9 @@ import Footer from '../Footer';
 
 const MyPage = () => {
   // TODO - filter 메소드를 이용하여 username이 kimcoding인 요소만 있는 배열을 filteredTweet에 할당합니다.
-  const filteredTweets = dummyTweets;
+  const filteredTweets = dummyTweets.filter((value, index, array) => {
+    return value.username === 'kimcoding';
+  });
 
   return (
     <section className="myInfo">
@@ -25,6 +27,7 @@ const MyPage = () => {
       </div>
       <ul className="tweets__mypage">
         {/* TODO : dummyTweets중 kimcoding 이 작성한 트윗 메세지만 있어야 합니다. */}
+
         <li className="tweet" key={''}>
           <div className="tweet__profile">
             <img src={''} />
