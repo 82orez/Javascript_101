@@ -8,7 +8,7 @@ console.log(dummyTweets); // 개발 단계에서 사용하는 더미 데이터�
 const Sidebar = () => {
   return (
     <section className="sidebar">
-        <i className = "far fa-comment-dots"></i>
+      <i className="far fa-comment-dots"></i>
     </section>
   );
 };
@@ -18,7 +18,7 @@ const Counter = () => {
     <div className="tweetForm__input">
       <div className="tweetForm__inputWrapper">
         <div className="tweetForm__count" role="status">
-            {`total: ${dummyTweets.length}`}
+          {`total: ${dummyTweets.length}`}
         </div>
       </div>
     </div>
@@ -45,13 +45,17 @@ const Tweets = () => {
             </div>
             <div className="tweet__content">
               <div className="tweet__userInfo">
-                  {/* TODO : 이름이 "parkhacker"인 경우, 이름 배경색을 rgb(235, 229, 249)으로 바꿔야 합니다. */}
-                  {tweet.username === 'parkhacker' ? <span className= 'tweet__username tweet__username--purple'>{tweet.username}</span>
-                          : <span className= 'tweet__username'>{tweet.username}</span>}
+                <span
+                  className={
+                    tweet.username === 'parkhacker' ? 'tweet__username tweet__username--purple' : 'tweet__username'
+                  }
+                >
+                  {tweet.username}
+                </span>
                 {/*<span className= 'tweet__username'>{tweet.username}</span>*/}
-                <span className='tweet__createdAt'>{tweet.createdAt}</span>
+                <span className="tweet__createdAt">{tweet.createdAt}</span>
               </div>
-                <div className='tweet__message'>{tweet.content}</div>
+              <div className="tweet__message">{tweet.content}</div>
             </div>
           </li>
         );
@@ -70,7 +74,6 @@ const Features = () => {
         </div>
       </div>
       <Tweets />
-      {/*TODO : Footer 컴포넌트를 작성합니다. -> completed */}
       <Footer />
     </section>
   );
@@ -80,7 +83,6 @@ const App = () => {
   return (
     <div className="App">
       <main>
-        {/*TODO : Sidebar 컴포넌트를 작성합니다.*/}
         <Sidebar />
         <Features />
       </main>
