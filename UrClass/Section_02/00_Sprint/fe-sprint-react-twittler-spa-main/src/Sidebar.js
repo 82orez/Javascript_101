@@ -1,5 +1,5 @@
 import React from 'react';
-// TODO - import문을 이용하여 react-router-dom 라이브러리의 Link 컴포넌트를 불러옵니다.
+// TODO - import 문을 이용하여 react-router-dom 라이브러리의 Link 컴포넌트를 불러옵니다.
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {

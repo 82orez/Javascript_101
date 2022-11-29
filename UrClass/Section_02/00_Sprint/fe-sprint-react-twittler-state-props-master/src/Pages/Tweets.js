@@ -7,6 +7,8 @@ import dummyTweets from '../static/dummyData';
 
 const Tweets = () => {
   // TODO : 새로 트윗을 작성하고 전송할 수 있게 useState 를 적절히 활용하세요.
+  const [isClicked, setIsClicked] = useState('');
+  const [msg, setMsg] = useState('');
 
   const handleButtonClick = (event) => {
     const tweet = {};
