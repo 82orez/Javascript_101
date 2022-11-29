@@ -57,7 +57,22 @@ const Tweets = () => {
       <div className="tweet__selectUser"></div>
       <ul className="tweets">
         {/* TODO : 하나의 트윗이 아니라, 주어진 트윗 목록(dummyTweets) 갯수에 맞게 보여줘야 합니다. */}
-        <Tweet tweet={dummyTweets[0]} />
+        {dummyTweets.map((tweet) => {
+          return (
+            <li className="tweet" key={tweet.id}>
+              <div className="tweet__profile">
+                <img src={tweet.picture} />
+              </div>
+              <div className="tweet__content">
+                <div className="tweet__userInfo">
+                  <span className="tweet__username">{tweet.username}</span>
+                  <span className="tweet__createdAt">{tweet.createdAt}</span>
+                </div>
+                <div className="tweet__message">{tweet.content}</div>
+              </div>
+            </li>
+          )
+        })}
       </ul>
       <Footer />
     </React.Fragment>
