@@ -1,12 +1,12 @@
-// TODO : useState를 react로 부터 import 합니다.
-import React, { /* TODO */ } from 'react';
+// TODO : useState 를 react 로 부터 import 합니다.
+import React, { useState } from 'react';
 import Footer from '../Footer';
 import Tweet from '../Components/Tweet';
 import './Tweets.css';
 import dummyTweets from '../static/dummyData';
 
 const Tweets = () => {
-  // TODO : 새로 트윗을 작성하고 전송할 수 있게 useState를 적절히 활용하세요.
+  // TODO : 새로 트윗을 작성하고 전송할 수 있게 useState 를 적절히 활용하세요.
 
   const handleButtonClick = (event) => {
     const tweet = {};
@@ -42,8 +42,8 @@ const Tweets = () => {
               </div>
               <div className="tweetForm__count" role="status">
                 <span className="tweetForm__count__text">
-                  {/* TODO : 트윗 총 개수를 보여줄 수 있는 Counter를 작성하세요. */}
-                  {'total: '}
+                  {/* TODO : 트윗 총 개수를 보여줄 수 있는 Counter 를 작성하세요. */}
+                  {'total: ' + dummyTweets.length}
                 </span>
               </div>
             </div>
