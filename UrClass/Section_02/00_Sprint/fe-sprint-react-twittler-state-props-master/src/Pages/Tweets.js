@@ -54,8 +54,10 @@ const Tweets = () => {
               </div>
             </div>
             <div className="tweetForm__submit">
-              <div className="tweetForm__submitIcon"></div>
+              <div className="tweetForm__submitIcon">
               {/* TODO : 작성한 트윗을 전송할 수 있는 button 엘리먼트를 작성하세요. */}
+                <button className={"tweetForm__submitButton"} onClick={handleButtonClick}>Submit</button>
+              </div>
             </div>
           </div>
         </div>
