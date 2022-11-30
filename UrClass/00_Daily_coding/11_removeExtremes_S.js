@@ -37,6 +37,7 @@ function removeExtremes(arr) {
   return result;
 }
 
+// ! 배열값이 아닌 index 를 저장하고 비교하여 출력하는게 point.
 
 let output = removeExtremes(['a', 'b', 'c', 'def']);
 console.log(output); // --> ['a', 'b']
