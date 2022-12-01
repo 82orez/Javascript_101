@@ -27,7 +27,7 @@ function CheckboxExample() {
       <input type={'checkbox'} checked={isChecked} onChange={handleChecked} />
       <span>{isChecked ? 'Checked!!' : 'Unchecked'}</span><br/>
 
-      <input type={'text'} value={name} onChange={handleChange}/>
+      <input type={'text'} placeholder={'Please name!'} onChange={handleChange}/>
       <button onClick={() => alert(name)}>Button</button>
       <h1>{name}</h1><br/>
 

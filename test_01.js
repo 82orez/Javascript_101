@@ -1,4 +1,8 @@
-let a = new Date();
+const a = {
+  username: '',
+  msg: ''
+}
 
-console.log(a.toLocaleString());
-console.log(typeof a);
+const b = {...a, username: 'TG'};
+
+console.log(b);

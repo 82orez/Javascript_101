@@ -35,7 +35,7 @@ const Tweets = () => {
         updatedAt: (new Date()).toDateString(),
       };
 
-      const newData = [tweet, ...data];
+      const newData = [tweet, ...data] ;
       setData(newData);
 
       setName('');
