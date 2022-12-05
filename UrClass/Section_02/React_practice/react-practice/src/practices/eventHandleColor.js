@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-const Say = () => {
+const EventHandleColor = () => {
   const [message, setMessage] = useState('Please press a button!');
+  const [color, setColor] = useState('black');
+
   const onClickEnter = () => {
     return setMessage('Hello');
   };
   const onclickLeave = () => {
     setMessage('Good bye');
   };
-
-  const [color, setColor] = useState('black');
 
   return (
     <div>
@@ -46,4 +46,4 @@ const Say = () => {
   );
 };
 
-export default Say;
+export default EventHandleColor;

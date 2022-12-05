@@ -4,7 +4,7 @@ const MapSample = () => {
   const names = ['snowman', 'ice', 'snow', 'wind'];
 
   const nameList = names.map((value, index, array) => {
-    return <li>{value}</li>;
+    return <li key={index}>{value}</li>;
   });
 
   return <ul>{nameList}</ul>;
