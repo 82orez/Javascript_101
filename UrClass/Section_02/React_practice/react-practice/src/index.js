@@ -11,6 +11,8 @@ import EventHandlePractice from './practices/eventHandlePractice';
 import EventHandleManyStates from './practices/eventHandleManyStates';
 import MapSample from './practices/MapSample';
 import MapSampleAdvanced from './practices/MapSampleAdvanced';
+import ParentComponent from './Lifting-State-Up/LiftingStateUp';
+import Twittler from './Lifting-State-Up/twittler/Twittler';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +25,9 @@ root.render(
     {/*<EventHandlePractice />*/}
     {/*<EventHandleManyStates />*/}
     {/*<MapSample />*/}
-    <MapSampleAdvanced />
+    {/*<MapSampleAdvanced />*/}
+    {/*<ParentComponent />*/}
+    <Twittler />
   </React.StrictMode>
 );
 
