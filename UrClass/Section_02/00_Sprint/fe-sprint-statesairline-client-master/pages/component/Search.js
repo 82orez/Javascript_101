@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Search() {
+function Search(props) {
   const [textDestination, setTextDestination] = useState('');
 
   const handleChange = (e) => {
@@ -16,7 +16,8 @@ function Search() {
   const handleSearchClick = () => {
     console.log('검색 버튼을 누르거나, 엔터를 치면 search 함수가 실행됩니다');
 
-    // TODO: 지시에 따라 상위 컴포넌트에서 props를 받아서 실행시켜 보세요.
+    // TODO: 지시에 따라 상위 컴포넌트에서 props 를 받아서 실행시켜 보세요.
+      props.onSearch({departure : "ICN", destination : textDestination});
   };
 
   return (
