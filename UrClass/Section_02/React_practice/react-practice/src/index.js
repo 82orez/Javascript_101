@@ -14,23 +14,27 @@ import MapSampleAdvanced from './practices/MapSampleAdvanced';
 import ParentComponent from './Lifting-State-Up/LiftingStateUp';
 import Twittler from './Lifting-State-Up/twittler/Twittler';
 import UseEffectCounter from './Hook/useEffectCounter';
+import Info from './Hook/useEffectUM/UseEffectInfo';
+import UseEffectUM from './Hook/useEffectUM/UseEffectUM';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    {/*<App />*/}
-    {/*<InsteadOfIf />*/}
-    {/*<ClassComponentState />*/}
-    {/*<EventHandleColor />*/}
-    {/*<CheckboxExample />*/}
-    {/*<EventHandlePractice />*/}
-    {/*<EventHandleManyStates />*/}
-    {/*<MapSample />*/}
-    {/*<MapSampleAdvanced />*/}
-    {/*<ParentComponent />*/}
-    {/*<Twittler />*/}
-    <UseEffectCounter />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  //   <InsteadOfIf />
+  //   <ClassComponentState />
+  //   <EventHandleColor />
+  //   <CheckboxExample />
+  //   <EventHandlePractice />
+  //   <EventHandleManyStates />
+  //   <MapSample />
+  //   <MapSampleAdvanced />
+  //   <ParentComponent />
+  //   <Twittler />
+  //   <UseEffectCounter />
+  //   <Info />
+  <UseEffectUM />
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
