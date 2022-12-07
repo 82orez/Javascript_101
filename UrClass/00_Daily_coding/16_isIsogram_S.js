@@ -10,12 +10,13 @@ function isIsogram(str) {
   let result = {};
 
   for (let i = 0; i < arr.length; i++) {
-    // console.log('실행합니다.')
+    // 빈 문자열이 들어올 때는 반복문 실행 안함.
     if (result[arr[i]]) {
       return false;
     }
     result[arr[i]] = true;
   }
+
   return true;
 }
 
