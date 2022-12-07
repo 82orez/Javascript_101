@@ -13,6 +13,7 @@ import MapSample from './practices/MapSample';
 import MapSampleAdvanced from './practices/MapSampleAdvanced';
 import ParentComponent from './Lifting-State-Up/LiftingStateUp';
 import Twittler from './Lifting-State-Up/twittler/Twittler';
+import UseEffectCounter from './Hook/useEffectCounter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,7 +28,8 @@ root.render(
     {/*<MapSample />*/}
     {/*<MapSampleAdvanced />*/}
     {/*<ParentComponent />*/}
-    <Twittler />
+    {/*<Twittler />*/}
+    <UseEffectCounter />
   </React.StrictMode>
 );
 
