@@ -3,8 +3,7 @@ function LoadingIndicator() {
     <img
       className="loading-indicator"
       alt="now loading..."
-      // ? 경로 변경
-      src="../../public/loading.gif"
+      src="loading.gif"
       style={{ margin: '1rem' }}
     />
   );
