@@ -20,14 +20,11 @@ export default function Main() {
 
   // 주어진 검색 키워드에 따라 condition 상태를 변경시켜주는 함수
   const search = ({ departure, destination }) => {
-    if (
-      condition.departure !== departure ||
-      condition.destination !== destination
-    ) {
+    if (condition.departure !== departure || condition.destination !== destination) {
       console.log('condition 상태를 변경시킵니다');
 
       // TODO: search 함수가 전달 받아온 '항공편 검색 조건' 인자를 condition 상태에 적절하게 담아보세요.-> Done.
-      setCondition({departure, destination});
+      setCondition({ departure, destination });
     }
   };
 
@@ -56,10 +53,20 @@ export default function Main() {
 
   useEffect(() => {
     setIsLoading(true);
-    getFlight(condition).then((filteredFlightList) => {
-      setFlightList(filteredFlightList)});
+    getFlight(condition).then((filteredList) => {
+      setFlightList(filteredList);
       setIsLoading(false);
+    })
   }, [condition]);
+
+
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   getFlight(condition).then((filteredFlightList) => {
+  //     setFlightList(filteredFlightList);
+  //     setIsLoading(false);
+  //   });
+  // }, [condition]);
 
   // TODO: 테스트 케이스의 지시에 따라 search 함수를 Search 컴포넌트로 내려주세요.-> Done.
   return (
@@ -81,8 +88,8 @@ export default function Main() {
             <div className="col">도착 시각</div>
             <div className="col"></div>
           </div>
-          {/*<FlightList list={flightList.filter(filterByCondition)} />*/}
-          <FlightList list={flightList} />
+          {/*<FlightList list={flightList} />*/}
+          {isLoading ? <LoadingIndicator /> : <FlightList list={flightList} />}
         </div>
 
         <div className="debug-area">
