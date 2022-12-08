@@ -15,17 +15,18 @@ const server = http.createServer((request, response) => {
     })
     .on('end', () => {
       body = Buffer.concat(body).toString();
-      // 여기서 `body`에 전체 요청 바디가 문자열로 담겨있습니다.
+      // * 여기서 `body`에 전체 요청 바디가 문자열로 담겨있습니다.
+      //  * 공식 문서 '지금까지 살펴본 내용'
+
+      // * method 와 url 에 따라 분기.
+      // ? CORS 관련 헤더를 OPTIONS 응답에 적용해야 합니다.
+      //   클라이언트의 preflight request 에 대한 응답을 돌려줘야 합니다.
+      //   preflight request 에 대한 응답 헤더는 이미 작성되어 있습니다.
+
+      // ? 만약에 메소드가 포스트이고 url 이 upper 이면 대문자를 리턴.
+      // ? 만약에 메소드가 포스트이고 url 이 lower 이면 소문자를 리턴.
+      // ? 나머지는 error 처리. bad request.
     });
-
-  // * method 와 url 에 따라 분기.
-  // ? CORS 관련 헤더를 OPTIONS 응답에 적용해야 합니다.
-  //   클라이언트의 preflight request 에 대한 응답을 돌려줘야 합니다.
-  //   preflight request 에 대한 응답 헤더는 이미 작성되어 있습니다.
-
-  // ? 만약에 메소드가 포스트이고 url 이 upper 이면 대문자를 리턴.
-  // ? 만약에 메소드가 포스트이고 url 이 lower 이면 소문자를 리턴.
-  // ? 나머지는 error 처리. bad request.
 
   console.log(`http request method is ${request.method}, url is ${request.url}`);
   response.writeHead(200, defaultCorsHeader);
