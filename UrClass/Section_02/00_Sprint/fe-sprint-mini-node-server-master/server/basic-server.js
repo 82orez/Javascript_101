@@ -26,16 +26,16 @@ const server = http.createServer((request, response) => {
       // ? 만약에 메소드가 포스트이고 url 이 upper 이면 대문자를 리턴.
       // ? 만약에 메소드가 포스트이고 url 이 lower 이면 소문자를 리턴.
       // ? 나머지는 error 처리. bad request.
-      if(request.method === 'POST' && request.url === '/upper'){
+      if(request.method === 'OPTIONS'){
+        response.writeHead(200, defaultCorsHeader)
+        response.end()
+      } else if(request.method === 'POST' && request.url === '/upper'){
         response.writeHead(200, defaultCorsHeader)
         response.end(body.toUpperCase())
       }else if(request.method === 'POST' && request.url === '/lower'){
         response.writeHead(200, defaultCorsHeader)
         response.end(body.toLowerCase())
-      }else if(request.method === 'OPTIONS'){
-        response.writeHead(200, defaultCorsHeader)
-        response.end()
-      }else{
+      } else{
         response.writeHead(404, defaultCorsHeader)
         response.end('잘못된 요청')
       }
