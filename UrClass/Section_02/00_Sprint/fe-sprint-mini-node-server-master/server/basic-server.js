@@ -19,6 +19,10 @@ const server = http.createServer((request, response) => {
     });
 
   // * method 와 url 에 따라 분기.
+  // ? CORS 관련 헤더를 OPTIONS 응답에 적용해야 합니다.
+  //   클라이언트의 preflight request 에 대한 응답을 돌려줘야 합니다.
+  //   preflight request 에 대한 응답 헤더는 이미 작성되어 있습니다.
+
   // ? 만약에 메소드가 포스트이고 url 이 upper 이면 대문자를 리턴.
   // ? 만약에 메소드가 포스트이고 url 이 lower 이면 소문자를 리턴.
   // ? 나머지는 error 처리. bad request.
