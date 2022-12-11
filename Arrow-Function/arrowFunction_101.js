@@ -17,7 +17,7 @@ func({key1: 1, key2:2}, {key1: 3, key2:4});
 // }
 // arrowFunction1(1, 2, 3, 4);
 
-
+// * arguments 를 얻고 싶으면 다음과 같이 처리해야함.
 const arrowFunction2 = (...args) => {
   console.log(args);
 }

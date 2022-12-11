@@ -1,8 +1,9 @@
 const express = require('express')
+const app = express();
 const cors = require('cors')
 
-const app = express(); //express 사용
 app.use(cors()); // 모든 요청/응답에 CORS 처리
+
 app.use(express.json({strict: false})) // 자동 바디 파싱
 
 const PORT = 4999;
