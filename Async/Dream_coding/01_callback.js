@@ -1,4 +1,4 @@
-// Javascript 는 hoisting 이 된 후에는 synchronous 하게 실행됨.
+// * Javascript 는 hoisting 이 된 후에는 synchronous(차례대로) 하게 실행됨.
 
 console.log(1);
 console.log(2);
@@ -9,16 +9,17 @@ setTimeout(() => console.log(2), 1000);
 console.log(3);
 // --------------------------------------------
 
-// callback 함수를 인자(매개변수)로 받아서 그 함수를 즉시 실행함.
+// * callback 함수를 인자(매개변수)로 받아서 그 함수를 즉시 실행함.
 function printImmediately(callback) {
     callback();
 }
-// callback 함수와 시간을 인자(매개변수)로 받아서 그 함수를 특정 시간 후에 실행함.
+
+// * callback 함수와 시간을 인자(매개변수)로 받아서 그 함수를 특정 시간 후에 실행함.
 function printWithDelay(callback, timeout) {
     setTimeout(callback, timeout);
 }
 
-// 'callback' 이 먼저 실행되지만 2초 후 나중에 출력.
+// * 'callback' 이 먼저 실행되지만 2초 후 나중에 출력.
 printWithDelay(() => console.log("hello first"), 2000);
 printImmediately(() => console.log("hello later"));
 

@@ -1,5 +1,5 @@
-// * 비동기 함수의 동기 처리.
-// * Call-back hell.
+// * 비동기 함수들을 동기화 하기 위해서 callback 함수를 쓴 모습.
+// * 이런 경우 자칫 Call-back hell 에 빠지기 쉽다.
 
 setTimeout(() => {
   setTimeout(() => {
