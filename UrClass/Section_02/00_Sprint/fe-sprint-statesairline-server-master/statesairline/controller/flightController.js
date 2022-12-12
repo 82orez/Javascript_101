@@ -44,7 +44,7 @@ module.exports = {
   findById: (req, res) => {
     const { uuid } = req.params;
     // * TODO:
-
+    // * 위와 같은 방식으로.
     let filteredList = flights;
 
     if (uuid) {
@@ -61,6 +61,17 @@ module.exports = {
   update: (req, res) => {
     const { uuid } = req.params;
     const bodyData = req.body;
-     // * TODO:
+    const beUpdatedIdx = flights.findIndex(flight => flight.uuid === uuid);
+    const updatedFlight = { ...flights[beUpdatedIdx], ...bodyData }; //최종적으로 업데이트된 flight
+    flights.splice(beUpdatedIdx, 1, updatedFlight);
+
+    /* 파일 수정 */
+    // const jsonData = JSON.stringify(flights);
+    // fs.writeFileSync(
+    //   `${__dirname}/../repository/flightList.js`,
+    //   `module.exports = ${jsonData}`
+    // );
+
+    return res.status(200).json(updatedFlight);
   }
 };
