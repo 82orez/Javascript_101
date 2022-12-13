@@ -1,22 +1,35 @@
-// index.html 을 열어서 agoraStatesDiscussions 배열 요소를 확인하세요.
-console.log(agoraStatesDiscussions);
+// ! 로컬 스토리지에서 Data 받아오는 코드.
+// // index.html 을 열어서 agoraStatesDiscussions 배열 요소를 확인하세요.
+// console.log(agoraStatesDiscussions);
+//
+//
+// // LocalStorage 에 ‘agoraData’ key 로 저장된 배열이 없으면 dummy data 를 저장한다.
+// const saveDataLocalStorage = (obj) => {
+//   localStorage.setItem('agoraData', JSON.stringify(obj));
+//   return;
+// }
+//
+// if (!localStorage.getItem('agoraData')) {
+//   saveDataLocalStorage(agoraStatesDiscussions);
+// }
+//
+// const getDataLocalStorage = (name) => {
+//   return JSON.parse(localStorage.getItem(name));
+// }
+// !
 
+// ? 아고라 스테이츠 서버에서 Data 를 받아옴.
+let localAgoraData;
 
-// LocalStorage 에 ‘agoraData’ key 로 저장된 배열이 없으면 dummy data 를 저장한다.
-const saveDataLocalStorage = (obj) => {
-  localStorage.setItem('agoraData', JSON.stringify(obj));
-  return;
-}
+fetch("http://localhost:4000/discussions/")
+    .then(response => response.json())
+    .then(result => {
+      localAgoraData = result;
+      const ul = document.querySelector("ul.discussions__container");
+      render(ul); //화면에 dom elements 를 render 해주는 함수를 위에서 구현했었다.
+    });
+// ?
 
-if (!localStorage.getItem('agoraData')) {
-  saveDataLocalStorage(agoraStatesDiscussions);
-}
-
-const getDataLocalStorage = (name) => {
-  return JSON.parse(localStorage.getItem(name));
-}
-
-let localAgoraData = getDataLocalStorage('agoraData');
 
 // convertToDiscussion 은 아고라 스테이츠 데이터를 DOM 으로 바꿔줍니다.
 const convertToDiscussion = (obj) => {
