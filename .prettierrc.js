@@ -3,7 +3,7 @@ module.exports = {
     endOfLine: 'crlf',
     semi: true,
     useTabs: false,
-    tabWidth: 4,
+    tabWidth: 2,
     trailingComma: 'all',
     printWidth: 120,
 };
