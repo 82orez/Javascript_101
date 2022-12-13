@@ -16,6 +16,8 @@
 // const getDataLocalStorage = (name) => {
 //   return JSON.parse(localStorage.getItem(name));
 // }
+//
+// let localAgoraData = getDataLocalStorage('agoraData');
 // !
 
 // ? 아고라 스테이츠 서버에서 Data 를 받아옴.

@@ -15,10 +15,11 @@ const discussionsController = {
     let filteredList;
 
     if (id) {
-      let filteredList = discussionsData.find((value) => {
+      filteredList = discussionsData.find((value) => {
         return value.id === Number(id);
       });
 
+      // ? id 가 일치하는 것이 있으면 조건문 실행.
       if (filteredList) {
         return res.status(200).json(filteredList);
       } else {
