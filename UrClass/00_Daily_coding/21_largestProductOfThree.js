@@ -5,17 +5,18 @@
 // ? 배열의 길이는 3 이상입니다.
 
 const largestProductOfThree = function (arr) {
-    const sorted = arr.slice().sort((a, b) => a - b);
-    const len = arr.length;
+    // TODO: 여기에 코드를 작성합니다.
+    let multi = [];
 
-    // * 이건 이해됨. 오름차순으로 정렬시켰으니 가장 큰 수 3개를 곱하는거니까.
-    const candi1 = sorted[len - 1] * sorted[len - 2] * sorted[len - 3];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                multi.push(arr[i] * arr[j] * arr[k]);
+            }
+        }
+    }
 
-    // * 그런데 아래 라인의 논리 구조가 이해 안됨.
-    // * 음수를 포함한 구조 같은데...
-    const candi2 = sorted[len - 1] * sorted[0] * sorted[1];
-
-    return Math.max(candi1, candi2);
+    return Math.max(...multi);
 };
 
 let output = largestProductOfThree([2, 1, 3, 7]);

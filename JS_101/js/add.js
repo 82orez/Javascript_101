@@ -1,4 +1,4 @@
 function addNumber(a,b) {
-    sum = a + b;
+    arrSumFor = a + b;
     alert(sum);
 }
