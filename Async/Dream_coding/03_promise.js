@@ -9,15 +9,17 @@
 const promise = new Promise((resolve, reject) => {
     console.log("doing something");
     setTimeout(() => {
+        // * promise 호출이 성공하면 resolve를 넘기는데 그것이 문자열 TG.
         resolve('TG');
         // reject(new Error("No network"));
     }, 2000);
 });
+console.log(promise);
 
 // * 2. Consumers: then(resolve), catch(reject), finally(always)
 promise
     .then(value => {
-        console.log(value);
+        console.log('then', value);
     })
     .catch(error => {
         console.log(error);

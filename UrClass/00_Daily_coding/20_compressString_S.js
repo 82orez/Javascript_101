@@ -26,5 +26,8 @@ function compressString(str) {
     return result;
 }
 
+let output = compressString('abc');
+console.log(output); // --> abc
+
 output = compressString('wwwggoppopppp');
 console.log(output); // --> 3wggoppo4p
