@@ -174,6 +174,39 @@ const root = document.getElementById('root');
 function createTreeView(menu, currentNode) {
   // TODO: createTreeView 함수를 작성하세요.
 
+  // * ul#root 엘리먼트 안에 카테고리(음료, 음식, 굿즈, 카드)를 렌더링할 4개의 li 엘리먼트가 있어야 합니다
+  for (let i = 0; i < menu.length; i++) {
+    const li = document.createElement('li');
+
+    // * 자식이 있으면
+    // * 카테고리(음료, 음식, 굿즈, 카드) 엘리먼트 안에는
+    // * 각각 자식 노드를 보여주고 감춰줄 checkbox 가 존재해야 합니다.
+    if (menu[i].children) {
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+
+      // * 음료, 음식, 굿즈, 카드 카테고리 이름(name)을 span 태그로 감싸야 합니다.
+      const span = document.createElement('span');
+      span.textContent = menu[i].name;
+
+      // * 자식 노드가 있는 데이터의 경우,
+      // * li 엘리먼트 아래에 자식 노드를 렌더링할 새로운 ul 이 존재해야 합니다.
+      const ul = document.createElement('ul');
+
+      // * 위에서 만들어 놓았던 것들을 li에 넣어준 뒤 root 에 넣어 줍니다.
+      li.append(input, span, ul);
+      currentNode.append(li);
+
+      // ! 재귀함수를 이용해서 자식노드를 만들어 줘야 합니다.
+      // * 두번째로 돌아갈 때 각 요소의 자식으로 들어가야 하고
+      // * 현재 노드는 ul 이기 때문에 매개변수로 적어주면 된다
+      createTreeView(menu[i].children, ul);
+    } else {
+      // * 자식이 없을 때는 이름만 표시합니다.
+      li.textContent = menu[i].name;
+      currentNode.append(li);
+    }
+  }
 }
 
 createTreeView(menu, root);
