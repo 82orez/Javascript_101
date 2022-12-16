@@ -84,10 +84,14 @@ if (typeof window === 'undefined') {
 // console.log(stringifyJSON(9));
 // console.log(stringifyJSON([8]));
 // console.log(stringifyJSON(["hi"]));
-console.log(stringifyJSON([1, [8, 'hi']]));
+// console.log(stringifyJSON(["hi"]));
+// console.log(stringifyJSON([1, [8, 'hi']]));
 
-let empty = [];
-empty.push(7);
-empty.push(8);
+console.log(stringifyJSON([{ a: "b" }, { c: "d" }]));
+console.log(stringifyJSON({ a: ["b", "c"] }));
 
-console.log(empty);
+// let empty = [];
+// empty.push(7);
+// empty.push(8);
+//
+// console.log(empty);
