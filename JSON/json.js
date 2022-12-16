@@ -1,6 +1,14 @@
 // * JSON: 주로 서버 통신에서 사용되는 데이터 형식
 
 // * 1. Object to JSON: stringify(obj)
+// * JSON.stringfy 함수는 input 값을 JSON 형식으로 변환합니다.
+
+// ! 단, undefined 와 function 은 JSON 으로 생략되거나 null 로 변환됩니다.
+// ? undefined, function 이 주어졌을 경우
+// ? stringifyJSON(undefined)            // undefined
+// ? stringifyJSON(function(){})         // undefined
+// ? stringifyJSON({ x: undefined, y: function(){} })       // '{}'
+
 let json = JSON.stringify(true);
 console.log('Bool:', json);
 

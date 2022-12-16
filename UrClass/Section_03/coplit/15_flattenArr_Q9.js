@@ -37,6 +37,7 @@ function flattenArr(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
       const flat = flattenArr(arr[i]);
+      // * 배열을 풀어주기 위해 전개연산자 이용하고 새 배열에 push.
       result.push(...flat);
     } else {
       result.push(arr[i]);
