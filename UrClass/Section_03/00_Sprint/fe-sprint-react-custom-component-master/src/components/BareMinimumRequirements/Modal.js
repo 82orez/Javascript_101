@@ -3,11 +3,23 @@ import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
   // TODO : Modal 을 구현하는데 전체적으로 필요한 CSS 를 구현합니다.
-  
+  display: flex;
+  justify-content : center;
+  align-items: center;
+  height : 300px;
 `;
 
 export const ModalBackdrop = styled.div`
   // TODO : Modal 이 떴을 때의 배경을 깔아주는 CSS 를 구현합니다.
+  position: fixed;
+  background-color: rgba(0,0,0,0.4);
+  top : 0;
+  left : 0;
+  right : 0;
+  bottom : 0;
+  display: flex;
+  justify-content : center;
+  align-items : center;
 `;
 
 export const ModalBtn = styled.button`
@@ -25,6 +37,19 @@ export const ModalView = styled.div.attrs((props) => ({
   role: 'dialog',
 }))`
   // TODO : Modal 창 CSS 를 구현합니다.
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 500px;
+  height: 200px;
+  margin-bottom : 300px;
+  display : flex;
+  flex-direction: column;
+  align-items : center;
+  > div.desc {
+    font-size : 30px;
+    color : #475ed4;
+    margin : 50px;
+  }
 `;
 
 export const Modal = () => {
