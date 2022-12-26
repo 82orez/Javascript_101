@@ -1,29 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let age = 29;
-        let name = 'TG';
-        
-        function myFunction() {
-            // age = 45;            // 전역 변수
-            let age = 30;     // { 블록 }  단위의 스코프를 가지는 지역 변수를 가지는 let
-            console.log(age);
+      let age = 29;
+      let name = 'TG';
 
-            // function myFunction2() {
-                
-            // }
-        }
-
-        myFunction();
+      function myFunction() {
+        // age = 45;            // 전역 변수
+        let age = 30; // { 블록 }  단위의 스코프를 가지는 지역 변수를 가지는 let
         console.log(age);
+
+        // function myFunction2() {
+
+        // }
+      }
+
+      myFunction();
+      console.log(age);
     </script>
-</body>
+  </body>
 </html>

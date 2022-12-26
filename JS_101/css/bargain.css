@@ -32,7 +32,16 @@ button {
     border:1px solid #ccc;
     font-size:1em;
 }
+button:hover {
+    color: #0b97c4;
+    background-color: #0a0623;
+}
 #showResult {
     margin-top:20px;
     font-size:1.5em;
+}
+#hello{
+    text-align: center;
+    width: 450px;
+    margin: 0 auto;
 }

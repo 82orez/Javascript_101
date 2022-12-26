@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body {
-            font-size:2em;
-            text-align: center;
-        }
+      body {
+        font-size: 2em;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
-<script>
-    // let num1 = parseInt(prompt('숫자1'));
-    // let num2 = parseInt(prompt('숫자2'));
-    // let result = add(num1,num2);
+  </head>
+  <body>
+    <script>
+      // let num1 = parseInt(prompt('숫자1'));
+      // let num2 = parseInt(prompt('숫자2'));
+      // let result = add(num1,num2);
 
-    let x = 5;   // x, y, result 는 전역 변수
-    let y = 2;
-    let result;
+      let x = 5; // x, y, result 는 전역 변수
+      let y = 2;
+      let result;
 
-    document.write(`${add()}<br>`);
+      document.write(`${add()}<br>`);
 
-    function add() {
-        x +=1;
-        let z = 3;   // z 는 { 블록 } 단위의 지역 변수
+      function add() {
+        x += 1;
+        let z = 3; // z 는 { 블록 } 단위의 지역 변수
         result = x + y + z;
         return result;
-    }
+      }
 
-    document.write(x);   // x 는 전역 변수이므로 5+1 이 출렴됨
-    // let x = 100;      // let 은 var 와 달리 변수 재선언 불가
+      document.write(x); // x 는 전역 변수이므로 5+1 이 출렴됨
+      // let x = 100;      // let 은 var 와 달리 변수 재선언 불가
 
-    document.write(z);   // z 는 지역 변수이므로 함수 밖에서 오류 발생
-</script>
-</body>
+      document.write(z); // z 는 지역 변수이므로 함수 밖에서 오류 발생
+    </script>
+  </body>
 </html>
