@@ -7,13 +7,15 @@ import commentList from './chap_05/CommentList';
 
 import Library from './chap_03/Library';
 import CommentList from './chap_05/CommentList';
+import NotificationList from './chap_06/NotificationList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/*<App />*/}
     {/*<Library />*/}
-    <CommentList />
+    {/*<CommentList />*/}
+    <NotificationList />
   </React.StrictMode>
 );
 
