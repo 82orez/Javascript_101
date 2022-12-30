@@ -4899,7 +4899,7 @@ Suite.prototype.eachTest = function(fn){
 
 }); // module: suite.js
 
-require.register("test.js", function(module, exports, require){
+require.register("03_1_useRef_focus.js", function(module, exports, require){
 
 /**
  * Module dependencies.
@@ -4937,7 +4937,7 @@ Test.prototype = new F;
 Test.prototype.constructor = Test;
 
 
-}); // module: test.js
+}); // module: 03_1_useRef_focus.js
 
 require.register("utils.js", function(module, exports, require){
 

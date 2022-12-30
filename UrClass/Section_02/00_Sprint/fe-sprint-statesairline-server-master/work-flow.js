@@ -17,7 +17,7 @@
 // statesairline/repository/airportlist.js 는 서비스에서 제공하는 공항 데이터가 작성되어 있습니다.
 
 // 5.test
-// statesairline/__test__/statesairline.test.js 은 Jest 스펙을 가지고 있으며 코드 테스트를 위한 테스트 케이스가 작성되어 있습니다.
+// statesairline/__test__/statesairline.03_1_useRef_focus.js 은 Jest 스펙을 가지고 있으며 코드 테스트를 위한 테스트 케이스가 작성되어 있습니다.
 // npm install 을 통해서 package.json 에 설정된 패키지를 설치하세요.
 // npm start 를 통해 서버를 실행하세요.
 // Postman 으로 API 동작 여부를 확인하세요.

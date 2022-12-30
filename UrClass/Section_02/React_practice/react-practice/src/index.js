@@ -13,9 +13,9 @@ import MapSample from './practices/MapSample';
 import MapSampleAdvanced from './practices/MapSampleAdvanced';
 import ParentComponent from './Lifting-State-Up/LiftingStateUp';
 import Twittler from './Lifting-State-Up/twittler/Twittler';
-import UseEffectCounter from '../../../../../React/sople/src/chap_07_Hooks/02_useEffect';
-import Info from './Hook/useEffectUM/UseEffectInfo';
-import UseEffectUM from './Hook/useEffectUM/UseEffectUM';
+import UseEffectCounter from '../../../../../React/sople/src/chap_07_Hooks/02_useEffect/02_1_useEffect';
+import Info from '../../../../../React/sople/src/chap_07_Hooks/02_useEffect/02_2_UseEffectInfo';
+import UseEffectUM from '../../../../../React/sople/src/chap_07_Hooks/02_useEffect/02_3_UseEffectUM';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -5,15 +5,15 @@ const Info = () => {
   const [nickName, setNickName] = useState('');
 
   useEffect(() => {
-    console.log('Rendering completed!');
+    console.log('Rendering new state completed!');
     console.log({
       name,
       nickName,
     });
 
-    // * useEffect 함수에서 return 하는 함수는 컴포가 unmount 될 때 실행됨.
+    // ! useEffect 함수에서 return 하는 함수는 컴포가 unmount 될 때 실행됨.
     return () => {
-      console.log('Clean up!');
+      console.log('Unmount previous state!');
       console.log({
         name,
         nickName,
@@ -31,8 +31,8 @@ const Info = () => {
   return (
     <div>
       <div>
-        <input name="name" value={name} onChange={onChange} />
-        <input name="nickname" value={nickName} onChange={onChangeNickName} />
+        <input name="name" value={name} placeholder={'Name'} onChange={onChange} />
+        <input name="nickname" value={nickName} placeholder={'Nick name'} onChange={onChangeNickName} />
       </div>
       <div>
         <div>
