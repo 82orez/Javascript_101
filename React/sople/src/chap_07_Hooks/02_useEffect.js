@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 function UseEffectCounter() {
   const [count, setCount] = useState(0);
@@ -8,12 +8,12 @@ function UseEffectCounter() {
   // * 결국 class 컴포의 componentDidMount(), componentDidUpdate() 와 동일한 역할.
   useEffect(() => {
     document.title = `You clicked ${count} times.`;
-  },);
+  });
 
   return (
     <div>
       <h1>{`You clicked ${count} times.`}</h1>
-      <button onClick={() => setCount(count+1)}>Click here!</button>
+      <button onClick={() => setCount(count + 1)}>Click here!</button>
     </div>
   );
 }

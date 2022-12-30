@@ -7,7 +7,10 @@ import commentList from './chap_05/CommentList';
 
 import Library from './chap_03/Library';
 import CommentList from './chap_05/CommentList';
-import NotificationList from './chap_06/NotificationList';
+import NotificationList from './chap_06_Life_cycle_class/NotificationList';
+import Counter from './chap_07_Hooks/01_useState';
+import useEffectCounter from './chap_07_Hooks/02_useEffect';
+import UseEffectCounter from './chap_07_Hooks/02_useEffect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +18,9 @@ root.render(
     {/*<App />*/}
     {/*<Library />*/}
     {/*<CommentList />*/}
-    <NotificationList />
+    {/*<NotificationList />*/}
+    {/*<Counter />*/}
+    <UseEffectCounter />
   </React.StrictMode>
 );
 

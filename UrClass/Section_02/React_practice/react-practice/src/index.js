@@ -13,7 +13,7 @@ import MapSample from './practices/MapSample';
 import MapSampleAdvanced from './practices/MapSampleAdvanced';
 import ParentComponent from './Lifting-State-Up/LiftingStateUp';
 import Twittler from './Lifting-State-Up/twittler/Twittler';
-import UseEffectCounter from './Hook/useEffectCounter';
+import UseEffectCounter from '../../../../../React/sople/src/chap_07_Hooks/02_useEffect';
 import Info from './Hook/useEffectUM/UseEffectInfo';
 import UseEffectUM from './Hook/useEffectUM/UseEffectUM';
 
