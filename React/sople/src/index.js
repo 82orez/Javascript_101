@@ -14,6 +14,7 @@ import UseEffectCounter from './chap_07_Hooks/02_useEffect/02_1_useEffect';
 import UseEffectUM from './chap_07_Hooks/02_useEffect/02_3_UseEffectUM';
 import TextInputWithFocusButton from './chap_07_Hooks/03_useRef/03_1_useRef_focus';
 import MediaPlay from './chap_07_Hooks/03_useRef/03_2_useRef_Media';
+import Accommodate from './chap_07_Hooks/Accommodate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,7 +27,8 @@ root.render(
   //   <UseEffectCounter />
   //   <UseEffectUM />
   // <TextInputWithFocusButton />
-  <MediaPlay />
+  // <MediaPlay />
+  <Accommodate />
   // </React.StrictMode>
 );
 
