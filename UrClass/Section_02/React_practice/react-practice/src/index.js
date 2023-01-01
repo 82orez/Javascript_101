@@ -11,7 +11,7 @@ import EventHandlePractice from './practices/eventHandlePractice';
 import EventHandleManyStates from './practices/eventHandleManyStates';
 import MapSample from './practices/MapSample';
 import MapSampleAdvanced from './practices/MapSampleAdvanced';
-import ParentComponent from './Lifting-State-Up/LiftingStateUp';
+import ParentComponent from '../../../../../React/sople/src/chap_12_LSU/LiftingStateUp';
 import Twittler from './Lifting-State-Up/twittler/Twittler';
 import UseEffectCounter from '../../../../../React/sople/src/chap_07_Hooks/02_useEffect/02_1_useEffect';
 import Info from '../../../../../React/sople/src/chap_07_Hooks/02_useEffect/02_2_UseEffectInfo';

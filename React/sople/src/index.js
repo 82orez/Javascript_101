@@ -24,7 +24,8 @@ import AttendanceBook from './chap_10_list/AttendanceBook';
 import NameForm from './chap_11_form/NameForm';
 import FruitSelect from './chap_11_form/FruitSelect';
 import SignUp from './chap_11_form/SignUp';
-import Convertor from './chap_12_LSU/Convertor';
+import Converter from './chap_12_LSU/Converter/Converter';
+import Twittler from './chap_12_LSU/twittler/Twittler';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -47,7 +48,8 @@ root.render(
   // <NameForm />
   // <FruitSelect />
   // <SignUp />
-  <Convertor />
+  // <Converter />
+  <Twittler />
   // </React.StrictMode>
 );
 

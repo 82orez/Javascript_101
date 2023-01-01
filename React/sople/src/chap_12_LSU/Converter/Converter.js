@@ -22,7 +22,7 @@ function tryConvert(temperature, convert) {
 
   return rounded.toString();
 }
-function Convertor(props) {
+function Converter(props) {
   const [temperature, setTemperature] = useState('');
   const [scale, setScale] = useState('c');
 
@@ -47,4 +47,4 @@ function Convertor(props) {
   );
 }
 
-export default Convertor;
+export default Converter;
