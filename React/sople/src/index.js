@@ -15,6 +15,16 @@ import UseEffectUM from './chap_07_Hooks/02_useEffect/02_3_UseEffectUM';
 import TextInputWithFocusButton from './chap_07_Hooks/03_useRef/03_1_useRef_focus';
 import MediaPlay from './chap_07_Hooks/03_useRef/03_2_useRef_Media';
 import Accommodate from './chap_07_Hooks/Accommodate';
+import Toggle from './chap_08_event/Toggle';
+import ConfirmButton from './chap_08_event/ConfirmButton';
+import LandingPage from './chap_09_if/LandingPage';
+import NumberList from './chap_10_list/NumberList';
+// const numbers = [1, 2, 3, 4, 5];
+import AttendanceBook from './chap_10_list/AttendanceBook';
+import NameForm from './chap_11_form/NameForm';
+import FruitSelect from './chap_11_form/FruitSelect';
+import SignUp from './chap_11_form/SignUp';
+import Convertor from './chap_12_LSU/Convertor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,7 +38,16 @@ root.render(
   //   <UseEffectUM />
   // <TextInputWithFocusButton />
   // <MediaPlay />
-  <Accommodate />
+  // <Accommodate />
+  // <Toggle />
+  // <ConfirmButton />
+  // <LandingPage />
+  // <NumberList numbers={numbers} />
+  // <AttendanceBook />
+  // <NameForm />
+  // <FruitSelect />
+  // <SignUp />
+  <Convertor />
   // </React.StrictMode>
 );
 
