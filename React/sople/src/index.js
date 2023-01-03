@@ -26,6 +26,13 @@ import FruitSelect from './chap_11_form/FruitSelect';
 import SignUp from './chap_11_form/SignUp';
 import Converter from './chap_12_LSU/Converter/Converter';
 import Twittler from './chap_12_LSU/twittler/Twittler';
+import ProfileCard from './chap_13_Card/ProfileCard';
+import SimpleRouter from './chap_14_Router/SimpleRouter';
+import CheckboxExample from './chap_08_event/CheckboxExample';
+import ManyStates from './chap_07_Hooks/01_usestate/ManyStates';
+import MainPage from './chap_15_styled_compo/MainPage';
+import Blocks from './chap_15_styled_compo/Blocks';
+import PropsDrilling from './chap_16_Redux/PropsDrilling';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -49,7 +56,14 @@ root.render(
   // <FruitSelect />
   // <SignUp />
   // <Converter />
-  <Twittler />
+  // <Twittler />
+  // <ProfileCard />
+  // <SimpleRouter />
+  // <CheckboxExample />
+  // <ManyStates />
+  // <MainPage />
+  // <Blocks />
+  <PropsDrilling />
   // </React.StrictMode>
 );
 

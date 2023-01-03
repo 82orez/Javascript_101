@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // ! State 가 여러 개인 경우 객체 형태로 만들어 준다.
-function EventPracticeManyStates() {
+function ManyStates() {
   const [form, setForm] = useState({
     username: '',
     msg: '',
@@ -39,4 +39,4 @@ function EventPracticeManyStates() {
   );
 }
 
-export default EventPracticeManyStates;
+export default ManyStates;

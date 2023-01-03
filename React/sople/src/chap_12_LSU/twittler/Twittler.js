@@ -44,6 +44,7 @@ function Twittler() {
       <ul id="tweets">
         {tweets.map((t) => (
           <SingleTweet key={t.uuid} writer={t.writer} date={t.date}>
+            {/** 다음 라인은 SingleTweet 컴포의 속성에 children 으로 들어감. **/}
             {t.content}
           </SingleTweet>
         ))}

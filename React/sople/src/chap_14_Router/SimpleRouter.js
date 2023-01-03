@@ -1,8 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 
-function App() {
+function SimpleRouter() {
   return (
     <BrowserRouter>
       <div>
@@ -27,7 +26,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
 function Home() {
@@ -42,6 +41,4 @@ function Dashboard() {
   return <h1>Dashboard</h1>;
 }
 
-
-
-export default App;
+export default SimpleRouter;

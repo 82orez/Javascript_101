@@ -10,6 +10,7 @@ function CheckboxExample() {
   const [name, setName] = useState('');
   const handleChange = (e) => {setName(e.target.value)};
 
+
   const [showPopup, setShowPopup] = useState(false);
   const togglePopup = () => {
     // Pop up 의 open/close 상태에 따라
@@ -32,8 +33,7 @@ function CheckboxExample() {
       <h1>{name}</h1><br/>
 
       <h1>Fix me to open Pop Up</h1>
-      {/* 버튼을 클릭했을 때 Pop up 의 open/close 가 작동하도록
-          button tag 를 완성하세요. */}
+      {/** 버튼을 클릭했을 때 Pop up 의 open/close 가 작동하도록 button tag 를 완성하세요. **/}
       <button className="open" onClick={togglePopup}>Open me</button>
       {showPopup ? (
         <div className="popup">
