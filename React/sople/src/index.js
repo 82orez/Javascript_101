@@ -33,6 +33,7 @@ import ManyStates from './chap_07_Hooks/01_usestate/ManyStates';
 import MainPage from './chap_15_styled_compo/MainPage';
 import Blocks from './chap_15_styled_compo/Blocks';
 import PropsDrilling from './chap_16_Redux/PropsDrilling';
+import Presentation from './chap_16_Redux/Presentation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -63,7 +64,8 @@ root.render(
   // <ManyStates />
   // <MainPage />
   // <Blocks />
-  <PropsDrilling />
+  // <PropsDrilling />
+  <Presentation />
   // </React.StrictMode>
 );
 
