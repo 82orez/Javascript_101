@@ -5,7 +5,7 @@ import Mypage from './pages/Mypage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-// 모든 요청에 withCredentials가 true로 설정됩니다.
+// ? 모든 요청에 withCredentials 가 true 로 설정됩니다.
 axios.defaults.withCredentials = true;
 
 function App() {

@@ -34,12 +34,12 @@ module.exports = async (req, res) => {
     const { accessToken } = await generateToken(userInfo);
 
     res.cookie('access_jwt', accessToken, {
+      // ? Expires 옵션이 없는 Session Cookie
       domain: 'localhost',
       path: '/',
       sameSite: 'none',
       httpOnly: true,
       secure: true,
-      // Expires 옵션이 없는 Session Cookie
     });
 
     return res.json({ ...userInfo, password: undefined });
