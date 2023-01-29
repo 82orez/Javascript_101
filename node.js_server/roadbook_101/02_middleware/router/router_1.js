@@ -11,9 +11,14 @@ const app = express();
 // ? PATH 는 서버에서의 경로입니다.
 // ? HANDLER 는 라우트가 일치할 때 실행되는 함수입니다.
 
-// * 홈 페이지 요청에 대해 Hello World!로 응답:
+// * 홈 페이지 GET 요청에 대해 Hello World!로 응답:
 app.get('/', function (req, res) {
   res.send('Hello World!');
+});
+
+// * /user url 라우트에 대한 GET 요청에 응답:
+app.get('/user', function (req, res) {
+  res.send('Hello World! User!');
 });
 
 // * 애플리케이션의 홈 페이지인 루트 라우트(/)에서 POST 요청에 응답:
@@ -21,14 +26,19 @@ app.post('/', function (req, res) {
   res.send('Got a POST request');
 });
 
-// * /user 라우트에 대한 PUT 요청에 응답:
-
+// * /user url 라우트에 대한 PUT 요청에 응답:
 app.put('/user', function (req, res) {
   res.send('Got a PUT request at /user');
 });
 
-// * /user 라우트에 대한 DELETE 요청에 응답:
-
+// * /user url 라우트에 대한 DELETE 요청에 응답:
 app.delete('/user', function (req, res) {
   res.send('Got a DELETE request at /user');
 });
+
+app.listen(3000, () => {
+  console.log('Sever is on');
+});
+
+// ? 브라우저 창에서 http://localhost:3000/
+// ? 브라우저 창에서 http://localhost:3000/user/

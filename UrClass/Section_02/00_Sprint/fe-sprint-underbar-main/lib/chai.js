@@ -25,7 +25,7 @@
           var a = typeof require == 'function' && require;
           if (!u && a) return a(o, !0);
           if (i) return i(o, !0);
-          var f = new Error("Cannot find module '" + o + "'");
+          var f = new Error("Cannot find 00_module '" + o + "'");
           throw ((f.code = 'MODULE_NOT_FOUND'), f);
         }
         var l = (n[o] = { exports: {} });
@@ -2385,7 +2385,7 @@
             /**
              * ### .fail(actual, expected, [message], [operator])
              *
-             * Throw a failure. Node.js `assert` module-compatible.
+             * Throw a failure. Node.js `assert` 00_module-compatible.
              *
              * @name fail
              * @param {Mixed} actual
@@ -4280,7 +4280,7 @@
           // Check whether `__proto__` is supported
           var hasProtoSupport = '__proto__' in Object;
 
-          // Without `__proto__` support, this module will need to add properties to a function.
+          // Without `__proto__` support, this 00_module will need to add properties to a function.
           // However, some Function.prototype methods cannot be overwritten,
           // and there seems no easy cross-platform way to detect them (@see chaijs/chai/issues/69).
           var excludeNames = /^(?:length|name|arguments|caller)$/;
@@ -5212,7 +5212,7 @@
             if (
               value &&
               typeof value.inspect === 'function' &&
-              // Filter out the util module, it's inspect function is special
+              // Filter out the util 00_module, it's inspect function is special
               value.inspect !== exports.inspect &&
               // Also filter out any prototype objects using the circular check.
               !(value.constructor && value.constructor.prototype === value)

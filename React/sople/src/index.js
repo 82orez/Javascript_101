@@ -59,13 +59,13 @@ root.render(
   // <Converter />
   // <Twittler />
   // <ProfileCard />
-  // <SimpleRouter />
+  <SimpleRouter />
   // <CheckboxExample />
   // <ManyStates />
   // <MainPage />
   // <Blocks />
   // <PropsDrilling />
-  <Presentation />
+  // <Presentation />
   // </React.StrictMode>
 );
 

@@ -1,4 +1,4 @@
-/* Sinon.JS 9.0.3, 2020-08-11, @license BSD-3 */(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.sinon = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+/* Sinon.JS 9.0.3, 2020-08-11, @license BSD-3 */(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.sinon = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find 00_module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
     "use strict";
 
     var behavior = require("./sinon/behavior");
@@ -2833,7 +2833,7 @@
     var functionName = require("@sinonjs/commons").functionName;
     var getPropertyDescriptor = require("./util/core/get-property-descriptor");
     var deepEqual = require("@sinonjs/samsam").deepEqual;
-    var isEsModule = require("./util/core/is-es-module");
+    var isEsModule = require("./util/core/is-es-00_module");
     var proxyCallUtil = require("./proxy-call-util");
     var walkObject = require("./util/core/walk-object");
     var wrapMethod = require("./util/core/wrap-method");
@@ -3010,7 +3010,7 @@
     var spy = require("./spy");
     var extend = require("./util/core/extend");
     var getPropertyDescriptor = require("./util/core/get-property-descriptor");
-    var isEsModule = require("./util/core/is-es-module");
+    var isEsModule = require("./util/core/is-es-00_module");
     var wrapMethod = require("./util/core/wrap-method");
     var throwOnFalsyObject = require("./throw-on-falsy-object");
     var valueToString = require("@sinonjs/commons").valueToString;
@@ -3495,13 +3495,13 @@
     /**
      * Verify if an object is a ECMAScript Module
      *
-     * As the exports from a module is immutable we cannot alter the exports
+     * As the exports from a 00_module is immutable we cannot alter the exports
      * using spies or stubs. Let the consumer know this to avoid bug reports
      * on weird error messages.
      *
      * @param {Object} object The object to examine
      *
-     * @returns {Boolean} true when the object is a module
+     * @returns {Boolean} true when the object is a 00_module
      */
     module.exports = function(object) {
         return (
@@ -5957,7 +5957,7 @@
     /**
      * Creates a matcher object for the passed expectation
      *
-     * @alias module:samsam.createMatcher
+     * @alias 00_module:samsam.createMatcher
      * @param {*} expectation An expecttation
      * @param {string} message A message for the expectation
      * @returns {object} A matcher object
@@ -6588,7 +6588,7 @@
      *
      * Supports cyclic objects.
      *
-     * @alias module:samsam.deepEqual
+     * @alias 00_module:samsam.deepEqual
      * @param {*} actual The object to examine
      * @param {*} expectation The object actual is expected to be equal to
      * @param {object} match A value to match on
@@ -6846,7 +6846,7 @@
      * `+0`, where it returns `false`. Additionally, it returns `true` when
      * `NaN` is compared to itself.
      *
-     * @alias module:samsam.identical
+     * @alias 00_module:samsam.identical
      * @param {*} obj1 The first value to compare
      * @param {*} obj2 The second value to compare
      * @returns {boolean} Returns `true` when the objects are *egal*, `false` otherwise
@@ -6869,7 +6869,7 @@
     /**
      * Returns `true` when `object` is an `arguments` object, `false` otherwise
      *
-     * @alias module:samsam.isArguments
+     * @alias 00_module:samsam.isArguments
      * @param  {*}  object - The object to examine
      * @returns {boolean} `true` when `object` is an `arguments` object
      */
@@ -6929,7 +6929,7 @@
      * is an *element-like* object, i.e. a regular object with a `nodeType`
      * property that holds the value `1`.
      *
-     * @alias module:samsam.isElement
+     * @alias 00_module:samsam.isElement
      * @param {object} object The object to examine
      * @returns {boolean} Returns `true` for DOM element nodes
      */
@@ -6991,7 +6991,7 @@
     /**
      * Returns `true` when `value` is `-0`
      *
-     * @alias module:samsam.isNegZero
+     * @alias 00_module:samsam.isNegZero
      * @param {*} value A value to examine
      * @returns {boolean} Returns `true` when `value` is `-0`
      */
@@ -7040,7 +7040,7 @@
     /**
      * Returns `true` when the argument is an instance of Set, `false` otherwise
      *
-     * @alias module:samsam.isSet
+     * @alias 00_module:samsam.isSet
      * @param  {*}  val - A value to examine
      * @returns {boolean} Returns `true` when the argument is an instance of Set, `false` otherwise
      */
@@ -7204,7 +7204,7 @@
     /**
      * Matches an object with a matcher (or value)
      *
-     * @alias module:samsam.match
+     * @alias 00_module:samsam.match
      * @param {object} object The object candidate to match
      * @param {object} matcherOrValue A matcher or value to match against
      * @returns {boolean} true when `object` matches `matcherOrValue`
@@ -7335,7 +7335,7 @@
     "use strict";
     
     /**
-     * @module samsam
+     * @00_module samsam
      */
     var identical = require("./identical");
     var isArguments = require("./is-arguments");
@@ -14007,7 +14007,7 @@
                 method = null;
             }
     
-            // Escape port number to prevent "named" parameters in 'path-to-regexp' module
+            // Escape port number to prevent "named" parameters in 'path-to-regexp' 00_module
             if (typeof url === "string" && url !== "" && /:[0-9]+\//.test(url)) {
                 var m = url.match(/^(https?:\/\/.*?):([0-9]+\/.*)$/);
                 // eslint-disable-next-line no-param-reassign
@@ -15876,7 +15876,7 @@
     
     },{}],132:[function(require,module,exports){
     if (typeof Object.create === 'function') {
-      // implementation from standard node.js 'util' module
+      // implementation from standard node.js 'util' 00_module
       module.exports = function inherits(ctor, superCtor) {
         ctor.super_ = superCtor
         ctor.prototype = Object.create(superCtor.prototype, {
@@ -16123,7 +16123,7 @@
       if (ctx.customInspect &&
           value &&
           isFunction(value.inspect) &&
-          // Filter out the util module, it's inspect function is special
+          // Filter out the util 00_module, it's inspect function is special
           value.inspect !== exports.inspect &&
           // Also filter out any prototype objects using the circular check.
           !(value.constructor && value.constructor.prototype === value)) {

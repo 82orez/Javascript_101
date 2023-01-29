@@ -141,7 +141,7 @@
     var assert = require('./chai/interface/assert');
     exports.use(assert);
 
-  }); // module: chai.js
+  }); // 00_module: chai.js
 
   require.register("chai/assertion.js", function(module, exports, require){
     /*!
@@ -277,7 +277,7 @@
         }
     });
 
-  }); // module: chai/assertion.js
+  }); // 00_module: chai/assertion.js
 
   require.register("chai/core/assertions.js", function(module, exports, require){
     /*!
@@ -1501,7 +1501,7 @@
 
     };
 
-  }); // module: chai/core/assertions.js
+  }); // 00_module: chai/core/assertions.js
 
   require.register("chai/error.js", function(module, exports, require){
     /*!
@@ -1565,7 +1565,7 @@
       return this.message;
     };
 
-  }); // module: chai/error.js
+  }); // 00_module: chai/error.js
 
   require.register("chai/interface/assert.js", function(module, exports, require){
     /*!
@@ -1614,7 +1614,7 @@
       /**
        * ### .fail(actual, expected, [message], [operator])
        *
-       * Throw a failure. Node.js `assert` module-compatible.
+       * Throw a failure. Node.js `assert` 00_module-compatible.
        *
        * @name fail
        * @param {Mixed} actual
@@ -2555,7 +2555,7 @@
       ('Throw', 'throws');
     };
 
-  }); // module: chai/interface/assert.js
+  }); // 00_module: chai/interface/assert.js
 
   require.register("chai/interface/expect.js", function(module, exports, require){
     /*!
@@ -2571,7 +2571,7 @@
     };
 
 
-  }); // module: chai/interface/expect.js
+  }); // 00_module: chai/interface/expect.js
 
   require.register("chai/interface/should.js", function(module, exports, require){
     /*!
@@ -2651,7 +2651,7 @@
       chai.Should = loadShould;
     };
 
-  }); // module: chai/interface/should.js
+  }); // 00_module: chai/interface/should.js
 
   require.register("chai/utils/addChainableMethod.js", function(module, exports, require){
     /*!
@@ -2673,7 +2673,7 @@
     // Check whether `__proto__` is supported
     var hasProtoSupport = '__proto__' in Object;
 
-    // Without `__proto__` support, this module will need to add properties to a function.
+    // Without `__proto__` support, this 00_module will need to add properties to a function.
     // However, some Function.prototype methods cannot be overwritten,
     // and there seems no easy cross-platform way to detect them (@see chaijs/chai/issues/69).
     var excludeNames = /^(?:length|name|arguments|caller)$/;
@@ -2741,7 +2741,7 @@
       });
     };
 
-  }); // module: chai/utils/addChainableMethod.js
+  }); // 00_module: chai/utils/addChainableMethod.js
 
   require.register("chai/utils/addMethod.js", function(module, exports, require){
     /*!
@@ -2782,7 +2782,7 @@
       };
     };
 
-  }); // module: chai/utils/addMethod.js
+  }); // 00_module: chai/utils/addMethod.js
 
   require.register("chai/utils/addProperty.js", function(module, exports, require){
     /*!
@@ -2826,7 +2826,7 @@
       });
     };
 
-  }); // module: chai/utils/addProperty.js
+  }); // 00_module: chai/utils/addProperty.js
 
   require.register("chai/utils/eql.js", function(module, exports, require){
     // This is (almost) directly from Node.js assert
@@ -2954,7 +2954,7 @@
       return true;
     }
 
-  }); // module: chai/utils/eql.js
+  }); // 00_module: chai/utils/eql.js
 
   require.register("chai/utils/flag.js", function(module, exports, require){
     /*!
@@ -2990,7 +2990,7 @@
       }
     };
 
-  }); // module: chai/utils/flag.js
+  }); // 00_module: chai/utils/flag.js
 
   require.register("chai/utils/getActual.js", function(module, exports, require){
     /*!
@@ -3013,7 +3013,7 @@
       return 'undefined' !== typeof actual ? actual : obj._obj;
     };
 
-  }); // module: chai/utils/getActual.js
+  }); // 00_module: chai/utils/getActual.js
 
   require.register("chai/utils/getEnumerableProperties.js", function(module, exports, require){
     /*!
@@ -3042,7 +3042,7 @@
       return result;
     };
 
-  }); // module: chai/utils/getEnumerableProperties.js
+  }); // 00_module: chai/utils/getEnumerableProperties.js
 
   require.register("chai/utils/getMessage.js", function(module, exports, require){
     /*!
@@ -3095,7 +3095,7 @@
       return flagMsg ? flagMsg + ': ' + msg : msg;
     };
 
-  }); // module: chai/utils/getMessage.js
+  }); // 00_module: chai/utils/getMessage.js
 
   require.register("chai/utils/getName.js", function(module, exports, require){
     /*!
@@ -3119,7 +3119,7 @@
       return match && match[1] ? match[1] : "";
     };
 
-  }); // module: chai/utils/getName.js
+  }); // 00_module: chai/utils/getName.js
 
   require.register("chai/utils/getPathValue.js", function(module, exports, require){
     /*!
@@ -3225,7 +3225,7 @@
       return res;
     };
 
-  }); // module: chai/utils/getPathValue.js
+  }); // 00_module: chai/utils/getPathValue.js
 
   require.register("chai/utils/getProperties.js", function(module, exports, require){
     /*!
@@ -3264,7 +3264,7 @@
       return result;
     };
 
-  }); // module: chai/utils/getProperties.js
+  }); // 00_module: chai/utils/getProperties.js
 
   require.register("chai/utils/index.js", function(module, exports, require){
     /*!
@@ -3376,7 +3376,7 @@
     exports.addChainableMethod = require('./addChainableMethod');
 
 
-  }); // module: chai/utils/index.js
+  }); // 00_module: chai/utils/index.js
 
   require.register("chai/utils/inspect.js", function(module, exports, require){
     // This is (almost) directly from Node.js utils
@@ -3442,7 +3442,7 @@
       // Provide a hook for user-specified inspect functions.
       // Check that value is an object with an inspect function on it
       if (value && typeof value.inspect === 'function' &&
-          // Filter out the util module, it's inspect function is special
+          // Filter out the util 00_module, it's inspect function is special
           value.inspect !== exports.inspect &&
           // Also filter out any prototype objects using the circular check.
           !(value.constructor && value.constructor.prototype === value)) {
@@ -3696,7 +3696,7 @@
       return Object.prototype.toString.call(o);
     }
 
-  }); // module: chai/utils/inspect.js
+  }); // 00_module: chai/utils/inspect.js
 
   require.register("chai/utils/objDisplay.js", function(module, exports, require){
     /*!
@@ -3748,7 +3748,7 @@
       }
     };
 
-  }); // module: chai/utils/objDisplay.js
+  }); // 00_module: chai/utils/objDisplay.js
 
   require.register("chai/utils/overwriteMethod.js", function(module, exports, require){
     /*!
@@ -3803,7 +3803,7 @@
       }
     };
 
-  }); // module: chai/utils/overwriteMethod.js
+  }); // 00_module: chai/utils/overwriteMethod.js
 
   require.register("chai/utils/overwriteProperty.js", function(module, exports, require){
     /*!
@@ -3861,7 +3861,7 @@
       });
     };
 
-  }); // module: chai/utils/overwriteProperty.js
+  }); // 00_module: chai/utils/overwriteProperty.js
 
   require.register("chai/utils/03_1_useRef_focus.js", function(module, exports, require){
     /*!
@@ -3891,7 +3891,7 @@
       return negate ? !expr : expr;
     };
 
-  }); // module: chai/utils/03_1_useRef_focus.js
+  }); // 00_module: chai/utils/03_1_useRef_focus.js
 
   require.register("chai/utils/transferFlags.js", function(module, exports, require){
     /*!
@@ -3939,7 +3939,7 @@
       }
     };
 
-  }); // module: chai/utils/transferFlags.js
+  }); // 00_module: chai/utils/transferFlags.js
 
   require.register("chai/utils/type.js", function(module, exports, require){
     /*!
@@ -3988,7 +3988,7 @@
       return typeof obj;
     };
 
-  }); // module: chai/utils/type.js
+  }); // 00_module: chai/utils/type.js
 
   require.alias("./chai.js", "chai");
 

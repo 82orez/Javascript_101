@@ -6,7 +6,7 @@
           var c = 'function' == typeof require && require;
           if (!f && c) return c(i, !0);
           if (u) return u(i, !0);
-          var a = new Error("Cannot find module '" + i + "'");
+          var a = new Error("Cannot find 00_module '" + i + "'");
           throw ((a.code = 'MODULE_NOT_FOUND'), a);
         }
         var p = (n[i] = { exports: {} });
@@ -265,8 +265,8 @@
           'use strict';
 
           /**
-           * Web Notifications module.
-           * @module Growl
+           * Web Notifications 00_module.
+           * @00_module Growl
            */
 
           /**
@@ -605,7 +605,7 @@
       function (require, module, exports) {
         'use strict';
         /**
-         * @module Context
+         * @00_module Context
          */
         /**
          * Expose `Context`.
@@ -700,7 +700,7 @@
 
         /**
          * Factory functions to create throwable error objects
-         * @module Errors
+         * @00_module Errors
          */
 
         /**
@@ -1460,7 +1460,7 @@
         var Test = require('../test');
 
         /**
-         * Exports-style (as Node.js module) interface:
+         * Exports-style (as Node.js 00_module) interface:
          *
          *     exports.Array = {
          *       '#indexOf()': {
@@ -1514,7 +1514,7 @@
           }
         };
 
-        module.exports.description = 'Node.js module ("exports") style';
+        module.exports.description = 'Node.js 00_module ("exports") style';
       },
       { '../suite': 36, '../test': 37 },
     ],
@@ -2023,7 +2023,7 @@
                 } catch (err) {
                   if (
                     err.code === 'MODULE_NOT_FOUND' ||
-                    err.message.indexOf('Cannot find module') >= 0
+                    err.message.indexOf('Cannot find 00_module') >= 0
                   ) {
                     // Try to load reporters from a path (absolute or relative)
                     try {
@@ -2033,7 +2033,7 @@
                       ));
                     } catch (_err) {
                       _err.code === 'MODULE_NOT_FOUND' ||
-                      _err.message.indexOf('Cannot find module') >= 0
+                      _err.message.indexOf('Cannot find 00_module') >= 0
                         ? utils.warn(
                             sQuote(reporterName) + ' reporter not found'
                           )
@@ -2205,7 +2205,7 @@
            * @description
            * This allows required files to be "freshly" reloaded, providing the ability
            * to reuse a Mocha instance programmatically.
-           * Note: does not clear ESM module files from the cache
+           * Note: does not clear ESM 00_module files from the cache
            *
            * <strong>Intended for consumers &mdash; not used internally</strong>
            *
@@ -2932,7 +2932,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module Base
+           * @00_module Base
            */
           /**
            * Module dependencies.
@@ -3480,7 +3480,7 @@
       function (require, module, exports) {
         'use strict';
         /**
-         * @module Doc
+         * @00_module Doc
          */
         /**
          * Module dependencies.
@@ -3597,7 +3597,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module Dot
+           * @00_module Dot
            */
           /**
            * Module dependencies.
@@ -3689,7 +3689,7 @@
 
           /* eslint-env browser */
           /**
-           * @module HTML
+           * @00_module HTML
            */
           /**
            * Module dependencies.
@@ -4166,7 +4166,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module JSONStream
+           * @00_module JSONStream
            */
           /**
            * Module dependencies.
@@ -4264,7 +4264,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module JSON
+           * @00_module JSON
            */
           /**
            * Module dependencies.
@@ -4407,7 +4407,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module Landing
+           * @00_module Landing
            */
           /**
            * Module dependencies.
@@ -4539,7 +4539,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module List
+           * @00_module List
            */
           /**
            * Module dependencies.
@@ -4626,7 +4626,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module Markdown
+           * @00_module Markdown
            */
           /**
            * Module dependencies.
@@ -4745,7 +4745,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module Min
+           * @00_module Min
            */
           /**
            * Module dependencies.
@@ -4804,7 +4804,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module Nyan
+           * @00_module Nyan
            */
           /**
            * Module dependencies.
@@ -5089,7 +5089,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module Progress
+           * @00_module Progress
            */
           /**
            * Module dependencies.
@@ -5201,7 +5201,7 @@
       function (require, module, exports) {
         'use strict';
         /**
-         * @module Spec
+         * @00_module Spec
          */
         /**
          * Module dependencies.
@@ -5310,7 +5310,7 @@
         (function (process) {
           'use strict';
           /**
-           * @module TAP
+           * @00_module TAP
            */
           /**
            * Module dependencies.
@@ -5611,7 +5611,7 @@
         (function (process, global) {
           'use strict';
           /**
-           * @module XUnit
+           * @00_module XUnit
            */
           /**
            * Module dependencies.
@@ -7584,7 +7584,7 @@
 
           /**
            * Provides a factory function for a {@link StatsCollector} object.
-           * @module
+           * @00_module
            */
 
           var constants = require('./runner').constants;
@@ -8488,7 +8488,7 @@
 
           /**
            * Various utility functions used throughout Mocha's codebase.
-           * @module utils
+           * @00_module utils
            */
 
           /**
@@ -9125,7 +9125,7 @@
 
           /**
            * @summary
-           * This Filter based on `mocha-clean` module.(see: `github.com/rstacruz/mocha-clean`)
+           * This Filter based on `mocha-clean` 00_module.(see: `github.com/rstacruz/mocha-clean`)
            * @description
            * When invoking this function you get a filter function that get the Error.stack as an input,
            * and return a prettify output.
@@ -9163,7 +9163,7 @@
                 ~line.indexOf('(timers.js:') ||
                 ~line.indexOf('(events.js:') ||
                 ~line.indexOf('(node.js:') ||
-                ~line.indexOf('(module.js:') ||
+                ~line.indexOf('(00_module.js:') ||
                 ~line.indexOf('GeneratorFunctionPrototype.next (native)') ||
                 false
               );
@@ -9294,7 +9294,7 @@
            * This differs from {@link module:utils.createMap createMap} only in that
            * the argument must be non-empty, because the result is frozen.
            *
-           * @see {@link module:utils.createMap createMap}
+           * @see {@link 00_module:utils.createMap createMap}
            * @param {...*} [obj] - Arguments to `Object.assign()`.
            * @returns {Object} A frozen object with no prototype, having `...obj` properties
            * @throws {TypeError} if argument is not a non-empty object.
@@ -9574,7 +9574,7 @@
       function (require, module, exports) {
         (function (Buffer) {
           /*!
-           * The buffer module from node.js, for the browser.
+           * The buffer 00_module from node.js, for the browser.
            *
            * @author   Feross Aboukhadijeh <https://feross.org>
            * @license  MIT
@@ -11780,7 +11780,7 @@
             return Object.prototype.toString.call(o);
           }
         }.call(this, {
-          isBuffer: require('../../insert-module-globals/node_modules/is-buffer/index.js'),
+          isBuffer: require('../../insert-00_module-globals/node_modules/is-buffer/index.js'),
         }));
       },
       { '../../insert-module-globals/node_modules/is-buffer/index.js': 57 },
@@ -15071,7 +15071,7 @@
             // Detect free variables `exports`.
             var freeExports = typeof exports == 'object' && exports;
 
-            // Detect free variable `module`.
+            // Detect free variable `00_module`.
             var freeModule =
               typeof module == 'object' &&
               module &&
@@ -19463,7 +19463,7 @@
     56: [
       function (require, module, exports) {
         if (typeof Object.create === 'function') {
-          // implementation from standard node.js 'util' module
+          // implementation from standard node.js 'util' 00_module
           module.exports = function inherits(ctor, superCtor) {
             if (superCtor) {
               ctor.super_ = superCtor;
@@ -23655,7 +23655,7 @@
     87: [
       function (require, module, exports) {
         if (typeof Object.create === 'function') {
-          // implementation from standard node.js 'util' module
+          // implementation from standard node.js 'util' 00_module
           module.exports = function inherits(ctor, superCtor) {
             ctor.super_ = superCtor;
             ctor.prototype = Object.create(superCtor.prototype, {
@@ -23915,7 +23915,7 @@
               ctx.customInspect &&
               value &&
               isFunction(value.inspect) &&
-              // Filter out the util module, it's inspect function is special
+              // Filter out the util 00_module, it's inspect function is special
               value.inspect !== exports.inspect &&
               // Also filter out any prototype objects using the circular check.
               !(value.constructor && value.constructor.prototype === value)

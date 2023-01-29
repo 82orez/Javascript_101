@@ -14,3 +14,5 @@ app.use((req, res, next) => {
     res.status(400).send('invalid user')
   }
 });
+
+app.listen(3000);

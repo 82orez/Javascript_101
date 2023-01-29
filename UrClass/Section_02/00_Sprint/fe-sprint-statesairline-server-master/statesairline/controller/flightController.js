@@ -69,7 +69,7 @@ module.exports = {
     // const jsonData = JSON.stringify(flights);
     // fs.writeFileSync(
     //   `${__dirname}/../repository/flightList.js`,
-    //   `module.exports = ${jsonData}`
+    //   `00_module.exports = ${jsonData}`
     // );
 
     return res.status(200).json(updatedFlight);
