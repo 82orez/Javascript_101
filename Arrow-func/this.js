@@ -2,31 +2,41 @@
 // * 이 때 this 는 자신이 속한 객체(object) 를 의미한다.
 
 function sayHello() {
-    console.log(`Hello ${this}`); // * sayHello 함수는 전역(Window) 객체에 속해 있으므로 이 때 this 는 전역 객체.
+  console.log(`Hello ${this}`); // * sayHello 함수는 전역(Window) 객체에 속해 있으므로 이 때 this 는 전역 객체.
+  function sayHello2() {
+    console.log(`Hello2 ${this}`);
+  }
+  sayHello2();
+  let computer = {
+    mac: 1,
+    window: 2,
+    cls: function () {
+      // console.log(this);
+      return this;
+    },
+  };
+  console.log(computer.cls());
 }
 
 sayHello();
 
 const people = {
-    name: 'TG',
-    sayHello: function() {
-        console.log(`Hello ${this.name}`)
-    }
-}
+  name: 'TG',
+  sayHello: function () {
+    console.log(`Hello ${this.name}`);
+  },
+};
 
-people.sayHello();  // * sayHello 함수는 people 객체에 속해 있으므로 이 때 this 는 people.
-
-
+people.sayHello(); // * sayHello 함수는 people 객체에 속해 있으므로 이 때 this 는 people.
 
 // ! 반면에 화살표 함수는 this 를 가지지 않는다.
 // ! 다른 말로 표현하면 화살표 함수의 this 는 전역(Window) 객체이다.
 
 const arrowPeople = {
-    name: 'TG',
-    sayHello: () => {
-        console.log(`Hello ${this.name}`)
-    }
-}
+  name: 'TG',
+  sayHello: () => {
+    console.log(`Hello ${this.name}`);
+  },
+};
 
 arrowPeople.sayHello();
-
