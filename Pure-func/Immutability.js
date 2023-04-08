@@ -14,7 +14,9 @@ increaseAge(person);
 // * 외부의 인자 person1 이라는 객체 자체에는 상태 변경이 생김.
 console.log('person: ', person);
 
+
 console.log('---------------------------------');
+
 
 // * Stateless(무상태성), Immutability(불변성) => O
 const person1 = {
