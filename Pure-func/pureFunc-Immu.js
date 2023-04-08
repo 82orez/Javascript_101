@@ -4,9 +4,9 @@ const person = {
     age: 32,
 };
 
-function increaseAge(person) {
-    person.age += 1;
-    return person;
+function increaseAge(a) {
+    a.age += 1;
+    return a;
 }
 
 increaseAge(person);
@@ -24,12 +24,13 @@ const person1 = {
     age: 32,
 };
 
-function increaseAge1(person1) {
+function increaseAge1(b) {
     // * 외부의 인자(객체)를 입력 받아 새로운 객체를 반환 => Immutability(붋변성)
-    return { ...person1, age: person1.age + 1 };
+    return { ...b, age: b.age + 1 };
 }
 
 console.log(increaseAge1(person1));
 
 // * 외부의 인자 person1 이라는 객체 자체에는 상태 변경이 없음.
+increaseAge1(person1)
 console.log('person1: ', person1);
