@@ -1,4 +1,4 @@
-// Inner object for asynchronous operation
+// Built-in-object for asynchronous operation
 // state: pending -> fulfilled or rejected
 // Producer vs Consumer
 
