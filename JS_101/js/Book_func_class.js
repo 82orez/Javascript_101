@@ -3,7 +3,7 @@
 function Book(title, author, volume, price) {
     this.title = title;
     this.author = author;
-    this.volume = volume;
+    // this.volume = volume;
     this.price = price;
 
     this.printPrice = function () {
@@ -35,3 +35,4 @@ document.write('<br>');
 
 python.printPrice();     // 함수 실행.
 document.write('<br>');
+

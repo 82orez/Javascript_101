@@ -1,4 +1,6 @@
 function addNumber(a,b) {
-    arrSumFor = a + b;
-    alert(sum);
+    let arrSumFor = a + b;
+    console.log(arrSumFor);
 }
+
+addNumber(1,2);
