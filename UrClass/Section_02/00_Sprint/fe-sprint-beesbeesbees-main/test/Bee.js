@@ -3,7 +3,7 @@ const chai = require('chai')
 const expect = chai.expect
 const Bee = require('../src/Bee')
 
-describe('Bee class functionality', () => {
+describe('Bee 102_class functionality', () => {
   var bee;
 
   beforeEach(() => bee = new Bee());

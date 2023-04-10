@@ -1,4 +1,4 @@
-// 과거 함수(function)를 이용한 class 선언 형태 -> EM6 이후 class 적용됨.
+// 과거 함수(function)를 이용한 102_class 선언 형태 -> EM6 이후 102_class 적용됨.
 // 네이밍이 일반 함수의 카멜 표기법과 달리 대문자로 시작.
 function Book(title, author, volume, price) {
     this.title = title;

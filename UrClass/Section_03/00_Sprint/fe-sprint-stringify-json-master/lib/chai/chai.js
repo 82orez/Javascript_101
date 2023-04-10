@@ -1397,7 +1397,7 @@
       /**
        * ### .respondTo(method)
        *
-       * Asserts that the object or class target will respond to a method.
+       * Asserts that the object or 102_class target will respond to a method.
        *
        *     Klass.prototype.bar = function(){};
        *     expect(Klass).to.respondTo('bar');

@@ -3,7 +3,7 @@ const chai = require('chai');
 const expect = chai.expect;
 const ForagerBee = require('../src/ForagerBee');
 
-describe('ForagerBee class functionality', () => {
+describe('ForagerBee 102_class functionality', () => {
   var foragerBee;
 
   beforeEach(() => (foragerBee = new ForagerBee()));

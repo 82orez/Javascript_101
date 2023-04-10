@@ -1867,7 +1867,7 @@
             /**
              * ### .respondTo(method)
              *
-             * Asserts that the object or class target will respond to a method.
+             * Asserts that the object or 102_class target will respond to a method.
              *
              *     Klass.prototype.bar = function(){};
              *     expect(Klass).to.respondTo('bar');
@@ -3835,7 +3835,7 @@
              *
              * Asserts if value is not a false value, and throws if it is a true value.
              * This is added to allow for chai to be a drop-in replacement for Node's
-             * assert class.
+             * assert 102_class.
              *
              *     var err = new Error('I am a custom error');
              *     assert.ifError(err); // Rethrows err!

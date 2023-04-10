@@ -3,7 +3,7 @@ const chai = require('chai')
 const expect = chai.expect
 const HoneyMakerBee = require('../src/HoneyMakerBee')
 
-describe('HoneyMakerBee class functionality', () => {
+describe('HoneyMakerBee 102_class functionality', () => {
   var honeyBee;
 
   beforeEach(() => honeyBee = new HoneyMakerBee());

@@ -4137,7 +4137,7 @@
     module.exports = {
         global: require("./global"),
         calledInOrder: require("./called-in-order"),
-        className: require("./class-name"),
+        className: require("./102_class-name"),
         deprecated: require("./deprecated"),
         every: require("./every"),
         functionName: require("./function-name"),
@@ -6556,7 +6556,7 @@
     var objectProto = require("@sinonjs/commons").prototypes.object;
     var mapForEach = require("@sinonjs/commons").prototypes.map.forEach;
     
-    var getClass = require("./get-class");
+    var getClass = require("./get-102_class");
     var identical = require("./identical");
     var isArguments = require("./is-arguments");
     var isDate = require("./is-date");
@@ -6816,7 +6816,7 @@
     /**
      * Returns the internal `Class` by calling `Object.prototype.toString`
      * with the provided value as `this`. Return value is a `String`, naming the
-     * internal class, e.g. "Array"
+     * internal 102_class, e.g. "Array"
      *
      * @private
      * @param  {*} value - Any value
@@ -6864,7 +6864,7 @@
     },{"./is-nan":76,"./is-neg-zero":77}],71:[function(require,module,exports){
     "use strict";
     
-    var getClass = require("./get-class");
+    var getClass = require("./get-102_class");
     
     /**
      * Returns `true` when `object` is an `arguments` object, `false` otherwise

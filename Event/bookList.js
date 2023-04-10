@@ -36,7 +36,7 @@ saveBttn.addEventListener('click', (e) => {
   const delBttns = document.querySelectorAll('.delButton');
 
   // * 배열에 담긴 요소들에 클릭 이벤트 발생시 그 부모 노드를 삭제함.
-  // * 여기서는 span class='delButton' 의 부모인 li 요소 삭제.
+  // * 여기서는 span 102_class='delButton' 의 부모인 li 요소 삭제.
   for (const delBttn of delBttns) {
     delBttn.addEventListener('click', function() {
       this.parentNode.remove();

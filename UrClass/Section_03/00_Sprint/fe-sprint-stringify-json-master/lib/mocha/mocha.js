@@ -2064,7 +2064,7 @@ function Doc(runner) {
   runner.on('suite', function(suite){
     if (suite.root) return;
     ++indents;
-    console.log('%s<section class="suite">', indent());
+    console.log('%s<section 102_class="suite">', indent());
     ++indents;
     console.log('%s<h1>%s</h1>', indent(), utils.escape(suite.title));
     console.log('%s<dl>', indent());
@@ -2196,7 +2196,7 @@ function HTMLCov(runner) {
 }
 
 /**
- * Return coverage class for `n`.
+ * Return coverage 102_class for `n`.
  *
  * @return {String}
  * @api private
@@ -2242,10 +2242,10 @@ exports = module.exports = HTML;
  */
 
 var statsTemplate = '<ul id="mocha-stats">'
-  + '<li class="progress"><canvas width="40" height="40"></canvas></li>'
-  + '<li class="passes"><a href="#">passes:</a> <em>0</em></li>'
-  + '<li class="failures"><a href="#">failures:</a> <em>0</em></li>'
-  + '<li class="duration">duration: <em>0</em>s</li>'
+  + '<li 102_class="progress"><canvas width="40" height="40"></canvas></li>'
+  + '<li 102_class="passes"><a href="#">passes:</a> <em>0</em></li>'
+  + '<li 102_class="failures"><a href="#">failures:</a> <em>0</em></li>'
+  + '<li 102_class="duration">duration: <em>0</em>s</li>'
   + '</ul>';
 
 /**
@@ -2315,7 +2315,7 @@ function HTML(runner, root) {
 
     // suite
     var url = '?grep=' + encodeURIComponent(suite.fullTitle()) + window.location.hash;
-    var el = fragment('<li class="suite"><h1><a href="%s">%s</a></h1></li>', url, escape(suite.title));
+    var el = fragment('<li 102_class="suite"><h1><a href="%s">%s</a></h1></li>', url, escape(suite.title));
 
     // container
     stack[0].appendChild(el);
@@ -2345,11 +2345,11 @@ function HTML(runner, root) {
 
     // test
     if ('passed' == test.state) {
-      var el = fragment('<li class="test pass %e"><h2>%e<span class="duration">%ems</span> <a href="?grep=%e" class="replay">‣</a></h2></li>', test.speed, test.title, test.duration, encodeURIComponent(test.fullTitle()) + window.location.hash);
+      var el = fragment('<li 102_class="test pass %e"><h2>%e<span 102_class="duration">%ems</span> <a href="?grep=%e" 102_class="replay">‣</a></h2></li>', test.speed, test.title, test.duration, encodeURIComponent(test.fullTitle()) + window.location.hash);
     } else if (test.pending) {
-      var el = fragment('<li class="test pass pending"><h2>%e</h2></li>', test.title);
+      var el = fragment('<li 102_class="test pass pending"><h2>%e</h2></li>', test.title);
     } else {
-      var el = fragment('<li class="test fail"><h2>%e <a href="?grep=%e" class="replay">‣</a></h2></li>', test.title, encodeURIComponent(test.fullTitle()) + window.location.hash);
+      var el = fragment('<li 102_class="test fail"><h2>%e <a href="?grep=%e" 102_class="replay">‣</a></h2></li>', test.title, encodeURIComponent(test.fullTitle()) + window.location.hash);
       var str = test.err.stack || test.err.toString();
 
       // FF / Opera do not add the message
@@ -2366,7 +2366,7 @@ function HTML(runner, root) {
         str += "\n(" + test.err.sourceURL + ":" + test.err.line + ")";
       }
 
-      el.appendChild(fragment('<pre class="error">%e</pre>', str));
+      el.appendChild(fragment('<pre 102_class="error">%e</pre>', str));
     }
 
     // toggle code
@@ -5201,12 +5201,12 @@ function highlight(js) {
   return js
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
-    .replace(/('.*?')/gm, '<span class="string">$1</span>')
-    .replace(/(\d+\.\d+)/gm, '<span class="number">$1</span>')
-    .replace(/(\d+)/gm, '<span class="number">$1</span>')
-    .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-    .replace(/\b(function|new|throw|return|var|if|else)\b/gm, '<span class="keyword">$1</span>')
+    .replace(/\/\/(.*)/gm, '<span 102_class="comment">//$1</span>')
+    .replace(/('.*?')/gm, '<span 102_class="string">$1</span>')
+    .replace(/(\d+\.\d+)/gm, '<span 102_class="number">$1</span>')
+    .replace(/(\d+)/gm, '<span 102_class="number">$1</span>')
+    .replace(/\bnew *(\w+)/gm, '<span 102_class="keyword">new</span> <span 102_class="init">$1</span>')
+    .replace(/\b(function|new|throw|return|var|if|else)\b/gm, '<span 102_class="keyword">$1</span>')
 }
 
 /**

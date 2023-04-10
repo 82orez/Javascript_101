@@ -1055,7 +1055,7 @@
         /**
          * Initialize a new `Hook` with the given `title` and callback `fn`
          *
-         * @class
+         * @102_class
          * @extends Runnable
          * @param {String} title
          * @param {Function} fn
@@ -1841,7 +1841,7 @@
            * Constructs a new Mocha instance with `options`.
            *
            * @public
-           * @class Mocha
+           * @102_class Mocha
            * @param {Object} [options] - Settings object.
            * @param {boolean} [options.allowUncaught] - Propagate uncaught errors?
            * @param {boolean} [options.asyncOnly] - Force `done` callback or promise?
@@ -1925,7 +1925,7 @@
             }
 
             /**
-             * The class which we'll instantiate in {@link Mocha#run}.  Defaults to
+             * The 102_class which we'll instantiate in {@link Mocha#run}.  Defaults to
              * {@link Runner} in serial mode; changes in parallel mode.
              * @memberof Mocha
              * @private
@@ -2072,7 +2072,7 @@
            * @public
            * @see [CLI option](../#-ui-name-u-name)
            * @see [Interface DSLs](../#interfaces)
-           * @param {string|Function} [ui=bdd] - Interface name or class.
+           * @param {string|Function} [ui=bdd] - Interface name or 102_class.
            * @returns {Mocha} this
            * @chainable
            * @throws {Error} if requested interface cannot be loaded
@@ -2792,7 +2792,7 @@
           /**
            * Toggles parallel mode.
            *
-           * Must be run before calling {@link Mocha#run}. Changes the `Runner` class to
+           * Must be run before calling {@link Mocha#run}. Changes the `Runner` 102_class to
            * use; also enables lazy file loading if not already done so.
            * @param {boolean} [enable] - If `true`, enable; otherwise disable.
            * @throws If run in browser
@@ -2822,7 +2822,7 @@
             }
             this.options.parallel = parallel;
 
-            // swap Runner class
+            // swap Runner 102_class
             this._runnerClass = parallel
               ? require('./nodejs/parallel-buffered-runner')
               : exports.Runner;
@@ -3231,7 +3231,7 @@
            * All other reporters generally inherit from this reporter.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @param {Runner} runner - Instance triggers reporter actions.
            * @param {Object} [options] - runner options
@@ -3504,7 +3504,7 @@
          * Constructs a new `Doc` reporter instance.
          *
          * @public
-         * @class
+         * @102_class
          * @memberof Mocha.reporters
          * @extends Mocha.reporters.Base
          * @param {Runner} runner - Instance triggers reporter actions.
@@ -3524,7 +3524,7 @@
               return;
             }
             ++indents;
-            Base.consoleLog('%s<section class="suite">', indent());
+            Base.consoleLog('%s<section 102_class="suite">', indent());
             ++indents;
             Base.consoleLog(
               '%s<h1>%s</h1>',
@@ -3565,23 +3565,23 @@
 
           runner.on(EVENT_TEST_FAIL, function (test, err) {
             Base.consoleLog(
-              '%s  <dt class="error">%s</dt>',
+              '%s  <dt 102_class="error">%s</dt>',
               indent(),
               utils.escape(test.title)
             );
             Base.consoleLog(
-              '%s  <dt class="error">%s</dt>',
+              '%s  <dt 102_class="error">%s</dt>',
               indent(),
               utils.escape(test.file)
             );
             var code = utils.escape(utils.clean(test.body));
             Base.consoleLog(
-              '%s  <dd class="error"><pre><code>%s</code></pre></dd>',
+              '%s  <dd 102_class="error"><pre><code>%s</code></pre></dd>',
               indent(),
               code
             );
             Base.consoleLog(
-              '%s  <dd class="error">%s</dd>',
+              '%s  <dd 102_class="error">%s</dd>',
               indent(),
               utils.escape(err)
             );
@@ -3622,7 +3622,7 @@
            * Constructs a new `Dot` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -3725,10 +3725,10 @@
 
           var statsTemplate =
             '<ul id="mocha-stats">' +
-            '<li class="progress"><canvas width="40" height="40"></canvas></li>' +
-            '<li class="passes"><a href="javascript:void(0);">passes:</a> <em>0</em></li>' +
-            '<li class="failures"><a href="javascript:void(0);">failures:</a> <em>0</em></li>' +
-            '<li class="duration">duration: <em>0</em>s</li>' +
+            '<li 102_class="progress"><canvas width="40" height="40"></canvas></li>' +
+            '<li 102_class="passes"><a href="javascript:void(0);">passes:</a> <em>0</em></li>' +
+            '<li 102_class="failures"><a href="javascript:void(0);">failures:</a> <em>0</em></li>' +
+            '<li 102_class="duration">duration: <em>0</em>s</li>' +
             '</ul>';
 
           var playIcon = '&#x2023;';
@@ -3737,7 +3737,7 @@
            * Constructs a new `HTML` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -3816,7 +3816,7 @@
               // suite
               var url = self.suiteURL(suite);
               var el = fragment(
-                '<li class="suite"><h1><a href="%s">%s</a></h1></li>',
+                '<li 102_class="suite"><h1><a href="%s">%s</a></h1></li>',
                 url,
                 escape(suite.title)
               );
@@ -3838,8 +3838,8 @@
             runner.on(EVENT_TEST_PASS, function (test) {
               var url = self.testURL(test);
               var markup =
-                '<li class="test pass %e"><h2>%e<span class="duration">%ems</span> ' +
-                '<a href="%s" class="replay">' +
+                '<li 102_class="test pass %e"><h2>%e<span 102_class="duration">%ems</span> ' +
+                '<a href="%s" 102_class="replay">' +
                 playIcon +
                 '</a></h2></li>';
               var el = fragment(
@@ -3856,7 +3856,7 @@
 
             runner.on(EVENT_TEST_FAIL, function (test) {
               var el = fragment(
-                '<li class="test fail"><h2>%e <a href="%e" class="replay">' +
+                '<li 102_class="test fail"><h2>%e <a href="%e" 102_class="replay">' +
                   playIcon +
                   '</a></h2></li>',
                 test.title,
@@ -3891,7 +3891,7 @@
               if (test.err.htmlMessage && stackString) {
                 el.appendChild(
                   fragment(
-                    '<div class="html-error">%s\n<pre class="error">%e</pre></div>',
+                    '<div 102_class="html-error">%s\n<pre 102_class="error">%e</pre></div>',
                     test.err.htmlMessage,
                     stackString
                   )
@@ -3899,14 +3899,14 @@
               } else if (test.err.htmlMessage) {
                 el.appendChild(
                   fragment(
-                    '<div class="html-error">%s</div>',
+                    '<div 102_class="html-error">%s</div>',
                     test.err.htmlMessage
                   )
                 );
               } else {
                 el.appendChild(
                   fragment(
-                    '<pre class="error">%e%e</pre>',
+                    '<pre 102_class="error">%e%e</pre>',
                     message,
                     stackString
                   )
@@ -3920,7 +3920,7 @@
 
             runner.on(EVENT_TEST_PENDING, function (test) {
               var el = fragment(
-                '<li class="test pass pending"><h2>%e</h2></li>',
+                '<li 102_class="test pass pending"><h2>%e</h2></li>',
                 test.title
               );
               appendToStack(el);
@@ -4189,7 +4189,7 @@
            * Constructs a new `JSONStream` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -4288,7 +4288,7 @@
            * Constructs a new `JSON` reporter instance.
            *
            * @public
-           * @class JSON
+           * @102_class JSON
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -4452,7 +4452,7 @@
            * Constructs a new `Landing` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -4567,7 +4567,7 @@
            * Constructs a new `List` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -4656,7 +4656,7 @@
            * Constructs a new `Markdown` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -4770,7 +4770,7 @@
            * This minimal test reporter is best used with '--watch'.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -4829,7 +4829,7 @@
            * Constructs a new `Nyan` reporter instance.
            *
            * @public
-           * @class Nyan
+           * @102_class Nyan
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -5120,7 +5120,7 @@
            * Constructs a new `Progress` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -5229,7 +5229,7 @@
          * Constructs a new `Spec` reporter instance.
          *
          * @public
-         * @class
+         * @102_class
          * @memberof Mocha.reporters
          * @extends Mocha.reporters.Base
          * @param {Runner} runner - Instance triggers reporter actions.
@@ -5338,7 +5338,7 @@
            * Constructs a new `TAP` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -5443,7 +5443,7 @@
            * Constructs a new TAPProducer.
            *
            * @description
-           * <em>Only</em> to be used as an abstract base class.
+           * <em>Only</em> to be used as an abstract base 102_class.
            *
            * @private
            * @constructor
@@ -5647,7 +5647,7 @@
            * Constructs a new `XUnit` reporter instance.
            *
            * @public
-           * @class
+           * @102_class
            * @memberof Mocha.reporters
            * @extends Mocha.reporters.Base
            * @param {Runner} runner - Instance triggers reporter actions.
@@ -5886,7 +5886,7 @@
           /**
            * Initialize a new `Runnable` with the given `title` and callback `fn`.
            *
-           * @class
+           * @102_class
            * @extends external:EventEmitter
            * @public
            * @param {String} title
@@ -6502,7 +6502,7 @@
            *
            * @extends external:EventEmitter
            * @public
-           * @class
+           * @102_class
            * @param {Suite} suite - Root suite
            * @param {Object|boolean} [opts] - Options. If `boolean`, whether or not to delay execution of root suite until ready (for backwards compatibility).
            * @param {boolean} [opts.delay] - Whether to delay execution of root suite until ready.
@@ -7719,7 +7719,7 @@
          * Constructs a new `Suite` instance with the given `title`, `ctx`, and `isRoot`.
          *
          * @public
-         * @class
+         * @102_class
          * @extends EventEmitter
          * @see {@link https://nodejs.org/api/events.html#events_class_eventemitter|EventEmitter}
          * @param {string} title - Suite title.
@@ -8382,7 +8382,7 @@
          * Initialize a new `Test` with the given `title` and callback `fn`.
          *
          * @public
-         * @class
+         * @102_class
          * @extends Runnable
          * @param {String} title - Test title (required)
          * @param {Function} [fn] - Test callback.  If omitted, the Test is considered "pending"
@@ -8617,17 +8617,17 @@
             return js
               .replace(/</g, '&lt;')
               .replace(/>/g, '&gt;')
-              .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
-              .replace(/('.*?')/gm, '<span class="string">$1</span>')
-              .replace(/(\d+\.\d+)/gm, '<span class="number">$1</span>')
-              .replace(/(\d+)/gm, '<span class="number">$1</span>')
+              .replace(/\/\/(.*)/gm, '<span 102_class="comment">//$1</span>')
+              .replace(/('.*?')/gm, '<span 102_class="string">$1</span>')
+              .replace(/(\d+\.\d+)/gm, '<span 102_class="number">$1</span>')
+              .replace(/(\d+)/gm, '<span 102_class="number">$1</span>')
               .replace(
                 /\bnew[ \t]+(\w+)/gm,
-                '<span class="keyword">new</span> <span class="init">$1</span>'
+                '<span 102_class="keyword">new</span> <span 102_class="init">$1</span>'
               )
               .replace(
                 /\b(function|new|throw|return|var|if|else)\b/gm,
-                '<span class="keyword">$1</span>'
+                '<span 102_class="keyword">$1</span>'
               );
           }
 
@@ -20344,7 +20344,7 @@
         // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
         // a duplex stream is just a stream that is both readable and writable.
-        // Since JS doesn't have multiple prototypal inheritance, this class
+        // Since JS doesn't have multiple prototypal inheritance, this 102_class
         // prototypally inherits from Readable, and then parasitically from
         // Writable.
 
@@ -20996,7 +20996,7 @@
             // 2. If that resulting state will trigger a _read, then call _read.
             // Note that this may be asynchronous, or synchronous.  Yes, it is
             // deeply ugly to write APIs this way, but that still doesn't mean
-            // that the Readable class should behave improperly, as streams are
+            // that the Readable 102_class should behave improperly, as streams are
             // designed to be sync/async agnostic.
             // Take note if the _read call is sync or async (ie, if the read call
             // has returned yet), so that we know whether or not it's safe to emit
@@ -22705,7 +22705,7 @@
 
         function _classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError('Cannot call a 102_class as a function');
           }
         }
 
@@ -23039,7 +23039,7 @@
         Stream.Stream = Stream;
 
         // old-style streams.  Note that the pipe method (the only relevant
-        // part of this class) is overridden in the Readable class.
+        // part of this 102_class) is overridden in the Readable 102_class.
 
         function Stream() {
           EE.call(this);

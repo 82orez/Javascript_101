@@ -36,6 +36,6 @@ p {  /* p 요소에 적용할 스타일 */
     font-size:1.0em;
     font-style:italic;
 }
-.bright {  /* class="bright"인 요소에 적용할 스타일 */
+.bright {  /* 102_class="bright"인 요소에 적용할 스타일 */
     color:blue;
 }
