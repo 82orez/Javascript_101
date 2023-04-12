@@ -1,3 +1,5 @@
+// * onenote 내용 참조.
+
 class Person {
   constructor(name, age) {
     this._name = name;
