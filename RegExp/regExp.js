@@ -50,36 +50,7 @@ console.log(/es/.test(str));
 console.log(/es/i.test(str));
 console.log();
 
-// * 문자열의 시작과 끝 체크하기: ^ $
-// 문자열의 시작 체크: ^
-// 문자열의 끝 체크: $
-let hello = 'Hello, everyone!';
 
-console.log('-------^ $--------');
-console.log(hello);
-console.log('^H: ', /^H/.test(hello)); // H 로 시작 체크
-console.log('^h: ', /^h/.test(hello)); // h 로 시작 체크
-console.log('!$: ', /!$/.test(hello)); // '!' 로 끝 체크
 
-console.log('one$: ', /one$/.test(hello)); // one 으로 끝 체크
-console.log();
 
-// ! 주의: ^ 기호가 [] 안에서 쓰일 경우에는 not 의 의미.
-// 문자열 중에서 숫자가 아닌 것을 반환.
-console.log('/[^0-9]/: ', 'ES2015'.match(/[^0-9]/)); // 첫번째 하나만
-console.log('/[^0-9]/g: ', 'ES2015'.match(/[^0-9]/g)); // 전부
-console.log();
 
-// * 반복 검색하기: {}
-// /패턴{n}/: 패턴이 n번 반복되는 것을 검색.
-// /패턴{n,}/: 패턴이 최소 n번 이상 반복되는 것을 검색.
-//! /패턴{n,m}/: 패턴이 최소 n번 이상 반복되는 것을 검색.
-
-let str1 = 'Ooooodooopoos';
-
-console.log('-------{반복}--------');
-console.log(str1.match(/o{2}/));
-console.log(str1.match(/o{2}/g));
-console.log(str1.match(/o{2,}/));
-console.log(str1.match(/o{2,3}/));
-console.log(str1.match(/o{2,3}/g));
