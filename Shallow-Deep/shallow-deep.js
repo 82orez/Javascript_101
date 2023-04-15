@@ -1,6 +1,6 @@
 // * 얕은(Shallow) 복사 vs. 깊은(Deep) 복사
 
-// * 원시 자료형 (Deep copy)
+// ? 원시 자료형 (Deep copy)
 let num = 20;
 let copiedNum = num;
 // 새로운 메모리에 원시 자료값 자체를 할당하기 때문에 결과는 true.
@@ -14,7 +14,7 @@ console.log(num === copiedNum);
 
 console.log('-----------------------------')
 
-// * 참조 자료형: Array, Object (Shallow copy)
+// ? 참조 자료형: Array, Object (Shallow copy)
 // Javascript 자체적으로 참조 자료형을 깊은 복사하는 방법은 없음.
 // 필요한 경우 관련된 라이브러리 설치가 필요.
 let arr = [0, 1, 2, 3];
@@ -28,3 +28,14 @@ arr.push(4);
 console.log(arr);
 console.log(copiedArr);
 console.log(arr === copiedArr);
+console.log();
+
+console.log('--------------Shallow copy(얕은 복사)---------------')
+
+// ! 참조 자료형의 경우 slice() 와 Spread(전개 연산자) 를 이용해 앝은 복사 할 수 있다.
+let arr1 = [0, 1, 2, 3];
+let copiedArr1 = [...arr1];
+let copiedArr2 = arr1.slice();
+
+console.log('arr1 === copiedArr1 ', arr1 === copiedArr1);
+console.log('arr1 === copiedArr1 ', arr1 === copiedArr2);

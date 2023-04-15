@@ -37,6 +37,7 @@ words.splice(1,0,'splice');
 console.log('splice: ',words);
 
 // concat: 배열 합치기
+// ? ES6 이후로는 주로 Spread(전개 연산자) 문법을 사용.
 let words2 = ['hello', 'world'];
 let newWords = words.concat(words2);
 console.log(newWords);

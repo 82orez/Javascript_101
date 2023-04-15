@@ -1,29 +1,14 @@
-class Person {
-  constructor(name, age) {
-    this._name = name;
-    this.age = age;
+const arg = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sum = function (...args) {
+  console.log(args);
+  for (const arg1 of args) {
+    console.log(arg1);
   }
+};
 
-  get name() {
-    return this._name.toUpperCase();
-  }
+// 둘이 같다.
+// 배열을 인수로 넘겨주는 apply()와 전개연산자를 이용해 배열을 인수로 치환한 call()
+// sum.apply(null, arg); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// sum.call(null, ...arg); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-  set name(newName) {
-    if (newName) {
-      this._name = newName;
-    }
-  }
-}
-
-let man = new Person('John', 10);
-
-// * 아래 콘솔의 결과값은 getter 가 실행된 결과이다.
-// man._name 이 아니라 man.name 을 호출했다.
-// 콘솔의 결과가 John 이 아니라 JOHN 이다.
-console.log(man.name, man.age);
-
-// * 아래는 setter 를 실행한 모습이다.
-man.name = 'John Park';
-man.age = 20;
-console.log(man.name, man.age);
-
+console.log(sum(...arg));

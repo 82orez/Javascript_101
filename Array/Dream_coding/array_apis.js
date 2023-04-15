@@ -96,7 +96,7 @@ const students = [
 
 
 // ? Q9. compute students' average score
-// * reduce 는 여러 배열을 가공하여 하나의 값, 문자열, 배열 등으로 나타내 준다.(응축 성향)
+// * reduce 는 배열의 여러 요소들을 순차적으로 가공(콜백 함수 실행)하여 하나의 값, 문자열, 배열 등으로 나타내 준다.(응축 성향)
 {
     const result = students.reduce((previousValue, currentValue, currentIndex, array) => {
         console.log('---------------')
