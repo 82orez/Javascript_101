@@ -16,7 +16,7 @@ console.log(apple1);
 console.log(banana1);
 console.log();
 
-// 참조: Rest(나머지 매개 변수) 문법을 이용한 구조 분해 할당.
+// * 참조: Rest(나머지 매개 변수) 문법을 이용한 구조 분해 할당.
 // 여러 개의 인자 또는 남아 있는 인자들을 모아서 하나의 배열로 만들어 열주는 문법.
 
 const [first, second, ...rest] = [1, 2, 3, 4, 5];
