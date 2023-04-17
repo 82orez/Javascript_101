@@ -28,12 +28,15 @@ const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const reduceResult = arr2.reduce((total, currentValue, currentIndex, array) => {
   total += currentValue;
   return total;
-}, 100);
+}, 100); // 초기값을 100 으로 설정.
 console.log('reduce: ', reduceResult);
 console.log();
 
 const flattened = [[0, 1], [2, 3], [4, 5]].reduce((accumulator, currentValue) => {
-    return accumulator.concat(currentValue);
-  }, []);
+  // return accumulator.concat(currentValue);
+  // 위의 식도 가능하지만, ES6 이후로는 Spread(전개 연산자)를 사용하는 추세임.
+  // 가독성도 좋음.
+  return [...accumulator, ...currentValue];
+  }, []); // 초기값을 빈 배열로 설정.
 // 펼친 결과: [0, 1, 2, 3, 4, 5]
 console.log('flattened: ', flattened);
