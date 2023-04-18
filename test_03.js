@@ -1,8 +1,4 @@
-const person = {
-  name: 'java',
-  'from what': 'japan',
-}
-person['published date'] = '2012';
-
-console.log(person);
-console.log(person.name)
+console.log('1');
+setTimeout(() => {
+  console.log();
+},1000);

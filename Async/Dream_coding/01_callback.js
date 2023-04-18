@@ -11,43 +11,40 @@ console.log(3);
 
 // * callback 함수를 인자(매개변수)로 받아서 그 함수를 즉시 실행함.
 function printImmediately(callback) {
-    callback();
+  callback();
 }
 
 // * callback 함수와 시간을 인자(매개변수)로 받아서 그 함수를 특정 시간 후에 실행함.
 function printWithDelay(callback, timeout) {
-    setTimeout(callback, timeout);
+  setTimeout(callback, timeout);
 }
 
 // * 'callback' 이 먼저 실행되지만 2초 후 나중에 출력.
-printWithDelay(() => console.log("hello first"), 2000);
-printImmediately(() => console.log("hello later"));
+printWithDelay(() => console.log('hello first'), 2000);
+printImmediately(() => console.log('hello later'));
 
 // -------------------------------------------------
 
 class UserStorage {
-    loginUser(id, pw, onSuccess, onError) {
-        setTimeout(() => {
-            if(
-                (id ==='TG' && pw === 'dream') || (id ==='coder' && pw === 'academy')
-                ) {
-                onSuccess(id);
-            } else {
-                onError(new Error('not found'));
-            }
-        }, 2000);
-    }
-    getRoles(user, onSuccess, onError) {
-        setTimeout(() => {
-            if (user === 'TG') {
-                onSuccess({name: 'TG', role: 'admin'});
-            } else {
-                onError(new Error('no access'));
-            }
-        }, 1000);
-    }
+  loginUser(id, pw, onSuccess, onError) {
+    setTimeout(() => {
+      if ((id === 'TG' && pw === 'dream') || (id === 'coder' && pw === 'academy')) {
+        onSuccess(id);
+      } else {
+        onError(new Error('not found'));
+      }
+    }, 2000);
+  }
+  getRoles(user, onSuccess, onError) {
+    setTimeout(() => {
+      if (user === 'TG') {
+        onSuccess({ name: 'TG', role: 'admin' });
+      } else {
+        onError(new Error('no access'));
+      }
+    }, 1000);
+  }
 }
-
 
 // const userStorage = new UserStorage();
 // const id = prompt('Enter your ID: ');

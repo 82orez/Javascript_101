@@ -6,14 +6,15 @@ function workP(sec) {
   });
 }
 
-// * 아래 코드는 Promise 자체를 반환. --> resolve 값을 Promise 가 품고 있음.
-console.log(workP(0.5));
+// * 아래 코드는 workP() 함수의 리턴값인 Promise 자체를 반환.
+// --> resolve 또는 reject 값을 Promise 가 품고(pending) 있음.
+console.log(workP(10));
 
-// * 그 resolve 값을 리턴 받기 위해서는 then() 을 이용.
-// * promise chain 을 이용하기 위해서는 넘겨줄 resolve 값을 return 해줘야 함. --> 다음 then() 에.
 workP(1)
+  // * 그 resolve 값을 리턴 받기 위해서는 then() 을 사용.
   .then((result) => {
     console.log('first: ', result);
+    // * promise chain 을 이용하기 위해서는 넘겨줄 resolve 값을 return 해줘야 함. --> 다음 then() 에.
     return workP(1);
   })
   .then((result) => {
