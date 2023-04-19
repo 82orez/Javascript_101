@@ -1,4 +1,4 @@
-// * async & await: syntactic sugar of promise.
+// * async & await: syntactic sugar of Promise.
 // * clear style of using promise.
 
 // * 1. Promise
