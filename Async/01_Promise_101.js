@@ -31,13 +31,13 @@ function workP(sec) {
 // * workP() 함수만 실행시키면의 리턴값인 Promise 자체만을를 반환.
 // * --> Promise 가 resolve 또는 reject 값을 품고(pending) 있음.
 // console.log(workP(10));
-// * workP() 의 return 값인 resolve 또는 reject 값을 넘겨 받기 위해서 then() 또는 catch() 를 사용.
+// * workP() 가 실행 완료되고 난 후 그 결과에 해댱하는 resolve 또는 reject 값을 넘겨 받기 위해서 then() 또는 catch() 를 사용.
 
 
 // ? 2. Consumers: then(resolve), catch(reject), finally(always)
 // * Promise chaining: 여러 개의 비동기 함수들을 순차적으 실행(동기화)시키는 방법.
-// 아래 예에서 실행 시간이 더 오래 걸리는 Producer 1(1초)이 먼저 실행되고 난 후,
-// Producer 2(0.5초) 가 실행되는 것을 볼 수 있음.
+// 아래 예에서 실행 시간이 더 오래 걸리는 Producer 1(1초)이 먼저 실행 완료되고 난 후,
+// Producer 2(0.5초)가 실행되는 것을 볼 수 있음.
 
 workP(1)    // Producer 1
   .then((result) => {
@@ -48,4 +48,4 @@ workP(1)    // Producer 1
     console.log('second: ', result); // Producer 2's resolve
   }).catch(err => {
     console.error(err);    // * Error handling.
-})
+}).finally(() => console.log('The End!'))
