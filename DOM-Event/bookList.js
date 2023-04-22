@@ -19,10 +19,10 @@ saveBttn.addEventListener('click', (e) => {
   // ! span 요소에 클래스 delButton 추가.
   itemSpan.classList.add('delButton');
 
-  // * li 요소에 span 요소를 자식으로 붙여 넣음.
+  // * li 요소에 span 요소를 마지막 자식으로 붙여 넣음.
   item.appendChild(itemSpan);
 
-  // * ul id='bookList 요소에 li 요소를 자식으로 붙여 넣음.
+  // * ul id='bookList 요소에 li 요소를 마지막 자식으로 붙여 넣음.
   bookList.appendChild(item);
 
   // 입력 value 초기화.
@@ -31,8 +31,8 @@ saveBttn.addEventListener('click', (e) => {
 
   console.log('----------------------------------------------')
 
-  // * save 버튼을 click 한 다음에 del 버튼이 생기므로 save 버튼 click 이벤트 리스너 안에 작성.
-  // * 클래스 delButton 요소들을 배열 형태로 만듬.
+  // ! save 버튼을 click 한 다음에 del 버튼이 생기므로 save 버튼 click 이벤트 리스너 안에 작성.
+  // * 클래스 delButton 의 모든 요소들을 배열 형태로 만듬.
   const delBttns = document.querySelectorAll('.delButton');
 
   // * 배열에 담긴 요소들에 클릭 이벤트 발생시 그 부모 노드를 삭제함.
