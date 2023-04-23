@@ -42,8 +42,8 @@ console.log();
 
 // ? 다시 man 인스턴스의 name 프로퍼티에 'tg lee' value 값을 재할당(set) 한다.
 man.name = 'tg lee';
-// 만약 아래와 같이 man.name 에 숫자 1을 재할당 하면 Setter 의 조건에 맞지 않아서 오류 발생.
-man.name = 1;
+// ! 만약 아래와 같이 man.name 에 숫자 1을 재할당 하면 Setter 의 조건에 맞지 않아서 오류 발생.
+// man.name = 1;
 
 // * 재할당 받은 man 인스턴스의 name 을 호출한다.
 // * 그런데 그 결과가 인스턴스 생성시 입력한 'tg lee' 이 아닌 'TG LEE' 이다.
