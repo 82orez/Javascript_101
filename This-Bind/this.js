@@ -11,6 +11,8 @@ function sayHello() {
   }
   sayHello2();
 
+  console.log('--------------------------------');
+
   const computer = {
     mac: 1,
     window: 2,
@@ -23,7 +25,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log('--------------------------------')
+console.log('--------------------------------');
 
 const people = {
   name: 'TG',
@@ -34,6 +36,8 @@ const people = {
 };
 people.sayHello(); // * sayHello 함수는 people 객체에 속해 있으므로 이 때 this 는 people.
 
+console.log('----------------Arrow function----------------');
+
 // ! 반면에 화살표 함수는 this 를 가지지 않는다.
 // 다른 말로 표현하면 화살표 함수의 this 는 전역(Window) 객체이다.
 
@@ -41,6 +45,7 @@ const arrowPeople = {
   name: 'TG',
   sayHello: () => {
     // 전역 객체에는 name 이라는 속성이 없으므로 undefined.
+    console.log(`Hello ${this}`);
     console.log(`Hello ${this.name}`);
   },
 };

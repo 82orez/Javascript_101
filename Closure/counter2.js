@@ -1,7 +1,8 @@
 // * 함수 두 번 호출 방지를 위해 즉시실행함수 사용.
 const counter = (() => {
-  // 상태 관리를 위한 자유 변.
+  // 상태 관리를 위한 자유 변수.
   let counter = 0;
+
   // 콜백 함수를 인자로 받는 클로저를 반환
   // ! 인수로 전달 받은 보조 함수에 상태 변경을 위임.
   return function (predicate) {
@@ -24,7 +25,7 @@ function decrease(n) {
   }
 }
 
-console.log('Closure\'s type: ' , counter);
+console.log("Closure's type: ", counter);
 
 // 아래의 counter(); 명령어의 의미는 counter 함수 실행하라는 의미가 아님.
 // 즉시실행함수 실행 후 counter 변수에 할당된 익명 함수를 실행하라는 의미임.
