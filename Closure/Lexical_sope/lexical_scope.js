@@ -4,7 +4,8 @@ const x = 1;
 
 function foo() {
   const x = 10;
-  // foo() 내부에서 호출되었지만, bar()의 상위 스코프인 x 에 접근하여 값을 가져온다.
+  // foo() 내부에서 호출되었지만,
+  // bar()가 선언된 곳을 기준으로 상위 스코프인 전역 변수 x 에 접근하여 값을 가져온다.
   bar();
 }
 
@@ -21,7 +22,7 @@ function outerFunc() {
   const x = 10;
   function innerFunc() {
     // innerFunc()의 상위 스코프는 outerFunc()이다.
-    // 상의 스코프로의 변수 접근은 가능하므로 10 을 출력한다.
+    // 상위 스코프로의 변수 접근은 가능하므로 10 을 출력한다.
     console.log(x);
   }
   innerFunc();
