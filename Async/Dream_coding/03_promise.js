@@ -1,6 +1,3 @@
-// * Promise 는 비동기 함수를 동기화 하기 위한 Javascript 클래스 객체입니다.
-// * state: pending -> resolve(fulfilled) or reject(failed)
-
 // * 1. Producer
 // * promise 는 executor 라는 콜백 함수를 인자로 가진다.
 // * 또한 executor 함수는 resolve 와 reject 라는 두 개의 콜백 함수를 인자로 가진다.
@@ -19,7 +16,7 @@ console.log(promise);
 // * 2. Consumers: then(resolve), catch(reject), finally(always)
 promise
   // ? promise 가 실행에 성공하면 promise 의 resolve 값인 문자열 'TG' 를 받아 와서,
-  // ?다음의 value 변수로 넘겨 준다.
+  // ? 다음의 value 변수로 넘겨 준다.
     .then(value => {
         console.log('then: ', value);
     })

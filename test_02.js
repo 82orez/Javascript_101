@@ -1,5 +1,6 @@
-const a = function () {
-  console.log('hello world')
-}
+let arr = [1,[2,[3,[4,5]]]];
 
-console.log(a)
+let flat = arr.flat(1);
+
+console.log(arr)
+console.log(flat)

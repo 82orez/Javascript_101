@@ -1,4 +1,3 @@
-console.log('1');
-setTimeout(() => {
-  console.log();
-},1000);
+const a = [2, , 3];
+
+console.log(a.length)
