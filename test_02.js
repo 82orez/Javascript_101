@@ -1,6 +1,10 @@
-let arr = [1,[2,[3,[4,5]]]];
+// const arr = [3, 17, 75, 80, 202];
 
-let flat = arr.flat(1);
+const f = arr => {
+  return arr.map(value => {
+    return value * 2;
+  });
+};
 
-console.log(arr)
-console.log(flat)
+let result = f([3, 17, 75, 80, 202]);
+console.log(result);
