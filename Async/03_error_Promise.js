@@ -31,17 +31,17 @@ function wait(sec) {
 }
 
 // * catch 를 이용해 오류를 잡는 방법.
-wait(1).catch((e) => {
+wait(1).catch(e => {
   console.log('e: ', e);
 });
 
 // * then 을 이용해 오류를 잡는 방법.
 wait(2).then(
-  (resolve) => {
+  resolve => {
     console.log(resolve);
     console.log('success');
   },
-  (reject) => {
+  reject => {
     console.log('reject: ', reject);
   },
 );

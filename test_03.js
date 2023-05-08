@@ -1,7 +1,6 @@
-const x = null;
+const arr = [3, 17, 75, 80, 202];
 
-console.log(true && 'Some input');
-console.log(false && 'Some input');
+arr.splice(4, 1, 5, 6, 7, 8);
 
-console.log(true || 'No input!');
-console.log(false || 'No input!');
+console.log(arr);
+

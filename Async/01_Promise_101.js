@@ -41,12 +41,12 @@ console.log('promise: ', promise);
 // Producer 2(0.5초)가 실행되는 것을 볼 수 있음.
 
 workP(1) // Producer 1
-  .then((result) => {
+  .then(result => {
     console.log('first: ', result); // Producer 1's resolve
     return workP(0.5); // Producer 2
   })
   .then(result => console.log('second: ', result)) // Producer 2's resolve
-  .catch((err) => {
+  .catch(err => {
     console.error(err); // * Error handling.
   })
   .finally(() => console.log('The End!'));
