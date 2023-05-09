@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import useCounter from './useCounter';
 
 const MAX_CAPACITY = 10;
@@ -19,13 +19,15 @@ function Accommodate(props) {
   }, [count]);
 
   return (
-    <div style={{padding: 16}}>
+    <div style={{ padding: 16 }}>
       <p>{`Total ${count} accommodated!`}</p>
 
-      <button onClick={increaseCount} disabled={isFull}>In</button>
+      <button onClick={increaseCount} disabled={isFull}>
+        In
+      </button>
       <button onClick={decreaseCount}>Out</button>
 
-      {isFull && <p style={{color: 'red'}}>Full!!!</p>}
+      {isFull && <p style={{ color: 'red' }}>Full!!!</p>}
     </div>
   );
 }

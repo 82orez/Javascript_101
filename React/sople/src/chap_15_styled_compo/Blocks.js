@@ -22,26 +22,26 @@ const Block = styled.div`
 
 const blockItems = [
   {
-    label: "1",
-    padding: "1rem",
-    backgroundColor: "red",
+    label: '1',
+    padding: '1rem',
+    backgroundColor: 'red',
   },
   {
-    label: "2",
-    padding: "3rem",
-    backgroundColor: "green",
+    label: '2',
+    padding: '3rem',
+    backgroundColor: 'green',
   },
   {
-    label: "3",
-    padding: "2rem",
-    backgroundColor: "blue",
+    label: '3',
+    padding: '2rem',
+    backgroundColor: 'blue',
   },
 ];
 
 function Blocks(props) {
   return (
     <Wrapper>
-      {blockItems.map((blockItem) => {
+      {blockItems.map(blockItem => {
         return (
           <Block padding={blockItem.padding} backgroundColor={blockItem.backgroundColor}>
             {blockItem.label}

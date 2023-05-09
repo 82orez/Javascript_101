@@ -1,14 +1,14 @@
 // * Lifting State Up
 // * 상위 컴포넌트의 "상태를 변경하는 함수" 그 자체를 하위 컴포넌트로 전달하고, 이 함수를 하위 컴포넌트가 실행한다.
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 function ParentComponent() {
   const [value, setValue] = useState('Change me');
 
   const handleChangeValue = () => {
     setValue('Different value');
-  }
+  };
 
   return (
     <div>
@@ -25,9 +25,9 @@ function ChildComponent(props) {
     // ? 이 버튼을 눌러서 부모의 상태를 바꿀 순 없을까?
     // * 인자로 받은 상태 변경 함수를 실행하자!
     props.handleButtonClick();
-  }
+  };
 
-  return <button onClick={handleClick}>Change value</button>
+  return <button onClick={handleClick}>Change value</button>;
 }
 
 export default ParentComponent;
